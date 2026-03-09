@@ -1,0 +1,132 @@
+<!DOCTYPE html>
+<html>
+<head>
+  <meta charset="UTF-8">
+  <title>Lab GPU Status</title>
+  <style>
+    body {
+      font-family: Arial, sans-serif;
+      background: #111;
+      color: #eee;
+      margin: 0;
+      padding: 30px;
+      text-align: center;
+    }
+    #loginBox, #dashboard {
+      max-width: 1000px;
+      margin: 0 auto;
+    }
+    #dashboard {
+      display: none;
+    }
+    .server {
+      margin: 20px 0;
+      padding: 14px;
+      border: 1px solid #333;
+      border-radius: 10px;
+      text-align: left;
+      background: #181818;
+    }
+    .gpu {
+      padding: 10px;
+      margin: 8px 0;
+      border-radius: 8px;
+    }
+    .free { background: #1f6f1f; }
+    .mid  { background: #8a6d00; }
+    .busy { background: #8b1a1a; }
+    input[type="password"] {
+      padding: 10px;
+      width: 220px;
+      font-size: 16px;
+    }
+    button {
+      padding: 10px 16px;
+      font-size: 16px;
+      cursor: pointer;
+      margin-left: 8px;
+    }
+    #error {
+      color: #ff7b7b;
+      margin-top: 10px;
+    }
+    #updated {
+      margin-bottom: 20px;
+      color: #bbb;
+    }
+  </style>
+</head>
+<body>
+  <div id="loginBox">
+    <h1>Lab GPU Dashboard</h1>
+    <p>Enter shared password</p>
+    <input type="password" id="pw" placeholder="Password">
+    <button onclick="checkPassword()">Enter</button>
+    <div id="error"></div>
+  </div>
+
+  <div id="dashboard">
+    <h1>Lab GPU Dashboard</h1>
+    <div id="updated"></div>
+    <div id="content"></div>
+  </div>
+
+  <script>
+    const PASSWORD = "labgpu123";
+
+    function checkPassword() {
+      const input = document.getElementById("pw").value;
+      const error = document.getElementById("error");
+
+      if (input === PASSWORD) {
+        document.getElementById("loginBox").style.display = "none";
+        document.getElementById("dashboard").style.display = "block";
+        loadStatus();
+        setInterval(loadStatus, 5000);
+      } else {
+        error.innerText = "Wrong password";
+      }
+    }
+
+    async function loadStatus() {
+      try {
+        const res = await fetch("gpu_status.json?t=" + Date.now());
+        const data = await res.json();
+
+        document.getElementById("updated").innerText =
+          "Last updated (UTC): " + data.updated_utc;
+
+        const content = document.getElementById("content");
+        content.innerHTML = "";
+
+        for (const [server, info] of Object.entries(data.servers)) {
+          const box = document.createElement("div");
+          box.className = "server";
+
+          let html = `<h2>${server}</h2>`;
+
+          if (info.status !== "ok") {
+            html += "<p>Unavailable</p>";
+          } else {
+            for (const gpu of info.gpus) {
+              html += `
+                <div class="gpu ${gpu.state}">
+                  GPU ${gpu.index} | ${gpu.name} |
+                  ${gpu.used_mib} / ${gpu.total_mib} MiB |
+                  Util: ${gpu.util_percent}%
+                </div>
+              `;
+            }
+          }
+
+          box.innerHTML = html;
+          content.appendChild(box);
+        }
+      } catch (err) {
+        document.getElementById("content").innerHTML =
+          "<p>Could not load gpu_status.json</p>";
+      }
+    }
+  </script>
+</body>
+</html>
