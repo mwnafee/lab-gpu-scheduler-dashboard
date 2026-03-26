@@ -1,5 +1,5 @@
 {
-  "updated_utc": "2026-03-26T17:37:52.888812+00:00",
+  "updated_utc": "2026-03-26T17:38:42.434294+00:00",
   "servers": {
     "axis0": {
       "status": "ok",
@@ -10,7 +10,7 @@
           "name": "NVIDIA TITAN RTX",
           "used_mib": 9924,
           "total_mib": 24576,
-          "util_percent": 99,
+          "util_percent": 98,
           "state": "mid",
           "processes": [
             {
@@ -139,7 +139,7 @@
           "processes": [
             {
               "pid": "2559431",
-              "user": "unknown",
+              "user": "manikm",
               "name": "VLLM::Worker_TP3",
               "used_mib": 74064
             }
@@ -175,8 +175,43 @@
       ]
     },
     "h100-litjan2024": {
-      "status": "unreachable",
-      "gpus": []
+      "status": "ok",
+      "gpus": [
+        {
+          "index": "0",
+          "uuid": "GPU-51f4c93c-f581-bc5d-b66f-4bb8a664c3e7",
+          "name": "NVIDIA H100 PCIe",
+          "used_mib": 69315,
+          "total_mib": 81559,
+          "util_percent": 0,
+          "state": "busy",
+          "processes": [
+            {
+              "pid": "1263394",
+              "user": "islamm11",
+              "name": "VLLM::Worker_TP0",
+              "used_mib": 69306
+            }
+          ]
+        },
+        {
+          "index": "1",
+          "uuid": "GPU-cbf8c219-f716-c2e7-0fa0-943605bdd357",
+          "name": "NVIDIA H100 PCIe",
+          "used_mib": 69315,
+          "total_mib": 81559,
+          "util_percent": 0,
+          "state": "busy",
+          "processes": [
+            {
+              "pid": "1263395",
+              "user": "islamm11",
+              "name": "VLLM::Worker_TP1",
+              "used_mib": 69306
+            }
+          ]
+        }
+      ]
     },
     "deeprecon": {
       "status": "ok",
