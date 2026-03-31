@@ -1,5 +1,5 @@
 {
-  "updated_utc": "2026-03-31T15:48:45.220227+00:00",
+  "updated_utc": "2026-03-31T15:49:26.839444+00:00",
   "servers": {
     "axis0": {
       "status": "ok",
@@ -27,8 +27,151 @@
       ]
     },
     "axis2": {
-      "status": "unreachable",
-      "gpus": []
+      "status": "ok",
+      "gpus": [
+        {
+          "index": "0",
+          "uuid": "GPU-4fe8d37d-e43a-e90a-62ab-b8b2d654a66b",
+          "name": "NVIDIA H100 80GB HBM3",
+          "used_mib": 74184,
+          "total_mib": 81559,
+          "util_percent": 0,
+          "state": "busy",
+          "processes": [
+            {
+              "pid": "260570",
+              "user": "manikm",
+              "name": "VLLM::EngineCore",
+              "used_mib": 74174
+            }
+          ]
+        },
+        {
+          "index": "1",
+          "uuid": "GPU-8a4650f4-6932-3e75-006b-f71194335d7e",
+          "name": "NVIDIA H100 80GB HBM3",
+          "used_mib": 66578,
+          "total_mib": 81559,
+          "util_percent": 0,
+          "state": "busy",
+          "processes": [
+            {
+              "pid": "2179273",
+              "user": "manikm",
+              "name": "VLLM::EngineCore",
+              "used_mib": 66568
+            }
+          ]
+        },
+        {
+          "index": "2",
+          "uuid": "GPU-9291d44c-11e1-33ed-b66a-82bb7f7483db",
+          "name": "NVIDIA H100 80GB HBM3",
+          "used_mib": 78912,
+          "total_mib": 81559,
+          "util_percent": 0,
+          "state": "busy",
+          "processes": [
+            {
+              "pid": "261558",
+              "user": "manikm",
+              "name": "VLLM::Worker_TP0",
+              "used_mib": 78902
+            }
+          ]
+        },
+        {
+          "index": "3",
+          "uuid": "GPU-4ee2f4c3-c97f-ad4f-1016-d0c4d1a98c4e",
+          "name": "NVIDIA H100 80GB HBM3",
+          "used_mib": 78912,
+          "total_mib": 81559,
+          "util_percent": 0,
+          "state": "busy",
+          "processes": [
+            {
+              "pid": "261559",
+              "user": "manikm",
+              "name": "VLLM::Worker_TP1",
+              "used_mib": 78902
+            }
+          ]
+        },
+        {
+          "index": "4",
+          "uuid": "GPU-f1222c01-2dcf-eaa5-7135-476ef280c166",
+          "name": "NVIDIA H100 80GB HBM3",
+          "used_mib": 78912,
+          "total_mib": 81559,
+          "util_percent": 0,
+          "state": "busy",
+          "processes": [
+            {
+              "pid": "261560",
+              "user": "manikm",
+              "name": "VLLM::Worker_TP2",
+              "used_mib": 78902
+            }
+          ]
+        },
+        {
+          "index": "5",
+          "uuid": "GPU-91867a7a-5e49-8049-fa35-3df1467e5c15",
+          "name": "NVIDIA H100 80GB HBM3",
+          "used_mib": 78912,
+          "total_mib": 81559,
+          "util_percent": 0,
+          "state": "busy",
+          "processes": [
+            {
+              "pid": "261561",
+              "user": "manikm",
+              "name": "VLLM::Worker_TP3",
+              "used_mib": 78902
+            }
+          ]
+        },
+        {
+          "index": "6",
+          "uuid": "GPU-652d5b3f-b16c-c486-1844-8a66b427c1a9",
+          "name": "NVIDIA H100 80GB HBM3",
+          "used_mib": 54200,
+          "total_mib": 81559,
+          "util_percent": 0,
+          "state": "mid",
+          "processes": [
+            {
+              "pid": "1391546",
+              "user": "liangy15",
+              "name": "python",
+              "used_mib": 54182
+            }
+          ]
+        },
+        {
+          "index": "7",
+          "uuid": "GPU-c3e858c3-04bb-b607-4d99-98502d0bfef5",
+          "name": "NVIDIA H100 80GB HBM3",
+          "used_mib": 80551,
+          "total_mib": 81559,
+          "util_percent": 100,
+          "state": "busy",
+          "processes": [
+            {
+              "pid": "618081",
+              "user": "wangj68",
+              "name": "python",
+              "used_mib": 72518
+            },
+            {
+              "pid": "621532",
+              "user": "wangj68",
+              "name": "/home/wangj68/anaconda3/envs/drifting/bin/python3.10",
+              "used_mib": 8012
+            }
+          ]
+        }
+      ]
     },
     "h100-litjan2024": {
       "status": "ok",
