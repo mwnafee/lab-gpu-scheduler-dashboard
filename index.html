@@ -2,238 +2,97 @@
 <html>
 <head>
   <meta charset="UTF-8">
-  <title>Lab GPU Dashboard</title>
-  <style>
-    body {
-      font-family: Arial, sans-serif;
-      background: #111;
-      color: #eee;
-      margin: 0;
-      padding: 30px;
-      text-align: center;
-    }
-
-    #loginBox, #dashboard {
-      max-width: 1100px;
-      margin: 0 auto;
-    }
-
-    #dashboard {
-      display: none;
-    }
-
-    h1 {
-      margin-bottom: 10px;
-    }
-
-    #updated {
-      margin-bottom: 20px;
-      color: #bbb;
-    }
-
-    .server {
-      margin: 24px 0;
-      padding: 16px;
-      border: 1px solid #333;
-      border-radius: 12px;
-      text-align: left;
-      background: #181818;
-    }
-
-    .server h2 {
-      margin-top: 0;
-    }
-
-    .gpu {
-      padding: 12px;
-      margin: 10px 0;
-      border-radius: 10px;
-    }
-
-    .free { background: #1f6f1f; }
-    .mid  { background: #8a6d00; }
-    .busy { background: #8b1a1a; }
-
-    .gpu-top {
-      font-weight: bold;
-      margin-bottom: 8px;
-    }
-
-    .gpu-sub {
-      font-size: 14px;
-      color: #f0f0f0;
-      margin-bottom: 8px;
-    }
-
-    .proc-list {
-      margin-top: 8px;
-      padding-left: 18px;
-    }
-
-    .proc-item {
-      margin: 4px 0;
-      font-size: 14px;
-    }
-
-    .no-proc {
-      font-size: 14px;
-      color: #ddd;
-      font-style: italic;
-    }
-
-    input[type="password"] {
-      padding: 10px;
-      width: 220px;
-      font-size: 16px;
-    }
-
-    button {
-      padding: 10px 16px;
-      font-size: 16px;
-      cursor: pointer;
-      margin-left: 8px;
-    }
-
-    #error {
-      color: #ff7b7b;
-      margin-top: 10px;
-    }
-
-    .summary {
-      margin: 20px 0;
-      padding: 14px;
-      border: 1px solid #333;
-      border-radius: 12px;
-      background: #181818;
-      text-align: left;
-    }
-
-    .summary h2 {
-      margin-top: 0;
-    }
-  </style>
+  <title>Lab GPU Scheduler Dashboard</title>
+  <link rel="stylesheet" href="scheduler.css">
 </head>
 <body>
   <div id="loginBox">
-    <h1>Lab GPU Dashboard</h1>
+    <h1>Lab GPU Scheduler Dashboard</h1>
     <p>Enter shared password</p>
     <input type="password" id="pw" placeholder="Password">
     <button onclick="checkPassword()">Enter</button>
     <div id="error"></div>
   </div>
 
-  <div id="dashboard">
-    <h1>Lab GPU Dashboard</h1>
+  <div id="app">
+    <h1>Lab GPU Scheduler Dashboard</h1>
     <div id="updated"></div>
-    <div id="summary" class="summary"></div>
-    <div id="content"></div>
+
+    <div class="tabs">
+      <button class="tab active" data-view="dashboardView">GPU Dashboard</button>
+      <button class="tab" data-view="schedulerView">GPU Scheduler</button>
+    </div>
+
+    <div id="dashboardView" class="view active">
+      <div id="summary" class="summary"></div>
+      <div id="content"></div>
+    </div>
+
+    <div id="schedulerView" class="view">
+      <div class="booking-layout">
+        <div class="booking-panel">
+          <h2>Create Booking</h2>
+          <div class="field">
+            <label for="displayName">Display Name</label>
+            <input id="displayName" placeholder="Mahmud Wasif Nafee">
+          </div>
+          <div class="field">
+            <label for="rpiId">RCS ID</label>
+            <input id="rpiId" placeholder="nafeem">
+          </div>
+          <div class="field">
+            <label for="gpuSelect">GPU</label>
+            <select id="gpuSelect"></select>
+          </div>
+          <div class="form-grid">
+            <div class="field">
+              <label for="startDay">Start Day</label>
+              <select id="startDay"></select>
+            </div>
+            <div class="field">
+              <label for="startHour">Start Hour</label>
+              <select id="startHour"></select>
+            </div>
+            <div class="field">
+              <label for="endDay">End Day</label>
+              <select id="endDay"></select>
+            </div>
+            <div class="field">
+              <label for="endHour">End Hour</label>
+              <select id="endHour"></select>
+            </div>
+          </div>
+          <button class="primary" id="createBookingBtn">Create Booking</button>
+          <div class="booking-hint" id="bookingHint"></div>
+          <div id="bookingMessage"></div>
+
+          <div class="booking-panel selected-box">
+            <h3>Selected Booking</h3>
+            <div id="selectedBookingInfo" class="selected-note">Click any booked cell to select it for removal.</div>
+            <button class="danger" id="removeBookingBtn" disabled>Remove Selected Booking</button>
+          </div>
+        </div>
+
+        <div class="booking-grid-wrap">
+          <div class="toolbar">
+            <div>
+              <h2>7-Day Booking Grid</h2>
+              <div class="selected-note">Frontend-only scheduler stored in this browser. It keeps bookings locally on this machine, but they are not shared across different browsers or machines.</div>
+            </div>
+            <div class="field field-compact">
+              <label for="gridGpuSelect">Viewing GPU</label>
+              <select id="gridGpuSelect"></select>
+            </div>
+          </div>
+          <table>
+            <thead id="bookingGridHead"></thead>
+            <tbody id="bookingGridBody"></tbody>
+          </table>
+        </div>
+      </div>
+    </div>
   </div>
 
-  <script>
-    const PASSWORD = "labgpu123";
-
-    function checkPassword() {
-      const input = document.getElementById("pw").value;
-      const error = document.getElementById("error");
-
-      if (input === PASSWORD) {
-        document.getElementById("loginBox").style.display = "none";
-        document.getElementById("dashboard").style.display = "block";
-        loadStatus();
-        setInterval(loadStatus, 5000);
-      } else {
-        error.innerText = "Wrong password";
-      }
-    }
-
-    function makeSummary(data) {
-      let freeItems = [];
-
-      for (const [server, info] of Object.entries(data.servers)) {
-        if (info.status !== "ok") continue;
-
-        for (const gpu of info.gpus) {
-          if (gpu.state === "free") {
-            freeItems.push(`${server} → GPU ${gpu.index}`);
-          }
-        }
-      }
-
-      const summary = document.getElementById("summary");
-
-      if (freeItems.length === 0) {
-        summary.innerHTML = `
-          <h2>Free GPUs</h2>
-          <div>No clearly free GPUs right now.</div>
-        `;
-      } else {
-        summary.innerHTML = `
-          <h2>Free GPUs</h2>
-          <div>${freeItems.join("<br>")}</div>
-        `;
-      }
-    }
-
-    async function loadStatus() {
-      try {
-        const res = await fetch("gpu_status.json?t=" + Date.now());
-        const data = await res.json();
-
-        document.getElementById("updated").innerText =
-          "Last updated (UTC): " + data.updated_utc;
-
-        makeSummary(data);
-
-        const content = document.getElementById("content");
-        content.innerHTML = "";
-
-        for (const [server, info] of Object.entries(data.servers)) {
-          const box = document.createElement("div");
-          box.className = "server";
-
-          let html = `<h2>${server}</h2>`;
-
-          if (info.status !== "ok") {
-            html += "<p>Unavailable</p>";
-          } else {
-            for (const gpu of info.gpus) {
-              html += `
-                <div class="gpu ${gpu.state}">
-                  <div class="gpu-top">
-                    GPU ${gpu.index} | ${gpu.name} | ${gpu.state.toUpperCase()}
-                  </div>
-                  <div class="gpu-sub">
-                    Memory: ${gpu.used_mib} / ${gpu.total_mib} MiB |
-                    Utilization: ${gpu.util_percent}%
-                  </div>
-              `;
-
-              if (gpu.processes && gpu.processes.length > 0) {
-                html += `<div><strong>Processes</strong></div><div class="proc-list">`;
-                for (const proc of gpu.processes) {
-                  html += `
-                    <div class="proc-item">
-                      ${proc.user} | PID ${proc.pid} | ${proc.name} | ${proc.used_mib} MiB
-                    </div>
-                  `;
-                }
-                html += `</div>`;
-              } else {
-                html += `<div class="no-proc">No active compute processes listed.</div>`;
-              }
-
-              html += `</div>`;
-            }
-          }
-
-          box.innerHTML = html;
-          content.appendChild(box);
-        }
-      } catch (err) {
-        document.getElementById("content").innerHTML =
-          "<p>Could not load gpu_status.json</p>";
-      }
-    }
-  </script>
+  <script src="scheduler.js"></script>
 </body>
 </html>
