@@ -1,5 +1,5 @@
 {
-  "updated_utc": "2026-04-14T18:55:43.840606+00:00",
+  "updated_utc": "2026-04-14T18:57:01.452370+00:00",
   "servers": {
     "axis0": {
       "status": "ok",
@@ -35,9 +35,22 @@
           "name": "NVIDIA RTX A5000",
           "used_mib": 5377,
           "total_mib": 24564,
-          "util_percent": 0,
+          "util_percent": 22,
           "state": "mid",
-          "processes": []
+          "processes": [
+            {
+              "pid": "1690563",
+              "user": "nafeem",
+              "name": "/scratch/nafeem/conda_envs/resshift_gray_clean/bin/python3.11",
+              "used_mib": 766
+            },
+            {
+              "pid": "1735905",
+              "user": "nafeem",
+              "name": "/scratch/nafeem/conda_envs/resshift_gray_clean/bin/python3.11",
+              "used_mib": 4608
+            }
+          ]
         },
         {
           "index": "1",
@@ -209,14 +222,7 @@
           "total_mib": 81559,
           "util_percent": 0,
           "state": "busy",
-          "processes": [
-            {
-              "pid": "412008",
-              "user": "islamm11",
-              "name": "VLLM::EngineCore",
-              "used_mib": 70808
-            }
-          ]
+          "processes": []
         },
         {
           "index": "1",
@@ -226,14 +232,7 @@
           "total_mib": 81559,
           "util_percent": 0,
           "state": "mid",
-          "processes": [
-            {
-              "pid": "411690",
-              "user": "islamm11",
-              "name": "python3",
-              "used_mib": 18018
-            }
-          ]
+          "processes": []
         }
       ]
     },
