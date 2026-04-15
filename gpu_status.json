@@ -1,5 +1,5 @@
 {
-  "updated_utc": "2026-04-15T04:50:07.429275+00:00",
+  "updated_utc": "2026-04-15T04:51:19.974475+00:00",
   "servers": {
     "axis0": {
       "status": "ok",
@@ -35,7 +35,7 @@
           "name": "NVIDIA RTX A5000",
           "used_mib": 5381,
           "total_mib": 24564,
-          "util_percent": 31,
+          "util_percent": 32,
           "state": "mid",
           "processes": [
             {
@@ -110,7 +110,7 @@
           "name": "NVIDIA H100 80GB HBM3",
           "used_mib": 28966,
           "total_mib": 81559,
-          "util_percent": 83,
+          "util_percent": 84,
           "state": "mid",
           "processes": [
             {
@@ -195,7 +195,7 @@
           "name": "NVIDIA H100 80GB HBM3",
           "used_mib": 36888,
           "total_mib": 81559,
-          "util_percent": 29,
+          "util_percent": 36,
           "state": "mid",
           "processes": [
             {
@@ -232,17 +232,24 @@
           "index": "0",
           "uuid": "GPU-51f4c93c-f581-bc5d-b66f-4bb8a664c3e7",
           "name": "NVIDIA H100 PCIe",
-          "used_mib": 0,
+          "used_mib": 74783,
           "total_mib": 81559,
           "util_percent": 0,
-          "state": "free",
-          "processes": []
+          "state": "busy",
+          "processes": [
+            {
+              "pid": "2317866",
+              "user": "islamm11",
+              "name": "VLLM::EngineCore",
+              "used_mib": 74774
+            }
+          ]
         },
         {
           "index": "1",
           "uuid": "GPU-cbf8c219-f716-c2e7-0fa0-943605bdd357",
           "name": "NVIDIA H100 PCIe",
-          "used_mib": 0,
+          "used_mib": 4,
           "total_mib": 81559,
           "util_percent": 0,
           "state": "free",
