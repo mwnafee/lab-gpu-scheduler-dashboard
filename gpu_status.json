@@ -1,30 +1,9 @@
 {
-  "updated_utc": "2026-04-28T09:18:18.469834+00:00",
+  "updated_utc": "2026-04-28T09:19:38.106776+00:00",
   "servers": {
     "axis0": {
-      "status": "ok",
-      "gpus": [
-        {
-          "index": "0",
-          "uuid": "GPU-5edd8cf7-a71e-4a7f-77be-8a5673dbb2f0",
-          "name": "NVIDIA TITAN RTX",
-          "used_mib": 1,
-          "total_mib": 24576,
-          "util_percent": 0,
-          "state": "free",
-          "processes": []
-        },
-        {
-          "index": "1",
-          "uuid": "GPU-442af73e-8628-b195-83b2-7506add343dc",
-          "name": "NVIDIA TITAN RTX",
-          "used_mib": 1,
-          "total_mib": 24576,
-          "util_percent": 0,
-          "state": "free",
-          "processes": []
-        }
-      ]
+      "status": "unreachable",
+      "gpus": []
     },
     "axis1": {
       "status": "ok",
@@ -45,7 +24,7 @@
           "name": "NVIDIA RTX A5000",
           "used_mib": 5209,
           "total_mib": 24564,
-          "util_percent": 32,
+          "util_percent": 25,
           "state": "mid",
           "processes": [
             {
@@ -109,7 +88,14 @@
           "total_mib": 81559,
           "util_percent": 0,
           "state": "busy",
-          "processes": []
+          "processes": [
+            {
+              "pid": "3933985",
+              "user": "manikm",
+              "name": "VLLM::Worker_TP0",
+              "used_mib": 77532
+            }
+          ]
         },
         {
           "index": "3",
@@ -119,7 +105,14 @@
           "total_mib": 81559,
           "util_percent": 0,
           "state": "busy",
-          "processes": []
+          "processes": [
+            {
+              "pid": "3933986",
+              "user": "manikm",
+              "name": "VLLM::Worker_TP1",
+              "used_mib": 77530
+            }
+          ]
         },
         {
           "index": "4",
@@ -129,7 +122,14 @@
           "total_mib": 81559,
           "util_percent": 0,
           "state": "busy",
-          "processes": []
+          "processes": [
+            {
+              "pid": "3933987",
+              "user": "manikm",
+              "name": "VLLM::Worker_TP2",
+              "used_mib": 77530
+            }
+          ]
         },
         {
           "index": "5",
@@ -149,7 +149,14 @@
           "total_mib": 81559,
           "util_percent": 0,
           "state": "busy",
-          "processes": []
+          "processes": [
+            {
+              "pid": "3933988",
+              "user": "manikm",
+              "name": "VLLM::Worker_TP3",
+              "used_mib": 77530
+            }
+          ]
         },
         {
           "index": "7",
@@ -159,7 +166,14 @@
           "total_mib": 81559,
           "util_percent": 0,
           "state": "busy",
-          "processes": []
+          "processes": [
+            {
+              "pid": "3936892",
+              "user": "manikm",
+              "name": "VLLM::EngineCore",
+              "used_mib": 74172
+            }
+          ]
         }
       ]
     },
