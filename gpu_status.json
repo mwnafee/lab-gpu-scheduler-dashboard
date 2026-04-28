@@ -1,5 +1,5 @@
 {
-  "updated_utc": "2026-04-28T19:30:09.756683+00:00",
+  "updated_utc": "2026-04-28T19:31:20.772890+00:00",
   "servers": {
     "axis0": {
       "status": "ok",
@@ -33,11 +33,18 @@
           "index": "0",
           "uuid": "GPU-0274ace2-6972-5b39-b19e-20424e7bea6c",
           "name": "NVIDIA RTX A5000",
-          "used_mib": 1,
+          "used_mib": 4749,
           "total_mib": 24564,
-          "util_percent": 0,
-          "state": "free",
-          "processes": []
+          "util_percent": 50,
+          "state": "mid",
+          "processes": [
+            {
+              "pid": "1408212",
+              "user": "nafeem",
+              "name": "/scratch/nafeem/conda_envs/resshift_gray_clean/bin/python3.11",
+              "used_mib": 4746
+            }
+          ]
         },
         {
           "index": "1",
@@ -45,7 +52,7 @@
           "name": "NVIDIA RTX A5000",
           "used_mib": 5209,
           "total_mib": 24564,
-          "util_percent": 25,
+          "util_percent": 26,
           "state": "mid",
           "processes": [
             {
@@ -95,16 +102,16 @@
           "index": "1",
           "uuid": "GPU-8a4650f4-6932-3e75-006b-f71194335d7e",
           "name": "NVIDIA H100 80GB HBM3",
-          "used_mib": 74618,
+          "used_mib": 74600,
           "total_mib": 81559,
           "util_percent": 100,
           "state": "busy",
           "processes": [
             {
-              "pid": "2090231",
+              "pid": "2162511",
               "user": "manikm",
               "name": "VLLM::EngineCore",
-              "used_mib": 74608
+              "used_mib": 74588
             }
           ]
         },
