@@ -1,30 +1,9 @@
 {
-  "updated_utc": "2026-04-28T15:00:15.400500+00:00",
+  "updated_utc": "2026-04-28T15:01:37.423198+00:00",
   "servers": {
     "axis0": {
-      "status": "ok",
-      "gpus": [
-        {
-          "index": "0",
-          "uuid": "GPU-5edd8cf7-a71e-4a7f-77be-8a5673dbb2f0",
-          "name": "NVIDIA TITAN RTX",
-          "used_mib": 1,
-          "total_mib": 24576,
-          "util_percent": 0,
-          "state": "free",
-          "processes": []
-        },
-        {
-          "index": "1",
-          "uuid": "GPU-442af73e-8628-b195-83b2-7506add343dc",
-          "name": "NVIDIA TITAN RTX",
-          "used_mib": 1,
-          "total_mib": 24576,
-          "util_percent": 0,
-          "state": "free",
-          "processes": []
-        }
-      ]
+      "status": "unreachable",
+      "gpus": []
     },
     "axis1": {
       "status": "ok",
@@ -45,7 +24,7 @@
           "name": "NVIDIA RTX A5000",
           "used_mib": 5209,
           "total_mib": 24564,
-          "util_percent": 28,
+          "util_percent": 24,
           "state": "mid",
           "processes": [
             {
@@ -107,9 +86,16 @@
           "name": "NVIDIA H100 80GB HBM3",
           "used_mib": 77542,
           "total_mib": 81559,
-          "util_percent": 56,
+          "util_percent": 100,
           "state": "busy",
-          "processes": []
+          "processes": [
+            {
+              "pid": "3933985",
+              "user": "manikm",
+              "name": "VLLM::Worker_TP0",
+              "used_mib": 77532
+            }
+          ]
         },
         {
           "index": "3",
@@ -117,9 +103,16 @@
           "name": "NVIDIA H100 80GB HBM3",
           "used_mib": 77540,
           "total_mib": 81559,
-          "util_percent": 80,
+          "util_percent": 100,
           "state": "busy",
-          "processes": []
+          "processes": [
+            {
+              "pid": "3933986",
+              "user": "manikm",
+              "name": "VLLM::Worker_TP1",
+              "used_mib": 77530
+            }
+          ]
         },
         {
           "index": "4",
@@ -127,9 +120,16 @@
           "name": "NVIDIA H100 80GB HBM3",
           "used_mib": 77540,
           "total_mib": 81559,
-          "util_percent": 60,
+          "util_percent": 100,
           "state": "busy",
-          "processes": []
+          "processes": [
+            {
+              "pid": "3933987",
+              "user": "manikm",
+              "name": "VLLM::Worker_TP2",
+              "used_mib": 77530
+            }
+          ]
         },
         {
           "index": "5",
@@ -147,9 +147,16 @@
           "name": "NVIDIA H100 80GB HBM3",
           "used_mib": 77542,
           "total_mib": 81559,
-          "util_percent": 73,
+          "util_percent": 100,
           "state": "busy",
-          "processes": []
+          "processes": [
+            {
+              "pid": "3933988",
+              "user": "manikm",
+              "name": "VLLM::Worker_TP3",
+              "used_mib": 77532
+            }
+          ]
         },
         {
           "index": "7",
@@ -159,7 +166,14 @@
           "total_mib": 81559,
           "util_percent": 0,
           "state": "busy",
-          "processes": []
+          "processes": [
+            {
+              "pid": "3936892",
+              "user": "manikm",
+              "name": "VLLM::EngineCore",
+              "used_mib": 74172
+            }
+          ]
         }
       ]
     },
