@@ -1,9 +1,37 @@
 {
-  "updated_utc": "2026-05-04T23:05:35.853194+00:00",
+  "updated_utc": "2026-05-04T23:06:59.720253+00:00",
   "servers": {
     "axis0": {
-      "status": "unreachable",
-      "gpus": []
+      "status": "ok",
+      "gpus": [
+        {
+          "index": "0",
+          "uuid": "GPU-5edd8cf7-a71e-4a7f-77be-8a5673dbb2f0",
+          "name": "NVIDIA TITAN RTX",
+          "used_mib": 6014,
+          "total_mib": 24576,
+          "util_percent": 0,
+          "state": "mid",
+          "processes": [
+            {
+              "pid": "1453117",
+              "user": "/home/nafeem/.bashrc: line 1: /data/nafeem/cellseg_env/bin/activate: No such file or directory\nmanikm",
+              "name": "python3",
+              "used_mib": 6010
+            }
+          ]
+        },
+        {
+          "index": "1",
+          "uuid": "GPU-442af73e-8628-b195-83b2-7506add343dc",
+          "name": "NVIDIA TITAN RTX",
+          "used_mib": 1,
+          "total_mib": 24576,
+          "util_percent": 0,
+          "state": "free",
+          "processes": []
+        }
+      ]
     },
     "axis1": {
       "status": "ok",
@@ -57,16 +85,16 @@
           "index": "0",
           "uuid": "GPU-4fe8d37d-e43a-e90a-62ab-b8b2d654a66b",
           "name": "NVIDIA H100 80GB HBM3",
-          "used_mib": 8156,
+          "used_mib": 74346,
           "total_mib": 81559,
-          "util_percent": 0,
-          "state": "mid",
+          "util_percent": 100,
+          "state": "busy",
           "processes": [
             {
               "pid": "1664049",
               "user": "manikm",
               "name": "VLLM::EngineCore",
-              "used_mib": 8146
+              "used_mib": 74336
             }
           ]
         },
@@ -76,11 +104,11 @@
           "name": "NVIDIA H100 80GB HBM3",
           "used_mib": 2432,
           "total_mib": 81559,
-          "util_percent": 41,
+          "util_percent": 48,
           "state": "free",
           "processes": [
             {
-              "pid": "1662670",
+              "pid": "1665132",
               "user": "wangj68",
               "name": "python",
               "used_mib": 2422
@@ -175,7 +203,7 @@
           "name": "NVIDIA H100 PCIe",
           "used_mib": 64843,
           "total_mib": 81559,
-          "util_percent": 96,
+          "util_percent": 86,
           "state": "mid",
           "processes": [
             {
