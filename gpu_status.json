@@ -1,9 +1,37 @@
 {
-  "updated_utc": "2026-05-05T12:37:52.326791+00:00",
+  "updated_utc": "2026-05-05T12:39:08.181676+00:00",
   "servers": {
     "axis0": {
-      "status": "unreachable",
-      "gpus": []
+      "status": "ok",
+      "gpus": [
+        {
+          "index": "0",
+          "uuid": "GPU-5edd8cf7-a71e-4a7f-77be-8a5673dbb2f0",
+          "name": "NVIDIA TITAN RTX",
+          "used_mib": 6014,
+          "total_mib": 24576,
+          "util_percent": 0,
+          "state": "mid",
+          "processes": [
+            {
+              "pid": "1453117",
+              "user": "/home/nafeem/.bashrc: line 1: /data/nafeem/cellseg_env/bin/activate: No such file or directory\nmanikm",
+              "name": "python3",
+              "used_mib": 6010
+            }
+          ]
+        },
+        {
+          "index": "1",
+          "uuid": "GPU-442af73e-8628-b195-83b2-7506add343dc",
+          "name": "NVIDIA TITAN RTX",
+          "used_mib": 1,
+          "total_mib": 24576,
+          "util_percent": 0,
+          "state": "free",
+          "processes": []
+        }
+      ]
     },
     "axis1": {
       "status": "ok",
@@ -59,16 +87,9 @@
           "name": "NVIDIA H100 80GB HBM3",
           "used_mib": 61046,
           "total_mib": 81559,
-          "util_percent": 48,
+          "util_percent": 47,
           "state": "mid",
-          "processes": [
-            {
-              "pid": "2398836",
-              "user": "manikm",
-              "name": "python",
-              "used_mib": 61036
-            }
-          ]
+          "processes": []
         },
         {
           "index": "1",
@@ -168,7 +189,7 @@
           "name": "NVIDIA H100 PCIe",
           "used_mib": 64441,
           "total_mib": 81559,
-          "util_percent": 77,
+          "util_percent": 78,
           "state": "mid",
           "processes": [
             {
