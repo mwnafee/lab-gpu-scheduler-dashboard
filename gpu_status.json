@@ -1,5 +1,5 @@
 {
-  "updated_utc": "2026-05-06T23:25:26.664480+00:00",
+  "updated_utc": "2026-05-06T23:26:38.907916+00:00",
   "servers": {
     "axis0": {
       "status": "ok",
@@ -42,7 +42,7 @@
           "name": "NVIDIA RTX A5000",
           "used_mib": 5239,
           "total_mib": 24564,
-          "util_percent": 23,
+          "util_percent": 22,
           "state": "mid",
           "processes": [
             {
@@ -59,7 +59,7 @@
           "name": "NVIDIA RTX A5000",
           "used_mib": 5239,
           "total_mib": 24564,
-          "util_percent": 22,
+          "util_percent": 26,
           "state": "mid",
           "processes": [
             {
@@ -178,8 +178,43 @@
       ]
     },
     "h100-litjan2024": {
-      "status": "unreachable",
-      "gpus": []
+      "status": "ok",
+      "gpus": [
+        {
+          "index": "0",
+          "uuid": "GPU-51f4c93c-f581-bc5d-b66f-4bb8a664c3e7",
+          "name": "NVIDIA H100 PCIe",
+          "used_mib": 70817,
+          "total_mib": 81559,
+          "util_percent": 0,
+          "state": "busy",
+          "processes": [
+            {
+              "pid": "1833423",
+              "user": "islamm11",
+              "name": "VLLM::EngineCore",
+              "used_mib": 70808
+            }
+          ]
+        },
+        {
+          "index": "1",
+          "uuid": "GPU-cbf8c219-f716-c2e7-0fa0-943605bdd357",
+          "name": "NVIDIA H100 PCIe",
+          "used_mib": 74849,
+          "total_mib": 81559,
+          "util_percent": 96,
+          "state": "busy",
+          "processes": [
+            {
+              "pid": "358061",
+              "user": "manikm",
+              "name": "/home/manikm/miniconda3/envs/clintrust_vllm/bin/python",
+              "used_mib": 74832
+            }
+          ]
+        }
+      ]
     },
     "deeprecon": {
       "status": "ok",
