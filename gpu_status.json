@@ -1,5 +1,5 @@
 {
-  "updated_utc": "2026-05-08T13:09:14.372149+00:00",
+  "updated_utc": "2026-05-08T13:10:24.828817+00:00",
   "servers": {
     "axis0": {
       "status": "ok",
@@ -34,49 +34,8 @@
       ]
     },
     "axis1": {
-      "status": "ok",
-      "gpus": [
-        {
-          "index": "0",
-          "uuid": "GPU-0274ace2-6972-5b39-b19e-20424e7bea6c",
-          "name": "NVIDIA RTX A5000",
-          "used_mib": 1,
-          "total_mib": 24564,
-          "util_percent": 0,
-          "state": "free",
-          "processes": []
-        },
-        {
-          "index": "1",
-          "uuid": "GPU-ea98594f-67ae-f02f-e199-ba2bbd25632e",
-          "name": "NVIDIA RTX A5000",
-          "used_mib": 1,
-          "total_mib": 24564,
-          "util_percent": 0,
-          "state": "free",
-          "processes": []
-        },
-        {
-          "index": "2",
-          "uuid": "GPU-37cea084-e348-fb23-50ad-db38c474ea65",
-          "name": "NVIDIA RTX A5000",
-          "used_mib": 1,
-          "total_mib": 24564,
-          "util_percent": 0,
-          "state": "free",
-          "processes": []
-        },
-        {
-          "index": "3",
-          "uuid": "GPU-d5c5ee02-067a-92a2-2129-166ed950fb4c",
-          "name": "NVIDIA RTX A5000",
-          "used_mib": 1,
-          "total_mib": 24564,
-          "util_percent": 0,
-          "state": "free",
-          "processes": []
-        }
-      ]
+      "status": "unreachable",
+      "gpus": []
     },
     "axis2": {
       "status": "ok",
@@ -102,11 +61,18 @@
           "index": "1",
           "uuid": "GPU-8a4650f4-6932-3e75-006b-f71194335d7e",
           "name": "NVIDIA H100 80GB HBM3",
-          "used_mib": 4,
+          "used_mib": 38698,
           "total_mib": 81559,
-          "util_percent": 0,
-          "state": "free",
-          "processes": []
+          "util_percent": 6,
+          "state": "mid",
+          "processes": [
+            {
+              "pid": "630193",
+              "user": "manikm",
+              "name": "python",
+              "used_mib": 44514
+            }
+          ]
         },
         {
           "index": "2",
@@ -180,11 +146,24 @@
           "index": "6",
           "uuid": "GPU-652d5b3f-b16c-c486-1844-8a66b427c1a9",
           "name": "NVIDIA H100 80GB HBM3",
-          "used_mib": 4,
+          "used_mib": 63943,
           "total_mib": 81559,
-          "util_percent": 0,
-          "state": "free",
-          "processes": []
+          "util_percent": 13,
+          "state": "mid",
+          "processes": [
+            {
+              "pid": "631680",
+              "user": "manikm",
+              "name": "python",
+              "used_mib": 63390
+            },
+            {
+              "pid": "632082",
+              "user": "unknown",
+              "name": "python",
+              "used_mib": 17318
+            }
+          ]
         },
         {
           "index": "7",
