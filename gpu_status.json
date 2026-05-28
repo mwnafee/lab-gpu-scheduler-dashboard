@@ -1,5 +1,5 @@
 {
-  "updated_utc": "2026-05-28T16:45:12.535160+00:00",
+  "updated_utc": "2026-05-28T16:46:21.055152+00:00",
   "servers": {
     "axis0": {
       "status": "ok",
@@ -54,11 +54,18 @@
           "index": "1",
           "uuid": "GPU-8a4650f4-6932-3e75-006b-f71194335d7e",
           "name": "NVIDIA H100 80GB HBM3",
-          "used_mib": 4,
+          "used_mib": 23,
           "total_mib": 81559,
           "util_percent": 0,
           "state": "free",
-          "processes": []
+          "processes": [
+            {
+              "pid": "115062",
+              "user": "manikm",
+              "name": "VLLM::EngineCore",
+              "used_mib": 772
+            }
+          ]
         },
         {
           "index": "2",
@@ -142,18 +149,11 @@
           "index": "7",
           "uuid": "GPU-c3e858c3-04bb-b607-4d99-98502d0bfef5",
           "name": "NVIDIA H100 80GB HBM3",
-          "used_mib": 4272,
+          "used_mib": 4,
           "total_mib": 81559,
           "util_percent": 0,
           "state": "free",
-          "processes": [
-            {
-              "pid": "112156",
-              "user": "manikm",
-              "name": "python",
-              "used_mib": 4260
-            }
-          ]
+          "processes": []
         }
       ]
     },
@@ -181,16 +181,16 @@
           "index": "1",
           "uuid": "GPU-cbf8c219-f716-c2e7-0fa0-943605bdd357",
           "name": "NVIDIA H100 PCIe",
-          "used_mib": 15433,
+          "used_mib": 15445,
           "total_mib": 81559,
-          "util_percent": 67,
+          "util_percent": 0,
           "state": "mid",
           "processes": [
             {
               "pid": "2610523",
               "user": "manikm",
               "name": "python",
-              "used_mib": 15424
+              "used_mib": 15436
             }
           ]
         }
