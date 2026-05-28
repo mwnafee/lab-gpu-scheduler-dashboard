@@ -57,12 +57,22 @@ h1, h2, h3 {
   display: block;
 }
 
-.server, .summary, .booking-panel, .booking-grid-wrap {
+.server, .summary, .booking-panel, .booking-grid-wrap, .ping-panel {
   margin: 20px 0;
   padding: 16px;
   border: 1px solid #333;
   border-radius: 12px;
   background: #181818;
+}
+
+.ping-grid {
+  display: grid;
+  grid-template-columns: repeat(4, minmax(160px, 1fr));
+  gap: 12px;
+}
+
+#sendPingBtn {
+  margin-left: 0;
 }
 
 .gpu {
@@ -144,7 +154,7 @@ button:disabled {
   cursor: not-allowed;
 }
 
-#error, #bookingMessage {
+#error, #bookingMessage, #pingMessage {
   color: #ff8b8b;
   margin-top: 10px;
   min-height: 20px;
@@ -264,6 +274,10 @@ td.booked-cell.selected {
 
 @media (max-width: 1000px) {
   .booking-layout {
+    grid-template-columns: 1fr;
+  }
+
+  .ping-grid {
     grid-template-columns: 1fr;
   }
 }

@@ -24,6 +24,29 @@
     </div>
 
     <div id="dashboardView" class="view active">
+      <div class="ping-panel">
+        <h2>Ping Admin</h2>
+        <div class="ping-grid">
+          <div class="field">
+            <label for="pingUser">Your name or RCS ID</label>
+            <input id="pingUser" placeholder="manikm">
+          </div>
+          <div class="field">
+            <label for="pingServer">Server</label>
+            <select id="pingServer"></select>
+          </div>
+          <div class="field">
+            <label for="pingIssue">Issue</label>
+            <input id="pingIssue" placeholder="GPU unavailable">
+          </div>
+          <div class="field">
+            <label for="pingNote">Optional note</label>
+            <input id="pingNote" placeholder="Short detail">
+          </div>
+        </div>
+        <button class="primary" id="sendPingBtn">Send Ping</button>
+        <div id="pingMessage"></div>
+      </div>
       <div id="summary" class="summary"></div>
       <div id="content"></div>
     </div>
@@ -93,6 +116,8 @@
     </div>
   </div>
 
+  <script src="https://cdn.jsdelivr.net/npm/@emailjs/browser@4/dist/email.min.js"></script>
+  <script src="scheduler-config.js"></script>
   <script src="scheduler.js"></script>
 </body>
 </html>

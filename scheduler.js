@@ -4,6 +4,7 @@ const WINDOW_DAYS = 7;
 const HOURS_PER_DAY = 24;
 const ALLOWED_IDS = ["nafeem", "wangj68"];
 const ADMIN_ID = "nafeem";
+const EMAILJS_CONFIG = window.SCHEDULER_CONFIG || {};
 
 const state = {
   statusData: null,
@@ -13,6 +14,8 @@ const state = {
   selectedBooking: null,
   today: new Date()
 };
+
+let emailjsReady = false;
 
 function loadBookings() {
   try {
@@ -35,6 +38,32 @@ function setBookingMessage(text, isSuccess) {
   const box = document.getElementById("bookingMessage");
   box.className = isSuccess ? "success" : "";
   box.innerText = text || "";
+}
+
+function setPingMessage(text, isSuccess) {
+  const box = document.getElementById("pingMessage");
+  box.className = isSuccess === true ? "success" : "";
+  box.innerText = text || "";
+}
+
+function hasEmailjsConfig() {
+  return Boolean(
+    window.emailjs &&
+    EMAILJS_CONFIG.emailjsPublicKey &&
+    EMAILJS_CONFIG.emailjsServiceId &&
+    EMAILJS_CONFIG.emailjsTemplateId
+  );
+}
+
+function initializeEmailjs() {
+  if (emailjsReady) return true;
+  if (!hasEmailjsConfig()) return false;
+
+  emailjs.init({
+    publicKey: EMAILJS_CONFIG.emailjsPublicKey
+  });
+  emailjsReady = true;
+  return true;
 }
 
 function switchView(viewId) {
@@ -152,6 +181,20 @@ function updateGpuList(data) {
   document.getElementById("gridGpuSelect").value = state.selectedGpuId;
 }
 
+function updatePingServerOptions(data) {
+  const select = document.getElementById("pingServer");
+  const current = select.value;
+  const servers = Object.keys(data.servers || {});
+
+  select.innerHTML = servers
+    .map((server) => `<option value="${server}">${server}</option>`)
+    .join("");
+
+  if (servers.includes(current)) {
+    select.value = current;
+  }
+}
+
 function renderDashboard(data) {
   const content = document.getElementById("content");
   content.innerHTML = "";
@@ -231,6 +274,7 @@ function initializeScheduler() {
   document.getElementById("rpiId").addEventListener("input", renderSelectedBooking);
   document.getElementById("createBookingBtn").addEventListener("click", createBooking);
   document.getElementById("removeBookingBtn").addEventListener("click", removeSelectedBooking);
+  document.getElementById("sendPingBtn").addEventListener("click", sendPing);
 
   document.getElementById("bookingGridBody").addEventListener("click", (event) => {
     const cell = event.target.closest(".booked-cell");
@@ -245,6 +289,43 @@ function initializeScheduler() {
   });
 
   renderSchedulerControls();
+}
+
+async function sendPing() {
+  const user = document.getElementById("pingUser").value.trim();
+  const server = document.getElementById("pingServer").value;
+  const issue = document.getElementById("pingIssue").value.trim();
+  const note = document.getElementById("pingNote").value.trim();
+  const button = document.getElementById("sendPingBtn");
+
+  if (!initializeEmailjs()) {
+    setPingMessage("EmailJS is not configured.", false);
+    return;
+  }
+
+  button.disabled = true;
+  setPingMessage("Sending ping...");
+
+  try {
+    await emailjs.send(
+      EMAILJS_CONFIG.emailjsServiceId,
+      EMAILJS_CONFIG.emailjsTemplateId,
+      {
+        user: user || "unknown",
+        server: server || "not specified",
+        issue: issue || "not specified",
+        note: note || "(none)",
+        time: new Date().toLocaleString(),
+        page: window.location.href
+      }
+    );
+
+    setPingMessage("Ping sent.", true);
+  } catch (error) {
+    setPingMessage(error.text || error.message || "Could not send ping.", false);
+  } finally {
+    button.disabled = false;
+  }
 }
 
 function renderSchedulerControls() {
@@ -498,6 +579,7 @@ async function loadStatus() {
 
     makeSummary(data);
     updateGpuList(data);
+    updatePingServerOptions(data);
     renderDashboard(data);
     renderBookingGrid();
   } catch (err) {
