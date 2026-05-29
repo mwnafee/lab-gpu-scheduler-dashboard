@@ -2,12 +2,12 @@
 <html>
 <head>
   <meta charset="UTF-8">
-  <title>Lab GPU Scheduler Dashboard</title>
+  <title>Lab GPU Dashboard</title>
   <link rel="stylesheet" href="scheduler.css">
 </head>
 <body>
   <div id="loginBox">
-    <h1>Lab GPU Scheduler Dashboard</h1>
+    <h1>Lab GPU Dashboard</h1>
     <p>Enter shared password</p>
     <input type="password" id="pw" placeholder="Password">
     <button onclick="checkPassword()">Enter</button>
@@ -15,104 +15,51 @@
   </div>
 
   <div id="app">
-    <h1>Lab GPU Scheduler Dashboard</h1>
+    <h1>Lab GPU Dashboard</h1>
     <div id="updated"></div>
 
-    <div class="tabs">
-      <button class="tab active" data-view="dashboardView">GPU Dashboard</button>
-      <button class="tab" data-view="schedulerView">GPU Scheduler</button>
-    </div>
-
-    <div id="dashboardView" class="view active">
-      <div class="ping-panel">
-        <h2>Ping Admin</h2>
-        <div class="ping-grid">
+    <div id="dashboardView">
+      <div class="request-panels">
+        <div class="request-panel">
+          <button class="primary request-action" id="sendSupportBtn">Ping for Support</button>
           <div class="field">
-            <label for="pingUser">Your name or RCS ID</label>
-            <input id="pingUser" placeholder="manikm">
+            <label for="supportUser">User</label>
+            <select id="supportUser"></select>
           </div>
           <div class="field">
-            <label for="pingServer">Server</label>
-            <select id="pingServer"></select>
+            <label for="supportServer">Server</label>
+            <select id="supportServer"></select>
           </div>
           <div class="field">
-            <label for="pingIssue">Issue</label>
-            <input id="pingIssue" placeholder="GPU unavailable">
+            <label for="supportIssue">Issue</label>
+            <select id="supportIssue">
+              <option value="Server unavailable">Server unavailable</option>
+              <option value="No storage">No storage</option>
+            </select>
           </div>
-          <div class="field">
-            <label for="pingNote">Optional note</label>
-            <input id="pingNote" placeholder="Short detail">
-          </div>
+          <div id="supportMessage"></div>
         </div>
-        <button class="primary" id="sendPingBtn">Send Ping</button>
-        <div id="pingMessage"></div>
+
+        <div class="request-panel">
+          <button class="primary request-action" id="sendFreeUpBtn">Ping to Free Up</button>
+          <div class="field">
+            <label for="freeUpUser">User</label>
+            <select id="freeUpUser"></select>
+          </div>
+          <div class="field">
+            <label for="freeUpServer">Server</label>
+            <select id="freeUpServer"></select>
+          </div>
+          <div class="field">
+            <label for="freeUpGpuCount">No. of GPUs</label>
+            <select id="freeUpGpuCount"></select>
+          </div>
+          <div id="freeUpMessage"></div>
+        </div>
       </div>
+
       <div id="summary" class="summary"></div>
       <div id="content"></div>
-    </div>
-
-    <div id="schedulerView" class="view">
-      <div class="booking-layout">
-        <div class="booking-panel">
-          <h2>Create Booking</h2>
-          <div class="field">
-            <label for="displayName">Display Name</label>
-            <input id="displayName" placeholder="Mahmud Wasif Nafee">
-          </div>
-          <div class="field">
-            <label for="rpiId">RCS ID</label>
-            <input id="rpiId" placeholder="nafeem">
-          </div>
-          <div class="field">
-            <label for="gpuSelect">GPU</label>
-            <select id="gpuSelect"></select>
-          </div>
-          <div class="form-grid">
-            <div class="field">
-              <label for="startDay">Start Day</label>
-              <select id="startDay"></select>
-            </div>
-            <div class="field">
-              <label for="startHour">Start Hour</label>
-              <select id="startHour"></select>
-            </div>
-            <div class="field">
-              <label for="endDay">End Day</label>
-              <select id="endDay"></select>
-            </div>
-            <div class="field">
-              <label for="endHour">End Hour</label>
-              <select id="endHour"></select>
-            </div>
-          </div>
-          <button class="primary" id="createBookingBtn">Create Booking</button>
-          <div class="booking-hint" id="bookingHint"></div>
-          <div id="bookingMessage"></div>
-
-          <div class="booking-panel selected-box">
-            <h3>Selected Booking</h3>
-            <div id="selectedBookingInfo" class="selected-note">Click any booked cell to select it for removal.</div>
-            <button class="danger" id="removeBookingBtn" disabled>Remove Selected Booking</button>
-          </div>
-        </div>
-
-        <div class="booking-grid-wrap">
-          <div class="toolbar">
-            <div>
-              <h2>7-Day Booking Grid</h2>
-              <div class="selected-note">Frontend-only scheduler stored in this browser. It keeps bookings locally on this machine, but they are not shared across different browsers or machines.</div>
-            </div>
-            <div class="field field-compact">
-              <label for="gridGpuSelect">Viewing GPU</label>
-              <select id="gridGpuSelect"></select>
-            </div>
-          </div>
-          <table>
-            <thead id="bookingGridHead"></thead>
-            <tbody id="bookingGridBody"></tbody>
-          </table>
-        </div>
-      </div>
     </div>
   </div>
 

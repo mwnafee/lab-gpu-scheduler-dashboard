@@ -1,5 +1,6 @@
 window.SCHEDULER_CONFIG = {
   emailjsPublicKey: "SXu04-JKtpZUf8NPb",
   emailjsServiceId: "service_arxizjv",
-  emailjsTemplateId: "template_b6gdjff"
+  supportTemplateId: "template_b6gdjff",
+  freeUpTemplateId: "template_756i22g"
 };
