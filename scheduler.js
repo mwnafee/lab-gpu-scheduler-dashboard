@@ -128,6 +128,70 @@ function makeSummary(data) {
   }
 }
 
+function formatBytes(bytes) {
+  const value = Number(bytes);
+  if (!Number.isFinite(value)) return "unknown";
+
+  const units = ["B", "K", "M", "G", "T", "P"];
+  let size = value;
+  let unitIndex = 0;
+
+  while (size >= 1024 && unitIndex < units.length - 1) {
+    size /= 1024;
+    unitIndex += 1;
+  }
+
+  const precision = unitIndex >= 3 ? 1 : 0;
+  return `${size.toFixed(precision)}${units[unitIndex]}`;
+}
+
+function renderStorageSummary(data) {
+  const box = document.getElementById("storageSummary");
+  const serverEntries = Object.entries(data.servers || {});
+  const panels = [];
+
+  for (const [server, info] of serverEntries) {
+    const storage = info.storage || [];
+    let rows = "";
+
+    if (storage.length === 0) {
+      rows = '<div class="storage-empty">No storage mount over 40G listed.</div>';
+    } else {
+      rows = storage.map((mount) => `
+        <div class="storage-row">
+          <div>
+            <div class="storage-mount">${escapeHtml(mount.mount)}</div>
+            <div class="storage-source">${escapeHtml(mount.source)}</div>
+          </div>
+          <div>${formatBytes(mount.size_bytes)}</div>
+          <div>${formatBytes(mount.used_bytes)}</div>
+          <div>${formatBytes(mount.avail_bytes)}</div>
+          <div>${escapeHtml(mount.use_percent)}</div>
+        </div>
+      `).join("");
+    }
+
+    panels.push(`
+      <div class="storage-server">
+        <h3>${escapeHtml(server)}</h3>
+        <div class="storage-header">
+          <div>Mount</div>
+          <div>Size</div>
+          <div>Used</div>
+          <div>Avail</div>
+          <div>Use</div>
+        </div>
+        ${rows}
+      </div>
+    `);
+  }
+
+  box.innerHTML = `
+    <h2>Storage</h2>
+    <div class="storage-grid">${panels.join("")}</div>
+  `;
+}
+
 function updateServerOptions(data) {
   const servers = Object.keys(data.servers || {});
   const options = makePlaceholder("server") + servers
@@ -315,6 +379,7 @@ async function loadStatus() {
       "Last updated (UTC): " + data.updated_utc;
 
     makeSummary(data);
+    renderStorageSummary(data);
     updateServerOptions(data);
     renderDashboard(data);
   } catch (err) {
