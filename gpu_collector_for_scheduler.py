@@ -23,6 +23,15 @@ EXCLUDED_FS_TYPES = {
     "configfs",
     "mqueue",
     "hugetlbfs",
+    "nfs",
+    "nfs4",
+    "cifs",
+    "smbfs",
+    "sshfs",
+    "fuse.sshfs",
+    "glusterfs",
+    "ceph",
+    "lustre",
 }
 
 GPU_QUERY = (
