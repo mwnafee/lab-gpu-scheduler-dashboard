@@ -1,5 +1,5 @@
 {
-  "updated_utc": "2026-06-12T19:09:12.677211+00:00",
+  "updated_utc": "2026-06-12T19:10:23.830429+00:00",
   "servers": {
     "axis0": {
       "status": "ok",
@@ -48,8 +48,8 @@
           "source": "/dev/nvme0n1p2",
           "mount": "/",
           "size_bytes": 75149131776,
-          "used_bytes": 34243076096,
-          "avail_bytes": 37062508544,
+          "used_bytes": 34243137536,
+          "avail_bytes": 37062447104,
           "use_percent": "49%",
           "fs_type": "ext4"
         }
@@ -122,8 +122,8 @@
           "source": "/dev/mapper/vg0-root",
           "mount": "/",
           "size_bytes": 67049664512,
-          "used_bytes": 39560712192,
-          "avail_bytes": 24036204544,
+          "used_bytes": 39560839168,
+          "avail_bytes": 24036077568,
           "use_percent": "63%",
           "fs_type": "ext4"
         }
@@ -271,8 +271,8 @@
           "source": "/dev/nvme0n1p3",
           "mount": "/",
           "size_bytes": 134145380352,
-          "used_bytes": 61296283648,
-          "avail_bytes": 65960374272,
+          "used_bytes": 61296525312,
+          "avail_bytes": 65960132608,
           "use_percent": "49%",
           "fs_type": "ext4"
         }
@@ -325,8 +325,8 @@
           "source": "/dev/sda4",
           "mount": "/",
           "size_bytes": 100861726720,
-          "used_bytes": 59800092672,
-          "avail_bytes": 35890896896,
+          "used_bytes": 59800203264,
+          "avail_bytes": 35890786304,
           "use_percent": "63%",
           "fs_type": "ext4"
         }
@@ -349,11 +349,18 @@
           "index": "1",
           "uuid": "GPU-1c1d2e93-fa30-47e7-14b0-b6b05746f754",
           "name": "NVIDIA GeForce GTX 1080 Ti",
-          "used_mib": 3,
+          "used_mib": 1695,
           "total_mib": 11264,
-          "util_percent": 0,
-          "state": "free",
-          "processes": []
+          "util_percent": 38,
+          "state": "mid",
+          "processes": [
+            {
+              "pid": "512082",
+              "user": "nafeem",
+              "name": "python",
+              "used_mib": 1690
+            }
+          ]
         },
         {
           "index": "2",
@@ -381,8 +388,8 @@
           "source": "/dev/sda2",
           "mount": "/data",
           "size_bytes": 15670141526016,
-          "used_bytes": 13774958768128,
-          "avail_bytes": 1105428926464,
+          "used_bytes": 13774958796800,
+          "avail_bytes": 1105428897792,
           "use_percent": "93%",
           "fs_type": "ext4"
         },
@@ -390,7 +397,7 @@
           "source": "/dev/sdb3",
           "mount": "/",
           "size_bytes": 469900591104,
-          "used_bytes": 448719806464,
+          "used_bytes": 448719892480,
           "avail_bytes": 0,
           "use_percent": "100%",
           "fs_type": "ext4"
