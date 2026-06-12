@@ -49,6 +49,7 @@ PROC_QUERY = (
 STORAGE_QUERY = "df -B1 --output=source,target,size,used,avail,pcent,fstype"
 
 OUTPUT_JSON = "/data/nafeem/lab-gpu-scheduler-dashboard/gpu_status.json"
+SSH_KNOWN_HOSTS = "/data/nafeem/.ssh/known_hosts"
 
 
 def run_cmd(cmd):
@@ -68,7 +69,12 @@ def run_server_cmd(server, cmd):
     if server == "deeprecon":
         return run_cmd(cmd)
     return run_cmd(
-        f"ssh -o BatchMode=yes -o ConnectTimeout=3 {server} '{cmd}'"
+        "ssh "
+        "-o BatchMode=yes "
+        "-o ConnectTimeout=3 "
+        f"-o UserKnownHostsFile={SSH_KNOWN_HOSTS} "
+        "-o StrictHostKeyChecking=accept-new "
+        f"{server} '{cmd}'"
     )
 
 
