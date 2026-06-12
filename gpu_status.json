@@ -1,9 +1,44 @@
 {
-  "updated_utc": "2026-06-12T03:47:57.709260+00:00",
+  "updated_utc": "2026-06-12T03:49:02.018283+00:00",
   "servers": {
     "axis0": {
-      "status": "unreachable",
-      "gpus": [],
+      "status": "ok",
+      "gpus": [
+        {
+          "index": "0",
+          "uuid": "GPU-5edd8cf7-a71e-4a7f-77be-8a5673dbb2f0",
+          "name": "NVIDIA TITAN RTX",
+          "used_mib": 3756,
+          "total_mib": 24576,
+          "util_percent": 80,
+          "state": "mid",
+          "processes": [
+            {
+              "pid": "469793",
+              "user": "nafeem",
+              "name": "/data/nafeem/miniconda3/envs/resshift_softannulus_xf/bin/python",
+              "used_mib": 3752
+            }
+          ]
+        },
+        {
+          "index": "1",
+          "uuid": "GPU-442af73e-8628-b195-83b2-7506add343dc",
+          "name": "NVIDIA TITAN RTX",
+          "used_mib": 3170,
+          "total_mib": 24576,
+          "util_percent": 73,
+          "state": "mid",
+          "processes": [
+            {
+              "pid": "469794",
+              "user": "nafeem",
+              "name": "/data/nafeem/miniconda3/envs/resshift_softannulus_xf/bin/python",
+              "used_mib": 3166
+            }
+          ]
+        }
+      ],
       "storage": []
     },
     "axis1": {
@@ -17,8 +52,43 @@
       "storage": []
     },
     "h100-litjan2024": {
-      "status": "unreachable",
-      "gpus": [],
+      "status": "ok",
+      "gpus": [
+        {
+          "index": "0",
+          "uuid": "GPU-51f4c93c-f581-bc5d-b66f-4bb8a664c3e7",
+          "name": "NVIDIA H100 PCIe",
+          "used_mib": 65279,
+          "total_mib": 81559,
+          "util_percent": 0,
+          "state": "busy",
+          "processes": [
+            {
+              "pid": "1155582",
+              "user": "islamm11",
+              "name": "VLLM::Worker_TP0",
+              "used_mib": 65270
+            }
+          ]
+        },
+        {
+          "index": "1",
+          "uuid": "GPU-cbf8c219-f716-c2e7-0fa0-943605bdd357",
+          "name": "NVIDIA H100 PCIe",
+          "used_mib": 65279,
+          "total_mib": 81559,
+          "util_percent": 0,
+          "state": "busy",
+          "processes": [
+            {
+              "pid": "1155583",
+              "user": "islamm11",
+              "name": "VLLM::Worker_TP1",
+              "used_mib": 65270
+            }
+          ]
+        }
+      ],
       "storage": []
     },
     "deeprecon": {
@@ -50,7 +120,7 @@
           "name": "NVIDIA GeForce GTX 1080 Ti",
           "used_mib": 4187,
           "total_mib": 11264,
-          "util_percent": 40,
+          "util_percent": 54,
           "state": "mid",
           "processes": [
             {
@@ -67,7 +137,7 @@
           "name": "NVIDIA GeForce GTX 1080 Ti",
           "used_mib": 3259,
           "total_mib": 11264,
-          "util_percent": 47,
+          "util_percent": 63,
           "state": "mid",
           "processes": [
             {
@@ -84,8 +154,8 @@
           "source": "/dev/sda2",
           "mount": "/data",
           "size_bytes": 15670141526016,
-          "used_bytes": 13772106715136,
-          "avail_bytes": 1108280979456,
+          "used_bytes": 13772106743808,
+          "avail_bytes": 1108280950784,
           "use_percent": "93%",
           "fs_type": "ext4"
         },
@@ -93,7 +163,7 @@
           "source": "/dev/sdb3",
           "mount": "/",
           "size_bytes": 469900591104,
-          "used_bytes": 448604606464,
+          "used_bytes": 448604622848,
           "avail_bytes": 0,
           "use_percent": "100%",
           "fs_type": "ext4"
