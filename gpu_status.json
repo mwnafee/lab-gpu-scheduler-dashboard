@@ -1,5 +1,5 @@
 {
-  "updated_utc": "2026-06-14T20:16:43.548327+00:00",
+  "updated_utc": "2026-06-14T20:18:01.912906+00:00",
   "servers": {
     "axis0": {
       "status": "ok",
@@ -48,8 +48,8 @@
           "source": "/dev/nvme0n1p2",
           "mount": "/",
           "size_bytes": 75149131776,
-          "used_bytes": 34261598208,
-          "avail_bytes": 37043986432,
+          "used_bytes": 34261676032,
+          "avail_bytes": 37043908608,
           "use_percent": "49%",
           "fs_type": "ext4"
         }
@@ -122,8 +122,8 @@
           "source": "/dev/mapper/vg0-root",
           "mount": "/",
           "size_bytes": 67049664512,
-          "used_bytes": 39679733760,
-          "avail_bytes": 23917182976,
+          "used_bytes": 39679873024,
+          "avail_bytes": 23917043712,
           "use_percent": "63%",
           "fs_type": "ext4"
         }
@@ -271,16 +271,51 @@
           "source": "/dev/nvme0n1p3",
           "mount": "/",
           "size_bytes": 134145380352,
-          "used_bytes": 58062745600,
-          "avail_bytes": 69193912320,
+          "used_bytes": 58062999552,
+          "avail_bytes": 69193658368,
           "use_percent": "46%",
           "fs_type": "ext4"
         }
       ]
     },
     "h100-litjan2024": {
-      "status": "unreachable",
-      "gpus": [],
+      "status": "ok",
+      "gpus": [
+        {
+          "index": "0",
+          "uuid": "GPU-51f4c93c-f581-bc5d-b66f-4bb8a664c3e7",
+          "name": "NVIDIA H100 PCIe",
+          "used_mib": 71235,
+          "total_mib": 81559,
+          "util_percent": 96,
+          "state": "busy",
+          "processes": [
+            {
+              "pid": "2477497",
+              "user": "azamm",
+              "name": "/home/azamm/anaconda3/envs/llm_medical/bin/python3.11",
+              "used_mib": 71226
+            }
+          ]
+        },
+        {
+          "index": "1",
+          "uuid": "GPU-cbf8c219-f716-c2e7-0fa0-943605bdd357",
+          "name": "NVIDIA H100 PCIe",
+          "used_mib": 79003,
+          "total_mib": 81559,
+          "util_percent": 100,
+          "state": "busy",
+          "processes": [
+            {
+              "pid": "2477498",
+              "user": "azamm",
+              "name": "/home/azamm/anaconda3/envs/llm_medical/bin/python3.11",
+              "used_mib": 78994
+            }
+          ]
+        }
+      ],
       "storage": [
         {
           "source": "/dev/md0p1",
@@ -304,8 +339,8 @@
           "source": "/dev/sda4",
           "mount": "/",
           "size_bytes": 100861726720,
-          "used_bytes": 58042871808,
-          "avail_bytes": 37648117760,
+          "used_bytes": 58043011072,
+          "avail_bytes": 37647978496,
           "use_percent": "61%",
           "fs_type": "ext4"
         }
@@ -360,8 +395,8 @@
           "source": "/dev/sda2",
           "mount": "/data",
           "size_bytes": 15670141526016,
-          "used_bytes": 13782716817408,
-          "avail_bytes": 1097670877184,
+          "used_bytes": 13782716829696,
+          "avail_bytes": 1097670864896,
           "use_percent": "93%",
           "fs_type": "ext4"
         },
@@ -369,8 +404,8 @@
           "source": "/dev/sdb3",
           "mount": "/",
           "size_bytes": 469900591104,
-          "used_bytes": 442053402624,
-          "avail_bytes": 3950247936,
+          "used_bytes": 442053468160,
+          "avail_bytes": 3950182400,
           "use_percent": "100%",
           "fs_type": "ext4"
         }
