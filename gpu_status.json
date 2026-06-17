@@ -1,5 +1,5 @@
 {
-  "updated_utc": "2026-06-17T07:36:41.104916+00:00",
+  "updated_utc": "2026-06-17T07:37:59.606098+00:00",
   "servers": {
     "axis0": {
       "status": "ok",
@@ -48,8 +48,8 @@
           "source": "/dev/nvme0n1p2",
           "mount": "/",
           "size_bytes": 75149131776,
-          "used_bytes": 34239008768,
-          "avail_bytes": 37066575872,
+          "used_bytes": 34239082496,
+          "avail_bytes": 37066502144,
           "use_percent": "49%",
           "fs_type": "ext4"
         }
@@ -122,8 +122,8 @@
           "source": "/dev/mapper/vg0-root",
           "mount": "/",
           "size_bytes": 67049664512,
-          "used_bytes": 40863612928,
-          "avail_bytes": 22733303808,
+          "used_bytes": 40863678464,
+          "avail_bytes": 22733238272,
           "use_percent": "65%",
           "fs_type": "ext4"
         }
@@ -271,8 +271,8 @@
           "source": "/dev/nvme0n1p3",
           "mount": "/",
           "size_bytes": 134145380352,
-          "used_bytes": 60125020160,
-          "avail_bytes": 67131637760,
+          "used_bytes": 60125384704,
+          "avail_bytes": 67131273216,
           "use_percent": "48%",
           "fs_type": "ext4"
         }
@@ -289,7 +289,14 @@
           "total_mib": 81559,
           "util_percent": 0,
           "state": "busy",
-          "processes": []
+          "processes": [
+            {
+              "pid": "2950510",
+              "user": "islamm11",
+              "name": "VLLM::EngineCore",
+              "used_mib": 74904
+            }
+          ]
         },
         {
           "index": "1",
@@ -299,7 +306,14 @@
           "total_mib": 81559,
           "util_percent": 0,
           "state": "free",
-          "processes": []
+          "processes": [
+            {
+              "pid": "2965557",
+              "user": "islamm11",
+              "name": "python",
+              "used_mib": 6554
+            }
+          ]
         }
       ],
       "storage": [
@@ -325,8 +339,8 @@
           "source": "/dev/sda4",
           "mount": "/",
           "size_bytes": 100861726720,
-          "used_bytes": 65408176128,
-          "avail_bytes": 30282813440,
+          "used_bytes": 65408344064,
+          "avail_bytes": 30282645504,
           "use_percent": "69%",
           "fs_type": "ext4"
         }
@@ -381,8 +395,8 @@
           "source": "/dev/sda2",
           "mount": "/data",
           "size_bytes": 15670141526016,
-          "used_bytes": 13790550204416,
-          "avail_bytes": 1089837490176,
+          "used_bytes": 13790550216704,
+          "avail_bytes": 1089837477888,
           "use_percent": "93%",
           "fs_type": "ext4"
         },
@@ -390,8 +404,8 @@
           "source": "/dev/sdb3",
           "mount": "/",
           "size_bytes": 469900591104,
-          "used_bytes": 444766158848,
-          "avail_bytes": 1237491712,
+          "used_bytes": 444766220288,
+          "avail_bytes": 1237430272,
           "use_percent": "100%",
           "fs_type": "ext4"
         }
