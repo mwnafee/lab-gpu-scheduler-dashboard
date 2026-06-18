@@ -1,5 +1,5 @@
 {
-  "updated_utc": "2026-06-18T16:52:43.894311+00:00",
+  "updated_utc": "2026-06-18T16:53:53.916897+00:00",
   "servers": {
     "axis0": {
       "status": "ok",
@@ -48,8 +48,8 @@
           "source": "/dev/nvme0n1p2",
           "mount": "/",
           "size_bytes": 75149131776,
-          "used_bytes": 34251972608,
-          "avail_bytes": 37053612032,
+          "used_bytes": 34252034048,
+          "avail_bytes": 37053550592,
           "use_percent": "49%",
           "fs_type": "ext4"
         }
@@ -64,12 +64,12 @@
           "name": "NVIDIA RTX A5000",
           "used_mib": 1830,
           "total_mib": 24564,
-          "util_percent": 0,
+          "util_percent": 14,
           "state": "free",
           "processes": [
             {
-              "pid": "1659043",
-              "user": "unknown",
+              "pid": "1823811",
+              "user": "nafeem",
               "name": "python",
               "used_mib": 1820
             }
@@ -129,8 +129,8 @@
           "source": "/dev/mapper/vg0-root",
           "mount": "/",
           "size_bytes": 67049664512,
-          "used_bytes": 40839598080,
-          "avail_bytes": 22757318656,
+          "used_bytes": 40839708672,
+          "avail_bytes": 22757208064,
           "use_percent": "65%",
           "fs_type": "ext4"
         }
@@ -257,8 +257,8 @@
           "source": "/dev/nvme0n1p3",
           "mount": "/",
           "size_bytes": 134145380352,
-          "used_bytes": 66784305152,
-          "avail_bytes": 60472352768,
+          "used_bytes": 66784710656,
+          "avail_bytes": 60471947264,
           "use_percent": "53%",
           "fs_type": "ext4"
         }
@@ -271,21 +271,35 @@
           "index": "0",
           "uuid": "GPU-51f4c93c-f581-bc5d-b66f-4bb8a664c3e7",
           "name": "NVIDIA H100 PCIe",
-          "used_mib": 0,
+          "used_mib": 7639,
           "total_mib": 81559,
           "util_percent": 0,
           "state": "free",
-          "processes": []
+          "processes": [
+            {
+              "pid": "798412",
+              "user": "azamm",
+              "name": "python",
+              "used_mib": 7630
+            }
+          ]
         },
         {
           "index": "1",
           "uuid": "GPU-cbf8c219-f716-c2e7-0fa0-943605bdd357",
           "name": "NVIDIA H100 PCIe",
-          "used_mib": 0,
+          "used_mib": 9305,
           "total_mib": 81559,
           "util_percent": 0,
-          "state": "free",
-          "processes": []
+          "state": "mid",
+          "processes": [
+            {
+              "pid": "798412",
+              "user": "azamm",
+              "name": "python",
+              "used_mib": 9296
+            }
+          ]
         }
       ],
       "storage": [
@@ -311,8 +325,8 @@
           "source": "/dev/sda4",
           "mount": "/",
           "size_bytes": 100861726720,
-          "used_bytes": 64204767232,
-          "avail_bytes": 31486222336,
+          "used_bytes": 64204922880,
+          "avail_bytes": 31486066688,
           "use_percent": "68%",
           "fs_type": "ext4"
         }
@@ -367,8 +381,8 @@
           "source": "/dev/sda2",
           "mount": "/data",
           "size_bytes": 15670141526016,
-          "used_bytes": 13790571585536,
-          "avail_bytes": 1089816109056,
+          "used_bytes": 13790571601920,
+          "avail_bytes": 1089816092672,
           "use_percent": "93%",
           "fs_type": "ext4"
         },
@@ -376,8 +390,8 @@
           "source": "/dev/sdb3",
           "mount": "/",
           "size_bytes": 469900591104,
-          "used_bytes": 444658311168,
-          "avail_bytes": 1345339392,
+          "used_bytes": 444658360320,
+          "avail_bytes": 1345290240,
           "use_percent": "100%",
           "fs_type": "ext4"
         }
