@@ -1,5 +1,5 @@
 {
-  "updated_utc": "2026-06-22T17:32:14.242214+00:00",
+  "updated_utc": "2026-06-22T17:33:32.147639+00:00",
   "servers": {
     "axis0": {
       "status": "ok",
@@ -48,8 +48,8 @@
           "source": "/dev/nvme0n1p2",
           "mount": "/",
           "size_bytes": 75149131776,
-          "used_bytes": 34216480768,
-          "avail_bytes": 37089103872,
+          "used_bytes": 34216546304,
+          "avail_bytes": 37089038336,
           "use_percent": "48%",
           "fs_type": "ext4"
         }
@@ -122,8 +122,8 @@
           "source": "/dev/mapper/vg0-root",
           "mount": "/",
           "size_bytes": 67049664512,
-          "used_bytes": 39214174208,
-          "avail_bytes": 24382742528,
+          "used_bytes": 39214235648,
+          "avail_bytes": 24382681088,
           "use_percent": "62%",
           "fs_type": "ext4"
         }
@@ -223,7 +223,7 @@
           "name": "NVIDIA H100 80GB HBM3",
           "used_mib": 75494,
           "total_mib": 81559,
-          "util_percent": 23,
+          "util_percent": 22,
           "state": "busy",
           "processes": [
             {
@@ -289,8 +289,8 @@
           "source": "/dev/md0p1",
           "mount": "/home",
           "size_bytes": 11429865578496,
-          "used_bytes": 9680738062336,
-          "avail_bytes": 1173017792512,
+          "used_bytes": 9680738066432,
+          "avail_bytes": 1173017788416,
           "use_percent": "90%",
           "fs_type": "ext4"
         },
@@ -298,8 +298,8 @@
           "source": "/dev/nvme0n1p3",
           "mount": "/",
           "size_bytes": 134145380352,
-          "used_bytes": 61421674496,
-          "avail_bytes": 65834983424,
+          "used_bytes": 61422002176,
+          "avail_bytes": 65834655744,
           "use_percent": "49%",
           "fs_type": "ext4"
         }
@@ -312,16 +312,16 @@
           "index": "0",
           "uuid": "GPU-51f4c93c-f581-bc5d-b66f-4bb8a664c3e7",
           "name": "NVIDIA H100 PCIe",
-          "used_mib": 76435,
+          "used_mib": 76755,
           "total_mib": 81559,
-          "util_percent": 0,
+          "util_percent": 93,
           "state": "busy",
           "processes": [
             {
               "pid": "2039358",
               "user": "azamm",
               "name": "/home/azamm/anaconda3/envs/llm_medical/bin/python3.11",
-              "used_mib": 76418
+              "used_mib": 76738
             }
           ]
         },
@@ -329,11 +329,18 @@
           "index": "1",
           "uuid": "GPU-cbf8c219-f716-c2e7-0fa0-943605bdd357",
           "name": "NVIDIA H100 PCIe",
-          "used_mib": 388,
+          "used_mib": 39265,
           "total_mib": 81559,
           "util_percent": 0,
-          "state": "free",
-          "processes": []
+          "state": "mid",
+          "processes": [
+            {
+              "pid": "2716270",
+              "user": "azamm",
+              "name": "/home/azamm/anaconda3/envs/llm_medical/bin/python3.11",
+              "used_mib": 38952
+            }
+          ]
         }
       ],
       "storage": [
@@ -341,8 +348,8 @@
           "source": "/dev/md0p1",
           "mount": "/home",
           "size_bytes": 3779167371264,
-          "used_bytes": 3296179286016,
-          "avail_bytes": 290940395520,
+          "used_bytes": 3296179359744,
+          "avail_bytes": 290940321792,
           "use_percent": "92%",
           "fs_type": "ext4"
         },
@@ -359,8 +366,8 @@
           "source": "/dev/sda4",
           "mount": "/",
           "size_bytes": 100861726720,
-          "used_bytes": 57992937472,
-          "avail_bytes": 37698052096,
+          "used_bytes": 57993252864,
+          "avail_bytes": 37697736704,
           "use_percent": "61%",
           "fs_type": "ext4"
         }
@@ -415,8 +422,8 @@
           "source": "/dev/sda2",
           "mount": "/data",
           "size_bytes": 15670141526016,
-          "used_bytes": 13790575685632,
-          "avail_bytes": 1089812008960,
+          "used_bytes": 13790575697920,
+          "avail_bytes": 1089811996672,
           "use_percent": "93%",
           "fs_type": "ext4"
         },
@@ -424,8 +431,8 @@
           "source": "/dev/sdb3",
           "mount": "/",
           "size_bytes": 469900591104,
-          "used_bytes": 443603087360,
-          "avail_bytes": 2400563200,
+          "used_bytes": 443603161088,
+          "avail_bytes": 2400489472,
           "use_percent": "100%",
           "fs_type": "ext4"
         }
