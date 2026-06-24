@@ -1,5 +1,5 @@
 {
-  "updated_utc": "2026-06-24T00:43:51.217182+00:00",
+  "updated_utc": "2026-06-24T00:45:05.886369+00:00",
   "servers": {
     "axis0": {
       "status": "ok",
@@ -48,8 +48,8 @@
           "source": "/dev/nvme0n1p2",
           "mount": "/",
           "size_bytes": 75149131776,
-          "used_bytes": 34243899392,
-          "avail_bytes": 37061685248,
+          "used_bytes": 34243977216,
+          "avail_bytes": 37061607424,
           "use_percent": "49%",
           "fs_type": "ext4"
         }
@@ -122,8 +122,8 @@
           "source": "/dev/mapper/vg0-root",
           "mount": "/",
           "size_bytes": 67049664512,
-          "used_bytes": 39254482944,
-          "avail_bytes": 24342433792,
+          "used_bytes": 39254544384,
+          "avail_bytes": 24342372352,
           "use_percent": "62%",
           "fs_type": "ext4"
         }
@@ -298,8 +298,8 @@
           "source": "/dev/nvme0n1p3",
           "mount": "/",
           "size_bytes": 134145380352,
-          "used_bytes": 60090269696,
-          "avail_bytes": 67166388224,
+          "used_bytes": 60090605568,
+          "avail_bytes": 67166052352,
           "use_percent": "48%",
           "fs_type": "ext4"
         }
@@ -314,7 +314,7 @@
           "name": "NVIDIA H100 PCIe",
           "used_mib": 77797,
           "total_mib": 81559,
-          "util_percent": 93,
+          "util_percent": 0,
           "state": "busy",
           "processes": [
             {
@@ -331,7 +331,7 @@
           "name": "NVIDIA H100 PCIe",
           "used_mib": 73381,
           "total_mib": 81559,
-          "util_percent": 0,
+          "util_percent": 100,
           "state": "busy",
           "processes": [
             {
@@ -348,8 +348,8 @@
           "source": "/dev/md0p1",
           "mount": "/home",
           "size_bytes": 3779167371264,
-          "used_bytes": 3297305608192,
-          "avail_bytes": 289814073344,
+          "used_bytes": 3297305673728,
+          "avail_bytes": 289814007808,
           "use_percent": "92%",
           "fs_type": "ext4"
         },
@@ -366,8 +366,8 @@
           "source": "/dev/sda4",
           "mount": "/",
           "size_bytes": 100861726720,
-          "used_bytes": 58057908224,
-          "avail_bytes": 37633081344,
+          "used_bytes": 58058063872,
+          "avail_bytes": 37632925696,
           "use_percent": "61%",
           "fs_type": "ext4"
         }
@@ -390,11 +390,18 @@
           "index": "1",
           "uuid": "GPU-1c1d2e93-fa30-47e7-14b0-b6b05746f754",
           "name": "NVIDIA GeForce GTX 1080 Ti",
-          "used_mib": 3,
+          "used_mib": 6443,
           "total_mib": 11264,
           "util_percent": 0,
-          "state": "free",
-          "processes": []
+          "state": "mid",
+          "processes": [
+            {
+              "pid": "2299531",
+              "user": "nafeem",
+              "name": "[No data]",
+              "used_mib": 6438
+            }
+          ]
         },
         {
           "index": "2",
@@ -422,8 +429,8 @@
           "source": "/dev/sda2",
           "mount": "/data",
           "size_bytes": 15670141526016,
-          "used_bytes": 13792640839680,
-          "avail_bytes": 1087746854912,
+          "used_bytes": 13792692969472,
+          "avail_bytes": 1087694725120,
           "use_percent": "93%",
           "fs_type": "ext4"
         },
@@ -431,8 +438,8 @@
           "source": "/dev/sdb3",
           "mount": "/",
           "size_bytes": 469900591104,
-          "used_bytes": 443337261056,
-          "avail_bytes": 2666389504,
+          "used_bytes": 443337355264,
+          "avail_bytes": 2666295296,
           "use_percent": "100%",
           "fs_type": "ext4"
         }
