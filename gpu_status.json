@@ -1,5 +1,5 @@
 {
-  "updated_utc": "2026-07-09T15:15:42.567574+00:00",
+  "updated_utc": "2026-07-09T15:17:04.877705+00:00",
   "servers": {
     "axis0": {
       "status": "ok",
@@ -48,8 +48,8 @@
           "source": "/dev/nvme0n1p2",
           "mount": "/",
           "size_bytes": 75149131776,
-          "used_bytes": 34161803264,
-          "avail_bytes": 37143781376,
+          "used_bytes": 34161856512,
+          "avail_bytes": 37143728128,
           "use_percent": "48%",
           "fs_type": "ext4"
         }
@@ -136,8 +136,8 @@
           "source": "/dev/mapper/vg0-root",
           "mount": "/",
           "size_bytes": 67049664512,
-          "used_bytes": 41934807040,
-          "avail_bytes": 21662109696,
+          "used_bytes": 41934917632,
+          "avail_bytes": 21661999104,
           "use_percent": "66%",
           "fs_type": "ext4"
         }
@@ -230,7 +230,7 @@
           "name": "NVIDIA H100 80GB HBM3",
           "used_mib": 69551,
           "total_mib": 81559,
-          "util_percent": 100,
+          "util_percent": 99,
           "state": "busy",
           "processes": [
             {
@@ -262,7 +262,35 @@
           "processes": []
         }
       ],
-      "storage": []
+      "storage": [
+        {
+          "source": "/dev/md1",
+          "mount": "/space",
+          "size_bytes": 45897978388480,
+          "used_bytes": 45282349518848,
+          "avail_bytes": 154787635200,
+          "use_percent": "100%",
+          "fs_type": "ext4"
+        },
+        {
+          "source": "/dev/md0p1",
+          "mount": "/home",
+          "size_bytes": 11429865578496,
+          "used_bytes": 10503049031680,
+          "avail_bytes": 350706823168,
+          "use_percent": "97%",
+          "fs_type": "ext4"
+        },
+        {
+          "source": "/dev/nvme4n1p3",
+          "mount": "/",
+          "size_bytes": 134145380352,
+          "used_bytes": 39263449088,
+          "avail_bytes": 87993208832,
+          "use_percent": "31%",
+          "fs_type": "ext4"
+        }
+      ]
     },
     "h100-litjan2024": {
       "status": "ok",
@@ -273,7 +301,7 @@
           "name": "NVIDIA H100 PCIe",
           "used_mib": 76063,
           "total_mib": 81559,
-          "util_percent": 94,
+          "util_percent": 0,
           "state": "busy",
           "processes": [
             {
@@ -290,7 +318,7 @@
           "name": "NVIDIA H100 PCIe",
           "used_mib": 46035,
           "total_mib": 81559,
-          "util_percent": 0,
+          "util_percent": 100,
           "state": "mid",
           "processes": [
             {
@@ -307,8 +335,8 @@
           "source": "/dev/md0p1",
           "mount": "/home",
           "size_bytes": 3779167371264,
-          "used_bytes": 3327745425408,
-          "avail_bytes": 259374256128,
+          "used_bytes": 3327745495040,
+          "avail_bytes": 259374186496,
           "use_percent": "93%",
           "fs_type": "ext4"
         },
@@ -325,8 +353,8 @@
           "source": "/dev/sda4",
           "mount": "/",
           "size_bytes": 100861726720,
-          "used_bytes": 59918389248,
-          "avail_bytes": 35772600320,
+          "used_bytes": 59918528512,
+          "avail_bytes": 35772461056,
           "use_percent": "63%",
           "fs_type": "ext4"
         }
@@ -381,8 +409,8 @@
           "source": "/dev/sda2",
           "mount": "/data",
           "size_bytes": 15670141526016,
-          "used_bytes": 13797971124224,
-          "avail_bytes": 1082416570368,
+          "used_bytes": 13797971136512,
+          "avail_bytes": 1082416558080,
           "use_percent": "93%",
           "fs_type": "ext4"
         },
@@ -390,8 +418,8 @@
           "source": "/dev/sdb3",
           "mount": "/",
           "size_bytes": 469900591104,
-          "used_bytes": 442139410432,
-          "avail_bytes": 3864240128,
+          "used_bytes": 442139455488,
+          "avail_bytes": 3864195072,
           "use_percent": "100%",
           "fs_type": "ext4"
         }
