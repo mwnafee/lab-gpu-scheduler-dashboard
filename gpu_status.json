@@ -1,5 +1,5 @@
 {
-  "updated_utc": "2026-07-11T20:27:12.088871+00:00",
+  "updated_utc": "2026-07-11T20:28:31.611140+00:00",
   "servers": {
     "axis0": {
       "status": "ok",
@@ -48,8 +48,8 @@
           "source": "/dev/nvme0n1p2",
           "mount": "/",
           "size_bytes": 75149131776,
-          "used_bytes": 34168885248,
-          "avail_bytes": 37136699392,
+          "used_bytes": 34168926208,
+          "avail_bytes": 37136658432,
           "use_percent": "48%",
           "fs_type": "ext4"
         }
@@ -108,7 +108,7 @@
           "name": "NVIDIA RTX A5000",
           "used_mib": 6934,
           "total_mib": 24564,
-          "util_percent": 10,
+          "util_percent": 6,
           "state": "mid",
           "processes": [
             {
@@ -143,8 +143,8 @@
           "source": "/dev/mapper/vg0-root",
           "mount": "/",
           "size_bytes": 67049664512,
-          "used_bytes": 42922250240,
-          "avail_bytes": 20674666496,
+          "used_bytes": 42922684416,
+          "avail_bytes": 20674232320,
           "use_percent": "68%",
           "fs_type": "ext4"
         }
@@ -169,7 +169,7 @@
           "name": "NVIDIA H100 80GB HBM3",
           "used_mib": 74529,
           "total_mib": 81559,
-          "util_percent": 14,
+          "util_percent": 98,
           "state": "busy",
           "processes": [
             {
@@ -203,7 +203,7 @@
           "name": "NVIDIA H100 80GB HBM3",
           "used_mib": 74529,
           "total_mib": 81559,
-          "util_percent": 100,
+          "util_percent": 13,
           "state": "busy",
           "processes": [
             {
@@ -262,7 +262,35 @@
           "processes": []
         }
       ],
-      "storage": []
+      "storage": [
+        {
+          "source": "/dev/md1",
+          "mount": "/space",
+          "size_bytes": 45897978388480,
+          "used_bytes": 45282349518848,
+          "avail_bytes": 154787635200,
+          "use_percent": "100%",
+          "fs_type": "ext4"
+        },
+        {
+          "source": "/dev/md0p1",
+          "mount": "/home",
+          "size_bytes": 11429865578496,
+          "used_bytes": 10536040452096,
+          "avail_bytes": 317715402752,
+          "use_percent": "98%",
+          "fs_type": "ext4"
+        },
+        {
+          "source": "/dev/nvme4n1p3",
+          "mount": "/",
+          "size_bytes": 134145380352,
+          "used_bytes": 36693573632,
+          "avail_bytes": 90563084288,
+          "use_percent": "29%",
+          "fs_type": "ext4"
+        }
+      ]
     },
     "h100-litjan2024": {
       "status": "ok",
@@ -318,8 +346,8 @@
           "source": "/dev/sda4",
           "mount": "/",
           "size_bytes": 100861726720,
-          "used_bytes": 57756295168,
-          "avail_bytes": 37934694400,
+          "used_bytes": 57756401664,
+          "avail_bytes": 37934587904,
           "use_percent": "61%",
           "fs_type": "ext4"
         }
@@ -374,8 +402,8 @@
           "source": "/dev/sda2",
           "mount": "/data",
           "size_bytes": 15670141526016,
-          "used_bytes": 13797960953856,
-          "avail_bytes": 1082426740736,
+          "used_bytes": 13797960966144,
+          "avail_bytes": 1082426728448,
           "use_percent": "93%",
           "fs_type": "ext4"
         },
@@ -383,8 +411,8 @@
           "source": "/dev/sdb3",
           "mount": "/",
           "size_bytes": 469900591104,
-          "used_bytes": 443945897984,
-          "avail_bytes": 2057752576,
+          "used_bytes": 443945943040,
+          "avail_bytes": 2057707520,
           "use_percent": "100%",
           "fs_type": "ext4"
         }
