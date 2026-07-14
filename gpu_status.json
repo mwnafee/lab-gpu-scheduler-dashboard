@@ -1,5 +1,5 @@
 {
-  "updated_utc": "2026-07-14T18:23:26.062171+00:00",
+  "updated_utc": "2026-07-14T18:24:49.486995+00:00",
   "servers": {
     "axis0": {
       "status": "ok",
@@ -48,16 +48,71 @@
           "source": "/dev/nvme0n1p2",
           "mount": "/",
           "size_bytes": 75149131776,
-          "used_bytes": 34365657088,
-          "avail_bytes": 36939927552,
+          "used_bytes": 34365698048,
+          "avail_bytes": 36939886592,
           "use_percent": "49%",
           "fs_type": "ext4"
         }
       ]
     },
     "axis1": {
-      "status": "unreachable",
-      "gpus": [],
+      "status": "ok",
+      "gpus": [
+        {
+          "index": "0",
+          "uuid": "GPU-0274ace2-6972-5b39-b19e-20424e7bea6c",
+          "name": "NVIDIA RTX A5000",
+          "used_mib": 1,
+          "total_mib": 24564,
+          "util_percent": 0,
+          "state": "free",
+          "processes": []
+        },
+        {
+          "index": "1",
+          "uuid": "GPU-ea98594f-67ae-f02f-e199-ba2bbd25632e",
+          "name": "NVIDIA RTX A5000",
+          "used_mib": 20818,
+          "total_mib": 24564,
+          "util_percent": 0,
+          "state": "busy",
+          "processes": [
+            {
+              "pid": "45457",
+              "user": "manikm",
+              "name": "VLLM::EngineCore",
+              "used_mib": 20808
+            }
+          ]
+        },
+        {
+          "index": "2",
+          "uuid": "GPU-37cea084-e348-fb23-50ad-db38c474ea65",
+          "name": "NVIDIA RTX A5000",
+          "used_mib": 21544,
+          "total_mib": 24564,
+          "util_percent": 0,
+          "state": "busy",
+          "processes": [
+            {
+              "pid": "70403",
+              "user": "manikm",
+              "name": "VLLM::EngineCore",
+              "used_mib": 21534
+            }
+          ]
+        },
+        {
+          "index": "3",
+          "uuid": "GPU-d5c5ee02-067a-92a2-2129-166ed950fb4c",
+          "name": "NVIDIA RTX A5000",
+          "used_mib": 1,
+          "total_mib": 24564,
+          "util_percent": 0,
+          "state": "free",
+          "processes": []
+        }
+      ],
       "storage": [
         {
           "source": "/dev/md0",
@@ -81,8 +136,8 @@
           "source": "/dev/mapper/vg0-root",
           "mount": "/",
           "size_bytes": 67049664512,
-          "used_bytes": 39986024448,
-          "avail_bytes": 23610892288,
+          "used_bytes": 39986073600,
+          "avail_bytes": 23610843136,
           "use_percent": "63%",
           "fs_type": "ext4"
         }
@@ -131,7 +186,7 @@
           "name": "NVIDIA H100 80GB HBM3",
           "used_mib": 73731,
           "total_mib": 81559,
-          "util_percent": 14,
+          "util_percent": 13,
           "state": "busy",
           "processes": [
             {
@@ -182,7 +237,7 @@
           "name": "NVIDIA H100 80GB HBM3",
           "used_mib": 15999,
           "total_mib": 81559,
-          "util_percent": 42,
+          "util_percent": 41,
           "state": "mid",
           "processes": [
             {
@@ -199,7 +254,7 @@
           "name": "NVIDIA H100 80GB HBM3",
           "used_mib": 61327,
           "total_mib": 81559,
-          "util_percent": 58,
+          "util_percent": 59,
           "state": "mid",
           "processes": [
             {
@@ -216,7 +271,7 @@
           "name": "NVIDIA H100 80GB HBM3",
           "used_mib": 50265,
           "total_mib": 81559,
-          "util_percent": 51,
+          "util_percent": 48,
           "state": "mid",
           "processes": [
             {
@@ -242,8 +297,8 @@
           "source": "/dev/md0p1",
           "mount": "/home",
           "size_bytes": 11429865578496,
-          "used_bytes": 10642028548096,
-          "avail_bytes": 211727306752,
+          "used_bytes": 10642028580864,
+          "avail_bytes": 211727273984,
           "use_percent": "99%",
           "fs_type": "ext4"
         },
@@ -251,8 +306,8 @@
           "source": "/dev/nvme4n1p3",
           "mount": "/",
           "size_bytes": 134145380352,
-          "used_bytes": 37744058368,
-          "avail_bytes": 89512599552,
+          "used_bytes": 37744455680,
+          "avail_bytes": 89512202240,
           "use_percent": "30%",
           "fs_type": "ext4"
         }
@@ -303,8 +358,8 @@
           "source": "/dev/sda5",
           "mount": "/var/lib/docker",
           "size_bytes": 111976861696,
-          "used_bytes": 13533999104,
-          "avail_bytes": 92707414016,
+          "used_bytes": 13510893568,
+          "avail_bytes": 92730519552,
           "use_percent": "13%",
           "fs_type": "ext4"
         },
@@ -312,8 +367,8 @@
           "source": "/dev/sda4",
           "mount": "/",
           "size_bytes": 100861726720,
-          "used_bytes": 57911238656,
-          "avail_bytes": 37779750912,
+          "used_bytes": 57912438784,
+          "avail_bytes": 37778550784,
           "use_percent": "61%",
           "fs_type": "ext4"
         }
@@ -368,8 +423,8 @@
           "source": "/dev/sda2",
           "mount": "/data",
           "size_bytes": 15670141526016,
-          "used_bytes": 13797968154624,
-          "avail_bytes": 1082419539968,
+          "used_bytes": 13797968166912,
+          "avail_bytes": 1082419527680,
           "use_percent": "93%",
           "fs_type": "ext4"
         },
@@ -377,8 +432,8 @@
           "source": "/dev/sdb3",
           "mount": "/",
           "size_bytes": 469900591104,
-          "used_bytes": 443537457152,
-          "avail_bytes": 2466193408,
+          "used_bytes": 443537498112,
+          "avail_bytes": 2466152448,
           "use_percent": "100%",
           "fs_type": "ext4"
         }
