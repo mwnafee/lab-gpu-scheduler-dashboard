@@ -1,5 +1,5 @@
 {
-  "updated_utc": "2026-07-16T20:04:04.443648+00:00",
+  "updated_utc": "2026-07-16T20:05:48.442723+00:00",
   "servers": {
     "axis0": {
       "status": "ok",
@@ -48,8 +48,8 @@
           "source": "/dev/nvme0n1p2",
           "mount": "/",
           "size_bytes": 75149131776,
-          "used_bytes": 34635354112,
-          "avail_bytes": 36670230528,
+          "used_bytes": 34635395072,
+          "avail_bytes": 36670189568,
           "use_percent": "49%",
           "fs_type": "ext4"
         }
@@ -108,7 +108,7 @@
           "name": "NVIDIA RTX A5000",
           "used_mib": 6456,
           "total_mib": 24564,
-          "util_percent": 99,
+          "util_percent": 0,
           "state": "mid",
           "processes": [
             {
@@ -143,8 +143,8 @@
           "source": "/dev/mapper/vg0-root",
           "mount": "/",
           "size_bytes": 67049664512,
-          "used_bytes": 44849410048,
-          "avail_bytes": 18747506688,
+          "used_bytes": 44849815552,
+          "avail_bytes": 18747101184,
           "use_percent": "71%",
           "fs_type": "ext4"
         }
@@ -276,7 +276,35 @@
           "processes": []
         }
       ],
-      "storage": []
+      "storage": [
+        {
+          "source": "/dev/md1",
+          "mount": "/space",
+          "size_bytes": 45897978388480,
+          "used_bytes": 45282349518848,
+          "avail_bytes": 154787635200,
+          "use_percent": "100%",
+          "fs_type": "ext4"
+        },
+        {
+          "source": "/dev/md0p1",
+          "mount": "/home",
+          "size_bytes": 11429865578496,
+          "used_bytes": 10643717894144,
+          "avail_bytes": 210037960704,
+          "use_percent": "99%",
+          "fs_type": "ext4"
+        },
+        {
+          "source": "/dev/nvme4n1p3",
+          "mount": "/",
+          "size_bytes": 134145380352,
+          "used_bytes": 37004640256,
+          "avail_bytes": 90252017664,
+          "use_percent": "30%",
+          "fs_type": "ext4"
+        }
+      ]
     },
     "h100-litjan2024": {
       "status": "ok",
@@ -292,7 +320,7 @@
           "processes": [
             {
               "pid": "3394994",
-              "user": "unknown",
+              "user": "islamm11",
               "name": "VLLM::EngineCore",
               "used_mib": 74904
             }
@@ -309,7 +337,7 @@
           "processes": [
             {
               "pid": "160623",
-              "user": "unknown",
+              "user": "islamm11",
               "name": "/home/islamm11/anaconda3/envs/mimic_tts/bin/python",
               "used_mib": 4738
             }
@@ -339,8 +367,8 @@
           "source": "/dev/sda4",
           "mount": "/",
           "size_bytes": 100861726720,
-          "used_bytes": 59762450432,
-          "avail_bytes": 35928539136,
+          "used_bytes": 59751202816,
+          "avail_bytes": 35939786752,
           "use_percent": "63%",
           "fs_type": "ext4"
         }
@@ -395,8 +423,8 @@
           "source": "/dev/sda2",
           "mount": "/data",
           "size_bytes": 15670141526016,
-          "used_bytes": 13797981106176,
-          "avail_bytes": 1082406588416,
+          "used_bytes": 13797981118464,
+          "avail_bytes": 1082406576128,
           "use_percent": "93%",
           "fs_type": "ext4"
         },
@@ -404,7 +432,7 @@
           "source": "/dev/sdb3",
           "mount": "/",
           "size_bytes": 469900591104,
-          "used_bytes": 447640805376,
+          "used_bytes": 447640854528,
           "avail_bytes": 0,
           "use_percent": "100%",
           "fs_type": "ext4"
