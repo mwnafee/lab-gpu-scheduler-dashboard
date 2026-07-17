@@ -1,5 +1,5 @@
 {
-  "updated_utc": "2026-07-17T20:04:02.514001+00:00",
+  "updated_utc": "2026-07-17T20:05:31.352602+00:00",
   "servers": {
     "axis0": {
       "status": "ok",
@@ -48,8 +48,8 @@
           "source": "/dev/nvme0n1p2",
           "mount": "/",
           "size_bytes": 75149131776,
-          "used_bytes": 34637914112,
-          "avail_bytes": 36667670528,
+          "used_bytes": 34637955072,
+          "avail_bytes": 36667629568,
           "use_percent": "49%",
           "fs_type": "ext4"
         }
@@ -62,16 +62,16 @@
           "index": "0",
           "uuid": "GPU-0274ace2-6972-5b39-b19e-20424e7bea6c",
           "name": "NVIDIA RTX A5000",
-          "used_mib": 1194,
+          "used_mib": 1388,
           "total_mib": 24564,
-          "util_percent": 49,
+          "util_percent": 36,
           "state": "free",
           "processes": [
             {
               "pid": "433009",
               "user": "manikm",
               "name": "/scratch/manikm/miniconda3/envs/benchmed/bin/python",
-              "used_mib": 1184
+              "used_mib": 1378
             }
           ]
         },
@@ -125,8 +125,8 @@
           "source": "/dev/md0",
           "mount": "/scratch",
           "size_bytes": 9524376285184,
-          "used_bytes": 7869190889472,
-          "avail_bytes": 1175106670592,
+          "used_bytes": 7869193834496,
+          "avail_bytes": 1175103725568,
           "use_percent": "88%",
           "fs_type": "ext4"
         },
@@ -134,8 +134,8 @@
           "source": "/dev/mapper/vg0-home",
           "mount": "/home",
           "size_bytes": 155826298880,
-          "used_bytes": 147484442624,
-          "avail_bytes": 351707136,
+          "used_bytes": 147484450816,
+          "avail_bytes": 351698944,
           "use_percent": "100%",
           "fs_type": "ext4"
         },
@@ -143,8 +143,8 @@
           "source": "/dev/mapper/vg0-root",
           "mount": "/",
           "size_bytes": 67049664512,
-          "used_bytes": 44825948160,
-          "avail_bytes": 18770968576,
+          "used_bytes": 44827115520,
+          "avail_bytes": 18769801216,
           "use_percent": "71%",
           "fs_type": "ext4"
         }
@@ -276,7 +276,35 @@
           "processes": []
         }
       ],
-      "storage": []
+      "storage": [
+        {
+          "source": "/dev/md1",
+          "mount": "/space",
+          "size_bytes": 45897978388480,
+          "used_bytes": 45282349518848,
+          "avail_bytes": 154787635200,
+          "use_percent": "100%",
+          "fs_type": "ext4"
+        },
+        {
+          "source": "/dev/md0p1",
+          "mount": "/home",
+          "size_bytes": 11429865578496,
+          "used_bytes": 10644213559296,
+          "avail_bytes": 209542295552,
+          "use_percent": "99%",
+          "fs_type": "ext4"
+        },
+        {
+          "source": "/dev/nvme4n1p3",
+          "mount": "/",
+          "size_bytes": 134145380352,
+          "used_bytes": 37193011200,
+          "avail_bytes": 90063646720,
+          "use_percent": "30%",
+          "fs_type": "ext4"
+        }
+      ]
     },
     "h100-litjan2024": {
       "status": "ok",
@@ -339,8 +367,8 @@
           "source": "/dev/sda4",
           "mount": "/",
           "size_bytes": 100861726720,
-          "used_bytes": 61616599040,
-          "avail_bytes": 34074390528,
+          "used_bytes": 61616807936,
+          "avail_bytes": 34074181632,
           "use_percent": "65%",
           "fs_type": "ext4"
         }
@@ -395,8 +423,8 @@
           "source": "/dev/sda2",
           "mount": "/data",
           "size_bytes": 15670141526016,
-          "used_bytes": 13797975343104,
-          "avail_bytes": 1082412351488,
+          "used_bytes": 13797975355392,
+          "avail_bytes": 1082412339200,
           "use_percent": "93%",
           "fs_type": "ext4"
         },
@@ -404,7 +432,7 @@
           "source": "/dev/sdb3",
           "mount": "/",
           "size_bytes": 469900591104,
-          "used_bytes": 448672202752,
+          "used_bytes": 448680697856,
           "avail_bytes": 0,
           "use_percent": "100%",
           "fs_type": "ext4"
