@@ -1,5 +1,5 @@
 {
-  "updated_utc": "2026-07-20T10:55:38.665479+00:00",
+  "updated_utc": "2026-07-20T10:56:59.401333+00:00",
   "servers": {
     "axis0": {
       "status": "ok",
@@ -48,16 +48,71 @@
           "source": "/dev/nvme0n1p2",
           "mount": "/",
           "size_bytes": 75149131776,
-          "used_bytes": 34642575360,
-          "avail_bytes": 36663009280,
+          "used_bytes": 34642616320,
+          "avail_bytes": 36662968320,
           "use_percent": "49%",
           "fs_type": "ext4"
         }
       ]
     },
     "axis1": {
-      "status": "unreachable",
-      "gpus": [],
+      "status": "ok",
+      "gpus": [
+        {
+          "index": "0",
+          "uuid": "GPU-0274ace2-6972-5b39-b19e-20424e7bea6c",
+          "name": "NVIDIA RTX A5000",
+          "used_mib": 1,
+          "total_mib": 24564,
+          "util_percent": 0,
+          "state": "free",
+          "processes": []
+        },
+        {
+          "index": "1",
+          "uuid": "GPU-ea98594f-67ae-f02f-e199-ba2bbd25632e",
+          "name": "NVIDIA RTX A5000",
+          "used_mib": 20818,
+          "total_mib": 24564,
+          "util_percent": 0,
+          "state": "busy",
+          "processes": [
+            {
+              "pid": "45457",
+              "user": "manikm",
+              "name": "VLLM::EngineCore",
+              "used_mib": 20808
+            }
+          ]
+        },
+        {
+          "index": "2",
+          "uuid": "GPU-37cea084-e348-fb23-50ad-db38c474ea65",
+          "name": "NVIDIA RTX A5000",
+          "used_mib": 21766,
+          "total_mib": 24564,
+          "util_percent": 0,
+          "state": "busy",
+          "processes": [
+            {
+              "pid": "70403",
+              "user": "manikm",
+              "name": "VLLM::EngineCore",
+              "used_mib": 21756
+            }
+          ]
+        },
+        {
+          "index": "3",
+          "uuid": "GPU-d5c5ee02-067a-92a2-2129-166ed950fb4c",
+          "name": "NVIDIA RTX A5000",
+          "used_mib": 1,
+          "total_mib": 24564,
+          "util_percent": 0,
+          "state": "free",
+          "processes": []
+        }
+      ],
       "storage": [
         {
           "source": "/dev/md0",
@@ -81,8 +136,8 @@
           "source": "/dev/mapper/vg0-root",
           "mount": "/",
           "size_bytes": 67049664512,
-          "used_bytes": 39905861632,
-          "avail_bytes": 23691055104,
+          "used_bytes": 39905914880,
+          "avail_bytes": 23691001856,
           "use_percent": "63%",
           "fs_type": "ext4"
         }
@@ -228,8 +283,8 @@
           "source": "/dev/md0p1",
           "mount": "/home",
           "size_bytes": 11429865578496,
-          "used_bytes": 10641747529728,
-          "avail_bytes": 212008325120,
+          "used_bytes": 10641747546112,
+          "avail_bytes": 212008308736,
           "use_percent": "99%",
           "fs_type": "ext4"
         },
@@ -237,8 +292,8 @@
           "source": "/dev/nvme4n1p3",
           "mount": "/",
           "size_bytes": 134145380352,
-          "used_bytes": 38158540800,
-          "avail_bytes": 89098117120,
+          "used_bytes": 38158819328,
+          "avail_bytes": 89097838592,
           "use_percent": "30%",
           "fs_type": "ext4"
         }
@@ -280,8 +335,8 @@
           "source": "/dev/md0p1",
           "mount": "/home",
           "size_bytes": 3779167371264,
-          "used_bytes": 3393733447680,
-          "avail_bytes": 193386233856,
+          "used_bytes": 3393733455872,
+          "avail_bytes": 193386225664,
           "use_percent": "95%",
           "fs_type": "ext4"
         },
@@ -298,8 +353,8 @@
           "source": "/dev/sda4",
           "mount": "/",
           "size_bytes": 100861726720,
-          "used_bytes": 59687944192,
-          "avail_bytes": 36003045376,
+          "used_bytes": 59688054784,
+          "avail_bytes": 36002934784,
           "use_percent": "63%",
           "fs_type": "ext4"
         }
@@ -354,8 +409,8 @@
           "source": "/dev/sda2",
           "mount": "/data",
           "size_bytes": 15670141526016,
-          "used_bytes": 13797988032512,
-          "avail_bytes": 1082399662080,
+          "used_bytes": 13797988044800,
+          "avail_bytes": 1082399649792,
           "use_percent": "93%",
           "fs_type": "ext4"
         },
@@ -363,8 +418,8 @@
           "source": "/dev/sdb3",
           "mount": "/",
           "size_bytes": 469900591104,
-          "used_bytes": 442839605248,
-          "avail_bytes": 3164045312,
+          "used_bytes": 442839658496,
+          "avail_bytes": 3163992064,
           "use_percent": "100%",
           "fs_type": "ext4"
         }
