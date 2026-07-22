@@ -1,5 +1,5 @@
 {
-  "updated_utc": "2026-07-22T04:03:14.168331+00:00",
+  "updated_utc": "2026-07-22T04:04:47.151112+00:00",
   "servers": {
     "axis0": {
       "status": "unreachable",
@@ -87,8 +87,8 @@
           "source": "/dev/mapper/vg0-root",
           "mount": "/",
           "size_bytes": 67049664512,
-          "used_bytes": 39966883840,
-          "avail_bytes": 23630032896,
+          "used_bytes": 39966994432,
+          "avail_bytes": 23629922304,
           "use_percent": "63%",
           "fs_type": "ext4"
         }
@@ -248,8 +248,8 @@
           "source": "/dev/md0p1",
           "mount": "/home",
           "size_bytes": 11429865578496,
-          "used_bytes": 10667823247360,
-          "avail_bytes": 185932607488,
+          "used_bytes": 10667823497216,
+          "avail_bytes": 185932357632,
           "use_percent": "99%",
           "fs_type": "ext4"
         },
@@ -257,23 +257,51 @@
           "source": "/dev/nvme4n1p3",
           "mount": "/",
           "size_bytes": 134145380352,
-          "used_bytes": 38576496640,
-          "avail_bytes": 88680161280,
+          "used_bytes": 38576791552,
+          "avail_bytes": 88679866368,
           "use_percent": "31%",
           "fs_type": "ext4"
         }
       ]
     },
     "h100-litjan2024": {
-      "status": "unreachable",
-      "gpus": [],
+      "status": "ok",
+      "gpus": [
+        {
+          "index": "0",
+          "uuid": "GPU-51f4c93c-f581-bc5d-b66f-4bb8a664c3e7",
+          "name": "NVIDIA H100 PCIe",
+          "used_mib": 25167,
+          "total_mib": 81559,
+          "util_percent": 0,
+          "state": "mid",
+          "processes": [
+            {
+              "pid": "2361553",
+              "user": "manikm",
+              "name": "/home/manikm/miniconda3/envs/clintrust_vllm/bin/python",
+              "used_mib": 25158
+            }
+          ]
+        },
+        {
+          "index": "1",
+          "uuid": "GPU-cbf8c219-f716-c2e7-0fa0-943605bdd357",
+          "name": "NVIDIA H100 PCIe",
+          "used_mib": 0,
+          "total_mib": 81559,
+          "util_percent": 0,
+          "state": "free",
+          "processes": []
+        }
+      ],
       "storage": [
         {
           "source": "/dev/md0p1",
           "mount": "/home",
           "size_bytes": 3779167371264,
-          "used_bytes": 3394440232960,
-          "avail_bytes": 192679448576,
+          "used_bytes": 3394440372224,
+          "avail_bytes": 192679309312,
           "use_percent": "95%",
           "fs_type": "ext4"
         },
@@ -290,8 +318,8 @@
           "source": "/dev/sda4",
           "mount": "/",
           "size_bytes": 100861726720,
-          "used_bytes": 57887657984,
-          "avail_bytes": 37803331584,
+          "used_bytes": 57887748096,
+          "avail_bytes": 37803241472,
           "use_percent": "61%",
           "fs_type": "ext4"
         }
@@ -346,8 +374,8 @@
           "source": "/dev/sda2",
           "mount": "/data",
           "size_bytes": 15670141526016,
-          "used_bytes": 13798174535680,
-          "avail_bytes": 1082213158912,
+          "used_bytes": 13798174547968,
+          "avail_bytes": 1082213146624,
           "use_percent": "93%",
           "fs_type": "ext4"
         },
@@ -355,8 +383,8 @@
           "source": "/dev/sdb3",
           "mount": "/",
           "size_bytes": 469900591104,
-          "used_bytes": 442986213376,
-          "avail_bytes": 3017437184,
+          "used_bytes": 442986307584,
+          "avail_bytes": 3017342976,
           "use_percent": "100%",
           "fs_type": "ext4"
         }
