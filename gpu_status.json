@@ -1,5 +1,5 @@
 {
-  "updated_utc": "2026-07-23T15:03:44.886295+00:00",
+  "updated_utc": "2026-07-23T15:05:07.277822+00:00",
   "servers": {
     "axis0": {
       "status": "ok",
@@ -48,8 +48,8 @@
           "source": "/dev/nvme0n1p2",
           "mount": "/",
           "size_bytes": 75149131776,
-          "used_bytes": 34727088128,
-          "avail_bytes": 36578496512,
+          "used_bytes": 34727129088,
+          "avail_bytes": 36578455552,
           "use_percent": "49%",
           "fs_type": "ext4"
         }
@@ -136,8 +136,8 @@
           "source": "/dev/mapper/vg0-root",
           "mount": "/",
           "size_bytes": 67049664512,
-          "used_bytes": 40009879552,
-          "avail_bytes": 23587037184,
+          "used_bytes": 40009994240,
+          "avail_bytes": 23586922496,
           "use_percent": "63%",
           "fs_type": "ext4"
         }
@@ -283,8 +283,8 @@
           "source": "/dev/md0p1",
           "mount": "/home",
           "size_bytes": 11429865578496,
-          "used_bytes": 10669980372992,
-          "avail_bytes": 183775481856,
+          "used_bytes": 10669980377088,
+          "avail_bytes": 183775477760,
           "use_percent": "99%",
           "fs_type": "ext4"
         },
@@ -292,16 +292,44 @@
           "source": "/dev/nvme4n1p3",
           "mount": "/",
           "size_bytes": 134145380352,
-          "used_bytes": 41553977344,
-          "avail_bytes": 85702680576,
+          "used_bytes": 41554264064,
+          "avail_bytes": 85702393856,
           "use_percent": "33%",
           "fs_type": "ext4"
         }
       ]
     },
     "h100-litjan2024": {
-      "status": "unreachable",
-      "gpus": [],
+      "status": "ok",
+      "gpus": [
+        {
+          "index": "0",
+          "uuid": "GPU-51f4c93c-f581-bc5d-b66f-4bb8a664c3e7",
+          "name": "NVIDIA H100 PCIe",
+          "used_mib": 25167,
+          "total_mib": 81559,
+          "util_percent": 0,
+          "state": "mid",
+          "processes": [
+            {
+              "pid": "2361553",
+              "user": "manikm",
+              "name": "/home/manikm/miniconda3/envs/clintrust_vllm/bin/python",
+              "used_mib": 25158
+            }
+          ]
+        },
+        {
+          "index": "1",
+          "uuid": "GPU-cbf8c219-f716-c2e7-0fa0-943605bdd357",
+          "name": "NVIDIA H100 PCIe",
+          "used_mib": 0,
+          "total_mib": 81559,
+          "util_percent": 0,
+          "state": "free",
+          "processes": []
+        }
+      ],
       "storage": [
         {
           "source": "/dev/md0p1",
@@ -325,8 +353,8 @@
           "source": "/dev/sda4",
           "mount": "/",
           "size_bytes": 100861726720,
-          "used_bytes": 57923534848,
-          "avail_bytes": 37767454720,
+          "used_bytes": 57912115200,
+          "avail_bytes": 37778874368,
           "use_percent": "61%",
           "fs_type": "ext4"
         }
@@ -381,8 +409,8 @@
           "source": "/dev/sda2",
           "mount": "/data",
           "size_bytes": 15670141526016,
-          "used_bytes": 13798173331456,
-          "avail_bytes": 1082214363136,
+          "used_bytes": 13798173343744,
+          "avail_bytes": 1082214350848,
           "use_percent": "93%",
           "fs_type": "ext4"
         },
@@ -390,7 +418,7 @@
           "source": "/dev/sdb3",
           "mount": "/",
           "size_bytes": 469900591104,
-          "used_bytes": 447071838208,
+          "used_bytes": 447071879168,
           "avail_bytes": 0,
           "use_percent": "100%",
           "fs_type": "ext4"
