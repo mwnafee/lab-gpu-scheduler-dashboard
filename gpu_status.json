@@ -1,5 +1,5 @@
 {
-  "updated_utc": "2026-07-23T20:03:00.486616+00:00",
+  "updated_utc": "2026-07-23T20:04:28.070318+00:00",
   "servers": {
     "axis0": {
       "status": "ok",
@@ -48,8 +48,8 @@
           "source": "/dev/nvme0n1p2",
           "mount": "/",
           "size_bytes": 75149131776,
-          "used_bytes": 34725924864,
-          "avail_bytes": 36579659776,
+          "used_bytes": 34725961728,
+          "avail_bytes": 36579622912,
           "use_percent": "49%",
           "fs_type": "ext4"
         }
@@ -136,8 +136,8 @@
           "source": "/dev/mapper/vg0-root",
           "mount": "/",
           "size_bytes": 67049664512,
-          "used_bytes": 39911313408,
-          "avail_bytes": 23685603328,
+          "used_bytes": 39911428096,
+          "avail_bytes": 23685488640,
           "use_percent": "63%",
           "fs_type": "ext4"
         }
@@ -269,35 +269,7 @@
           "processes": []
         }
       ],
-      "storage": [
-        {
-          "source": "/dev/md1",
-          "mount": "/space",
-          "size_bytes": 45897978388480,
-          "used_bytes": 45282349518848,
-          "avail_bytes": 154787635200,
-          "use_percent": "100%",
-          "fs_type": "ext4"
-        },
-        {
-          "source": "/dev/md0p1",
-          "mount": "/home",
-          "size_bytes": 11429865578496,
-          "used_bytes": 10670044925952,
-          "avail_bytes": 183710928896,
-          "use_percent": "99%",
-          "fs_type": "ext4"
-        },
-        {
-          "source": "/dev/nvme4n1p3",
-          "mount": "/",
-          "size_bytes": 134145380352,
-          "used_bytes": 40438247424,
-          "avail_bytes": 86818410496,
-          "use_percent": "32%",
-          "fs_type": "ext4"
-        }
-      ]
+      "storage": []
     },
     "h100-litjan2024": {
       "status": "ok",
@@ -330,7 +302,35 @@
           "processes": []
         }
       ],
-      "storage": []
+      "storage": [
+        {
+          "source": "/dev/md0p1",
+          "mount": "/home",
+          "size_bytes": 3779167371264,
+          "used_bytes": 3395045478400,
+          "avail_bytes": 192074203136,
+          "use_percent": "95%",
+          "fs_type": "ext4"
+        },
+        {
+          "source": "/dev/sda5",
+          "mount": "/var/lib/docker",
+          "size_bytes": 111976861696,
+          "used_bytes": 46599409664,
+          "avail_bytes": 59642003456,
+          "use_percent": "44%",
+          "fs_type": "ext4"
+        },
+        {
+          "source": "/dev/sda4",
+          "mount": "/",
+          "size_bytes": 100861726720,
+          "used_bytes": 57954021376,
+          "avail_bytes": 37736968192,
+          "use_percent": "61%",
+          "fs_type": "ext4"
+        }
+      ]
     },
     "deeprecon": {
       "status": "ok",
@@ -381,8 +381,8 @@
           "source": "/dev/sda2",
           "mount": "/data",
           "size_bytes": 15670141526016,
-          "used_bytes": 13798176337920,
-          "avail_bytes": 1082211356672,
+          "used_bytes": 13798176350208,
+          "avail_bytes": 1082211344384,
           "use_percent": "93%",
           "fs_type": "ext4"
         },
@@ -390,7 +390,7 @@
           "source": "/dev/sdb3",
           "mount": "/",
           "size_bytes": 469900591104,
-          "used_bytes": 447074705408,
+          "used_bytes": 447074754560,
           "avail_bytes": 0,
           "use_percent": "100%",
           "fs_type": "ext4"
