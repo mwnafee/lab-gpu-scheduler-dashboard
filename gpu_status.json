@@ -1,5 +1,5 @@
 {
-  "updated_utc": "2026-07-27T21:38:12.577648+00:00",
+  "updated_utc": "2026-07-27T21:39:27.394621+00:00",
   "servers": {
     "axis0": {
       "status": "ok",
@@ -48,8 +48,8 @@
           "source": "/dev/nvme0n1p2",
           "mount": "/",
           "size_bytes": 75149131776,
-          "used_bytes": 34732412928,
-          "avail_bytes": 36573171712,
+          "used_bytes": 34732453888,
+          "avail_bytes": 36573130752,
           "use_percent": "49%",
           "fs_type": "ext4"
         }
@@ -136,8 +136,8 @@
           "source": "/dev/mapper/vg0-root",
           "mount": "/",
           "size_bytes": 67049664512,
-          "used_bytes": 38249156608,
-          "avail_bytes": 25347760128,
+          "used_bytes": 38249263104,
+          "avail_bytes": 25347653632,
           "use_percent": "61%",
           "fs_type": "ext4"
         }
@@ -283,8 +283,8 @@
           "source": "/dev/md0p1",
           "mount": "/home",
           "size_bytes": 11429865578496,
-          "used_bytes": 10677965373440,
-          "avail_bytes": 175790481408,
+          "used_bytes": 10677965438976,
+          "avail_bytes": 175790415872,
           "use_percent": "99%",
           "fs_type": "ext4"
         },
@@ -292,8 +292,8 @@
           "source": "/dev/nvme4n1p3",
           "mount": "/",
           "size_bytes": 134145380352,
-          "used_bytes": 33801842688,
-          "avail_bytes": 93454815232,
+          "used_bytes": 33802129408,
+          "avail_bytes": 93454528512,
           "use_percent": "27%",
           "fs_type": "ext4"
         }
@@ -325,7 +325,7 @@
           "name": "NVIDIA H100 PCIe",
           "used_mib": 54879,
           "total_mib": 81559,
-          "util_percent": 96,
+          "util_percent": 97,
           "state": "mid",
           "processes": [
             {
@@ -360,8 +360,8 @@
           "source": "/dev/sda4",
           "mount": "/",
           "size_bytes": 100861726720,
-          "used_bytes": 57931124736,
-          "avail_bytes": 37759864832,
+          "used_bytes": 57920098304,
+          "avail_bytes": 37770891264,
           "use_percent": "61%",
           "fs_type": "ext4"
         }
@@ -384,11 +384,18 @@
           "index": "1",
           "uuid": "GPU-1c1d2e93-fa30-47e7-14b0-b6b05746f754",
           "name": "NVIDIA GeForce GTX 1080 Ti",
-          "used_mib": 3,
+          "used_mib": 6441,
           "total_mib": 11264,
-          "util_percent": 0,
-          "state": "free",
-          "processes": []
+          "util_percent": 100,
+          "state": "mid",
+          "processes": [
+            {
+              "pid": "987870",
+              "user": "nafeem",
+              "name": "/data/nafeem/miniconda3/envs/cellseg/bin/python",
+              "used_mib": 6436
+            }
+          ]
         },
         {
           "index": "2",
@@ -416,8 +423,8 @@
           "source": "/dev/sda2",
           "mount": "/data",
           "size_bytes": 15670141526016,
-          "used_bytes": 13799283253248,
-          "avail_bytes": 1081104441344,
+          "used_bytes": 13799283273728,
+          "avail_bytes": 1081104420864,
           "use_percent": "93%",
           "fs_type": "ext4"
         },
@@ -425,8 +432,8 @@
           "source": "/dev/sdb3",
           "mount": "/",
           "size_bytes": 469900591104,
-          "used_bytes": 442826391552,
-          "avail_bytes": 3177259008,
+          "used_bytes": 442826473472,
+          "avail_bytes": 3177177088,
           "use_percent": "100%",
           "fs_type": "ext4"
         }
