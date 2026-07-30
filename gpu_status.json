@@ -1,5 +1,5 @@
 {
-  "updated_utc": "2026-07-30T13:04:37.591624+00:00",
+  "updated_utc": "2026-07-30T13:05:59.719784+00:00",
   "servers": {
     "axis0": {
       "status": "ok",
@@ -48,8 +48,8 @@
           "source": "/dev/nvme0n1p2",
           "mount": "/",
           "size_bytes": 75149131776,
-          "used_bytes": 34739564544,
-          "avail_bytes": 36566020096,
+          "used_bytes": 34739601408,
+          "avail_bytes": 36565983232,
           "use_percent": "49%",
           "fs_type": "ext4"
         }
@@ -136,8 +136,8 @@
           "source": "/dev/mapper/vg0-root",
           "mount": "/",
           "size_bytes": 67049664512,
-          "used_bytes": 42259259392,
-          "avail_bytes": 21337657344,
+          "used_bytes": 42259378176,
+          "avail_bytes": 21337538560,
           "use_percent": "67%",
           "fs_type": "ext4"
         }
@@ -283,8 +283,8 @@
           "source": "/dev/md0p1",
           "mount": "/home",
           "size_bytes": 11429865578496,
-          "used_bytes": 10681198796800,
-          "avail_bytes": 172557058048,
+          "used_bytes": 10681273847808,
+          "avail_bytes": 172482007040,
           "use_percent": "99%",
           "fs_type": "ext4"
         },
@@ -292,23 +292,58 @@
           "source": "/dev/nvme4n1p3",
           "mount": "/",
           "size_bytes": 134145380352,
-          "used_bytes": 39330709504,
-          "avail_bytes": 87925948416,
+          "used_bytes": 39331016704,
+          "avail_bytes": 87925641216,
           "use_percent": "31%",
           "fs_type": "ext4"
         }
       ]
     },
     "h100-litjan2024": {
-      "status": "unreachable",
-      "gpus": [],
+      "status": "ok",
+      "gpus": [
+        {
+          "index": "0",
+          "uuid": "GPU-51f4c93c-f581-bc5d-b66f-4bb8a664c3e7",
+          "name": "NVIDIA H100 PCIe",
+          "used_mib": 74913,
+          "total_mib": 81559,
+          "util_percent": 0,
+          "state": "busy",
+          "processes": [
+            {
+              "pid": "2593977",
+              "user": "islamm11",
+              "name": "VLLM::EngineCore",
+              "used_mib": 74904
+            }
+          ]
+        },
+        {
+          "index": "1",
+          "uuid": "GPU-cbf8c219-f716-c2e7-0fa0-943605bdd357",
+          "name": "NVIDIA H100 PCIe",
+          "used_mib": 8233,
+          "total_mib": 81559,
+          "util_percent": 0,
+          "state": "mid",
+          "processes": [
+            {
+              "pid": "2593645",
+              "user": "islamm11",
+              "name": "/home/islamm11/anaconda3/envs/mimic_tts/bin/python",
+              "used_mib": 8224
+            }
+          ]
+        }
+      ],
       "storage": [
         {
           "source": "/dev/md0p1",
           "mount": "/home",
           "size_bytes": 3779167371264,
-          "used_bytes": 3276662091776,
-          "avail_bytes": 310457589760,
+          "used_bytes": 3276662169600,
+          "avail_bytes": 310457511936,
           "use_percent": "92%",
           "fs_type": "ext4"
         },
@@ -325,8 +360,8 @@
           "source": "/dev/sda4",
           "mount": "/",
           "size_bytes": 100861726720,
-          "used_bytes": 57911422976,
-          "avail_bytes": 37779566592,
+          "used_bytes": 57900077056,
+          "avail_bytes": 37790912512,
           "use_percent": "61%",
           "fs_type": "ext4"
         }
@@ -381,8 +416,8 @@
           "source": "/dev/sda2",
           "mount": "/data",
           "size_bytes": 15670141526016,
-          "used_bytes": 13800237498368,
-          "avail_bytes": 1080150196224,
+          "used_bytes": 13800237510656,
+          "avail_bytes": 1080150183936,
           "use_percent": "93%",
           "fs_type": "ext4"
         },
@@ -390,7 +425,7 @@
           "source": "/dev/sdb3",
           "mount": "/",
           "size_bytes": 469900591104,
-          "used_bytes": 447823351808,
+          "used_bytes": 447823396864,
           "avail_bytes": 0,
           "use_percent": "100%",
           "fs_type": "ext4"
