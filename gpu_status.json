@@ -1,5 +1,5 @@
 {
-  "updated_utc": "2026-07-31T02:16:54.240723+00:00",
+  "updated_utc": "2026-07-31T02:18:39.282986+00:00",
   "servers": {
     "axis0": {
       "status": "ok",
@@ -48,8 +48,8 @@
           "source": "/dev/nvme0n1p2",
           "mount": "/",
           "size_bytes": 75149131776,
-          "used_bytes": 34743828480,
-          "avail_bytes": 36561756160,
+          "used_bytes": 34743877632,
+          "avail_bytes": 36561707008,
           "use_percent": "49%",
           "fs_type": "ext4"
         }
@@ -136,8 +136,8 @@
           "source": "/dev/mapper/vg0-root",
           "mount": "/",
           "size_bytes": 67049664512,
-          "used_bytes": 43448930304,
-          "avail_bytes": 20147986432,
+          "used_bytes": 43449061376,
+          "avail_bytes": 20147855360,
           "use_percent": "69%",
           "fs_type": "ext4"
         }
@@ -174,7 +174,7 @@
           "processes": [
             {
               "pid": "3278217",
-              "user": "unknown",
+              "user": "manikm",
               "name": "VLLM::Worker_PP0_TP1",
               "used_mib": 77870
             }
@@ -191,7 +191,7 @@
           "processes": [
             {
               "pid": "3278218",
-              "user": "unknown",
+              "user": "manikm",
               "name": "VLLM::Worker_PP1_TP0",
               "used_mib": 76724
             }
@@ -271,7 +271,7 @@
           "name": "NVIDIA H100 80GB HBM3",
           "used_mib": 19336,
           "total_mib": 81559,
-          "util_percent": 96,
+          "util_percent": 99,
           "state": "mid",
           "processes": [
             {
@@ -297,8 +297,8 @@
           "source": "/dev/md0p1",
           "mount": "/home",
           "size_bytes": 11429865578496,
-          "used_bytes": 10685194076160,
-          "avail_bytes": 168561778688,
+          "used_bytes": 10685194092544,
+          "avail_bytes": 168561762304,
           "use_percent": "99%",
           "fs_type": "ext4"
         },
@@ -306,17 +306,80 @@
           "source": "/dev/nvme4n1p3",
           "mount": "/",
           "size_bytes": 134145380352,
-          "used_bytes": 40936497152,
-          "avail_bytes": 86320160768,
+          "used_bytes": 40936833024,
+          "avail_bytes": 86319824896,
           "use_percent": "33%",
           "fs_type": "ext4"
         }
       ]
     },
     "h100-litjan2024": {
-      "status": "unreachable",
-      "gpus": [],
-      "storage": []
+      "status": "ok",
+      "gpus": [
+        {
+          "index": "0",
+          "uuid": "GPU-51f4c93c-f581-bc5d-b66f-4bb8a664c3e7",
+          "name": "NVIDIA H100 PCIe",
+          "used_mib": 74913,
+          "total_mib": 81559,
+          "util_percent": 0,
+          "state": "busy",
+          "processes": [
+            {
+              "pid": "2593977",
+              "user": "islamm11",
+              "name": "VLLM::EngineCore",
+              "used_mib": 74904
+            }
+          ]
+        },
+        {
+          "index": "1",
+          "uuid": "GPU-cbf8c219-f716-c2e7-0fa0-943605bdd357",
+          "name": "NVIDIA H100 PCIe",
+          "used_mib": 9265,
+          "total_mib": 81559,
+          "util_percent": 0,
+          "state": "mid",
+          "processes": [
+            {
+              "pid": "2593645",
+              "user": "islamm11",
+              "name": "/home/islamm11/anaconda3/envs/mimic_tts/bin/python",
+              "used_mib": 9256
+            }
+          ]
+        }
+      ],
+      "storage": [
+        {
+          "source": "/dev/md0p1",
+          "mount": "/home",
+          "size_bytes": 3779167371264,
+          "used_bytes": 3277885001728,
+          "avail_bytes": 309234679808,
+          "use_percent": "92%",
+          "fs_type": "ext4"
+        },
+        {
+          "source": "/dev/sda5",
+          "mount": "/var/lib/docker",
+          "size_bytes": 111976861696,
+          "used_bytes": 84332785664,
+          "avail_bytes": 21908627456,
+          "use_percent": "80%",
+          "fs_type": "ext4"
+        },
+        {
+          "source": "/dev/sda4",
+          "mount": "/",
+          "size_bytes": 100861726720,
+          "used_bytes": 59836346368,
+          "avail_bytes": 35854643200,
+          "use_percent": "63%",
+          "fs_type": "ext4"
+        }
+      ]
     },
     "deeprecon": {
       "status": "ok",
@@ -367,8 +430,8 @@
           "source": "/dev/sda2",
           "mount": "/data",
           "size_bytes": 15670141526016,
-          "used_bytes": 13801010421760,
-          "avail_bytes": 1079377272832,
+          "used_bytes": 13801010434048,
+          "avail_bytes": 1079377260544,
           "use_percent": "93%",
           "fs_type": "ext4"
         },
@@ -376,7 +439,7 @@
           "source": "/dev/sdb3",
           "mount": "/",
           "size_bytes": 469900591104,
-          "used_bytes": 450241179648,
+          "used_bytes": 450241241088,
           "avail_bytes": 0,
           "use_percent": "100%",
           "fs_type": "ext4"
