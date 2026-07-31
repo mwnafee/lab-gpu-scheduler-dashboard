@@ -1,5 +1,5 @@
 {
-  "updated_utc": "2026-07-31T07:12:30.815712+00:00",
+  "updated_utc": "2026-07-31T07:13:45.452842+00:00",
   "servers": {
     "axis0": {
       "status": "ok",
@@ -48,8 +48,8 @@
           "source": "/dev/nvme0n1p2",
           "mount": "/",
           "size_bytes": 75149131776,
-          "used_bytes": 34741616640,
-          "avail_bytes": 36563968000,
+          "used_bytes": 34741653504,
+          "avail_bytes": 36563931136,
           "use_percent": "49%",
           "fs_type": "ext4"
         }
@@ -136,8 +136,8 @@
           "source": "/dev/mapper/vg0-root",
           "mount": "/",
           "size_bytes": 67049664512,
-          "used_bytes": 43459178496,
-          "avail_bytes": 20137738240,
+          "used_bytes": 43459293184,
+          "avail_bytes": 20137623552,
           "use_percent": "69%",
           "fs_type": "ext4"
         }
@@ -150,7 +150,7 @@
           "index": "0",
           "uuid": "GPU-4fe8d37d-e43a-e90a-62ab-b8b2d654a66b",
           "name": "NVIDIA H100 80GB HBM3",
-          "used_mib": 77885,
+          "used_mib": 77886,
           "total_mib": 81559,
           "util_percent": 0,
           "state": "busy",
@@ -252,17 +252,24 @@
           "index": "6",
           "uuid": "GPU-652d5b3f-b16c-c486-1844-8a66b427c1a9",
           "name": "NVIDIA H100 80GB HBM3",
-          "used_mib": 4,
+          "used_mib": 19338,
           "total_mib": 81559,
-          "util_percent": 0,
-          "state": "free",
-          "processes": []
+          "util_percent": 100,
+          "state": "mid",
+          "processes": [
+            {
+              "pid": "1851051",
+              "user": "islamm11",
+              "name": "python",
+              "used_mib": 19328
+            }
+          ]
         },
         {
           "index": "7",
           "uuid": "GPU-c3e858c3-04bb-b607-4d99-98502d0bfef5",
           "name": "NVIDIA H100 80GB HBM3",
-          "used_mib": 19329,
+          "used_mib": 19330,
           "total_mib": 81559,
           "util_percent": 99,
           "state": "mid",
@@ -290,8 +297,8 @@
           "source": "/dev/md0p1",
           "mount": "/home",
           "size_bytes": 11429865578496,
-          "used_bytes": 10687072202752,
-          "avail_bytes": 166683652096,
+          "used_bytes": 10687085203456,
+          "avail_bytes": 166670651392,
           "use_percent": "99%",
           "fs_type": "ext4"
         },
@@ -299,8 +306,8 @@
           "source": "/dev/nvme4n1p3",
           "mount": "/",
           "size_bytes": 134145380352,
-          "used_bytes": 40975458304,
-          "avail_bytes": 86281199616,
+          "used_bytes": 40975794176,
+          "avail_bytes": 86280863744,
           "use_percent": "33%",
           "fs_type": "ext4"
         }
@@ -349,8 +356,8 @@
           "source": "/dev/md0p1",
           "mount": "/home",
           "size_bytes": 3779167371264,
-          "used_bytes": 3278091153408,
-          "avail_bytes": 309028528128,
+          "used_bytes": 3278091214848,
+          "avail_bytes": 309028466688,
           "use_percent": "92%",
           "fs_type": "ext4"
         },
@@ -367,8 +374,8 @@
           "source": "/dev/sda4",
           "mount": "/",
           "size_bytes": 100861726720,
-          "used_bytes": 59834998784,
-          "avail_bytes": 35855990784,
+          "used_bytes": 59835207680,
+          "avail_bytes": 35855781888,
           "use_percent": "63%",
           "fs_type": "ext4"
         }
@@ -423,8 +430,8 @@
           "source": "/dev/sda2",
           "mount": "/data",
           "size_bytes": 15670141526016,
-          "used_bytes": 13801013391360,
-          "avail_bytes": 1079374303232,
+          "used_bytes": 13801013403648,
+          "avail_bytes": 1079374290944,
           "use_percent": "93%",
           "fs_type": "ext4"
         },
@@ -432,7 +439,7 @@
           "source": "/dev/sdb3",
           "mount": "/",
           "size_bytes": 469900591104,
-          "used_bytes": 450245373952,
+          "used_bytes": 450245423104,
           "avail_bytes": 0,
           "use_percent": "100%",
           "fs_type": "ext4"
