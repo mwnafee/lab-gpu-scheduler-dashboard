@@ -1,5 +1,5 @@
 {
-  "updated_utc": "2026-07-31T18:39:40.245162+00:00",
+  "updated_utc": "2026-07-31T18:41:14.206593+00:00",
   "servers": {
     "axis0": {
       "status": "ok",
@@ -48,8 +48,8 @@
           "source": "/dev/nvme0n1p2",
           "mount": "/",
           "size_bytes": 75149131776,
-          "used_bytes": 34741678080,
-          "avail_bytes": 36563906560,
+          "used_bytes": 34741714944,
+          "avail_bytes": 36563869696,
           "use_percent": "49%",
           "fs_type": "ext4"
         }
@@ -113,7 +113,35 @@
           "processes": []
         }
       ],
-      "storage": []
+      "storage": [
+        {
+          "source": "/dev/md0",
+          "mount": "/scratch",
+          "size_bytes": 9524376285184,
+          "used_bytes": 8101930360832,
+          "avail_bytes": 942367199232,
+          "use_percent": "90%",
+          "fs_type": "ext4"
+        },
+        {
+          "source": "/dev/mapper/vg0-home",
+          "mount": "/home",
+          "size_bytes": 155826298880,
+          "used_bytes": 137289728000,
+          "avail_bytes": 10546421760,
+          "use_percent": "93%",
+          "fs_type": "ext4"
+        },
+        {
+          "source": "/dev/mapper/vg0-root",
+          "mount": "/",
+          "size_bytes": 67049664512,
+          "used_bytes": 41950859264,
+          "avail_bytes": 21646057472,
+          "use_percent": "66%",
+          "fs_type": "ext4"
+        }
+      ]
     },
     "axis2": {
       "status": "ok",
@@ -255,8 +283,8 @@
           "source": "/dev/md0p1",
           "mount": "/home",
           "size_bytes": 11429865578496,
-          "used_bytes": 10689057185792,
-          "avail_bytes": 164698669056,
+          "used_bytes": 10689057341440,
+          "avail_bytes": 164698513408,
           "use_percent": "99%",
           "fs_type": "ext4"
         },
@@ -264,8 +292,8 @@
           "source": "/dev/nvme4n1p3",
           "mount": "/",
           "size_bytes": 134145380352,
-          "used_bytes": 41013166080,
-          "avail_bytes": 86243491840,
+          "used_bytes": 41013456896,
+          "avail_bytes": 86243201024,
           "use_percent": "33%",
           "fs_type": "ext4"
         }
@@ -297,7 +325,7 @@
           "name": "NVIDIA H100 PCIe",
           "used_mib": 6383,
           "total_mib": 81559,
-          "util_percent": 92,
+          "util_percent": 46,
           "state": "free",
           "processes": [
             {
@@ -314,8 +342,8 @@
           "source": "/dev/md0p1",
           "mount": "/home",
           "size_bytes": 3779167371264,
-          "used_bytes": 3279013105664,
-          "avail_bytes": 308106575872,
+          "used_bytes": 3279020199936,
+          "avail_bytes": 308099481600,
           "use_percent": "92%",
           "fs_type": "ext4"
         },
@@ -332,8 +360,8 @@
           "source": "/dev/sda4",
           "mount": "/",
           "size_bytes": 100861726720,
-          "used_bytes": 59941629952,
-          "avail_bytes": 35749359616,
+          "used_bytes": 59941900288,
+          "avail_bytes": 35749089280,
           "use_percent": "63%",
           "fs_type": "ext4"
         }
@@ -388,8 +416,8 @@
           "source": "/dev/sda2",
           "mount": "/data",
           "size_bytes": 15670141526016,
-          "used_bytes": 13801020321792,
-          "avail_bytes": 1079367372800,
+          "used_bytes": 13801020334080,
+          "avail_bytes": 1079367360512,
           "use_percent": "93%",
           "fs_type": "ext4"
         },
@@ -397,7 +425,7 @@
           "source": "/dev/sdb3",
           "mount": "/",
           "size_bytes": 469900591104,
-          "used_bytes": 448903589888,
+          "used_bytes": 448903639040,
           "avail_bytes": 0,
           "use_percent": "100%",
           "fs_type": "ext4"
