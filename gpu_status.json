@@ -1,5 +1,5 @@
 {
-  "updated_utc": "2026-08-01T01:42:51.396444+00:00",
+  "updated_utc": "2026-08-01T01:44:05.553948+00:00",
   "servers": {
     "axis0": {
       "status": "ok",
@@ -48,8 +48,8 @@
           "source": "/dev/nvme0n1p2",
           "mount": "/",
           "size_bytes": 75149131776,
-          "used_bytes": 34744381440,
-          "avail_bytes": 36561203200,
+          "used_bytes": 34744422400,
+          "avail_bytes": 36561162240,
           "use_percent": "49%",
           "fs_type": "ext4"
         }
@@ -136,8 +136,8 @@
           "source": "/dev/mapper/vg0-root",
           "mount": "/",
           "size_bytes": 67049664512,
-          "used_bytes": 42070061056,
-          "avail_bytes": 21526855680,
+          "used_bytes": 42070163456,
+          "avail_bytes": 21526753280,
           "use_percent": "67%",
           "fs_type": "ext4"
         }
@@ -283,8 +283,8 @@
           "source": "/dev/md0p1",
           "mount": "/home",
           "size_bytes": 11429865578496,
-          "used_bytes": 10691308011520,
-          "avail_bytes": 162447843328,
+          "used_bytes": 10691308023808,
+          "avail_bytes": 162447831040,
           "use_percent": "99%",
           "fs_type": "ext4"
         },
@@ -292,8 +292,8 @@
           "source": "/dev/nvme4n1p3",
           "mount": "/",
           "size_bytes": 134145380352,
-          "used_bytes": 40988086272,
-          "avail_bytes": 86268571648,
+          "used_bytes": 40988344320,
+          "avail_bytes": 86268313600,
           "use_percent": "33%",
           "fs_type": "ext4"
         }
@@ -323,11 +323,18 @@
           "index": "1",
           "uuid": "GPU-cbf8c219-f716-c2e7-0fa0-943605bdd357",
           "name": "NVIDIA H100 PCIe",
-          "used_mib": 0,
+          "used_mib": 4831,
           "total_mib": 81559,
-          "util_percent": 0,
+          "util_percent": 48,
           "state": "free",
-          "processes": []
+          "processes": [
+            {
+              "pid": "978900",
+              "user": "islamm11",
+              "name": "/home/islamm11/anaconda3/envs/mimic_tts/bin/python",
+              "used_mib": 4822
+            }
+          ]
         }
       ],
       "storage": [
@@ -353,8 +360,8 @@
           "source": "/dev/sda4",
           "mount": "/",
           "size_bytes": 100861726720,
-          "used_bytes": 59969679360,
-          "avail_bytes": 35721310208,
+          "used_bytes": 59956457472,
+          "avail_bytes": 35734532096,
           "use_percent": "63%",
           "fs_type": "ext4"
         }
@@ -409,8 +416,8 @@
           "source": "/dev/sda2",
           "mount": "/data",
           "size_bytes": 15670141526016,
-          "used_bytes": 13801024614400,
-          "avail_bytes": 1079363080192,
+          "used_bytes": 13801024626688,
+          "avail_bytes": 1079363067904,
           "use_percent": "93%",
           "fs_type": "ext4"
         },
@@ -418,7 +425,7 @@
           "source": "/dev/sdb3",
           "mount": "/",
           "size_bytes": 469900591104,
-          "used_bytes": 447704420352,
+          "used_bytes": 447704465408,
           "avail_bytes": 0,
           "use_percent": "100%",
           "fs_type": "ext4"
