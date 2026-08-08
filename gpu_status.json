@@ -1,5 +1,5 @@
 {
-  "updated_utc": "2026-08-08T13:02:48.217086+00:00",
+  "updated_utc": "2026-08-08T13:04:02.388195+00:00",
   "servers": {
     "axis0": {
       "status": "ok",
@@ -48,8 +48,8 @@
           "source": "/dev/nvme0n1p2",
           "mount": "/",
           "size_bytes": 75149131776,
-          "used_bytes": 34745470976,
-          "avail_bytes": 36560113664,
+          "used_bytes": 34745507840,
+          "avail_bytes": 36560076800,
           "use_percent": "49%",
           "fs_type": "ext4"
         }
@@ -127,8 +127,8 @@
           "source": "/dev/mapper/vg0-home",
           "mount": "/home",
           "size_bytes": 155826298880,
-          "used_bytes": 138202652672,
-          "avail_bytes": 9633497088,
+          "used_bytes": 138202800128,
+          "avail_bytes": 9633349632,
           "use_percent": "94%",
           "fs_type": "ext4"
         },
@@ -136,8 +136,8 @@
           "source": "/dev/mapper/vg0-root",
           "mount": "/",
           "size_bytes": 67049664512,
-          "used_bytes": 38458216448,
-          "avail_bytes": 25138700288,
+          "used_bytes": 38458318848,
+          "avail_bytes": 25138597888,
           "use_percent": "61%",
           "fs_type": "ext4"
         }
@@ -242,7 +242,7 @@
           "processes": [
             {
               "pid": "3278221",
-              "user": "manikm",
+              "user": "unknown",
               "name": "VLLM::Worker_PP2_TP1",
               "used_mib": 76972
             }
@@ -283,8 +283,8 @@
           "source": "/dev/md0p1",
           "mount": "/home",
           "size_bytes": 11429865578496,
-          "used_bytes": 10754434535424,
-          "avail_bytes": 99321319424,
+          "used_bytes": 10754542649344,
+          "avail_bytes": 99213205504,
           "use_percent": "100%",
           "fs_type": "ext4"
         },
@@ -292,64 +292,23 @@
           "source": "/dev/nvme4n1p3",
           "mount": "/",
           "size_bytes": 134145380352,
-          "used_bytes": 40066248704,
-          "avail_bytes": 87190409216,
+          "used_bytes": 40066527232,
+          "avail_bytes": 87190130688,
           "use_percent": "32%",
           "fs_type": "ext4"
         }
       ]
     },
     "h100-litjan2024": {
-      "status": "ok",
-      "gpus": [
-        {
-          "index": "0",
-          "uuid": "GPU-51f4c93c-f581-bc5d-b66f-4bb8a664c3e7",
-          "name": "NVIDIA H100 PCIe",
-          "used_mib": 60266,
-          "total_mib": 81559,
-          "util_percent": 0,
-          "state": "mid",
-          "processes": [
-            {
-              "pid": "496388",
-              "user": "islamm11",
-              "name": "VLLM::Worker_TP0",
-              "used_mib": 60242
-            }
-          ]
-        },
-        {
-          "index": "1",
-          "uuid": "GPU-cbf8c219-f716-c2e7-0fa0-943605bdd357",
-          "name": "NVIDIA H100 PCIe",
-          "used_mib": 65887,
-          "total_mib": 81559,
-          "util_percent": 0,
-          "state": "busy",
-          "processes": [
-            {
-              "pid": "496389",
-              "user": "islamm11",
-              "name": "VLLM::Worker_TP1",
-              "used_mib": 60014
-            },
-            {
-              "pid": "495501",
-              "user": "islamm11",
-              "name": "/home/islamm11/anaconda3/envs/mimic_tts/bin/python",
-              "used_mib": 5858
-            }
-          ]
-        }
-      ],
+      "status": "unreachable",
+      "gpus": [],
       "storage": [
         {
           "source": "/dev/md0p1",
           "mount": "/home",
           "size_bytes": 3779167371264,
-          "used_bytes": 3260877963264,
-          "avail_bytes": 326241718272,
+          "used_bytes": 3260878053376,
+          "avail_bytes": 326241628160,
           "use_percent": "91%",
           "fs_type": "ext4"
         },
@@ -366,8 +325,8 @@
           "source": "/dev/sda4",
           "mount": "/",
           "size_bytes": 100861726720,
-          "used_bytes": 61675290624,
-          "avail_bytes": 34015698944,
+          "used_bytes": 61675524096,
+          "avail_bytes": 34015465472,
           "use_percent": "65%",
           "fs_type": "ext4"
         }
@@ -422,8 +381,8 @@
           "source": "/dev/sda2",
           "mount": "/data",
           "size_bytes": 15670141526016,
-          "used_bytes": 13801023795200,
-          "avail_bytes": 1079363899392,
+          "used_bytes": 13801023807488,
+          "avail_bytes": 1079363887104,
           "use_percent": "93%",
           "fs_type": "ext4"
         },
@@ -431,8 +390,8 @@
           "source": "/dev/sdb3",
           "mount": "/",
           "size_bytes": 469900591104,
-          "used_bytes": 444186566656,
-          "avail_bytes": 1817083904,
+          "used_bytes": 444186611712,
+          "avail_bytes": 1817038848,
           "use_percent": "100%",
           "fs_type": "ext4"
         }
