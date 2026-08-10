@@ -1,9 +1,30 @@
 {
-  "updated_utc": "2026-08-10T16:22:08.050587+00:00",
+  "updated_utc": "2026-08-10T16:23:30.266746+00:00",
   "servers": {
     "axis0": {
-      "status": "unreachable",
-      "gpus": [],
+      "status": "ok",
+      "gpus": [
+        {
+          "index": "0",
+          "uuid": "GPU-5edd8cf7-a71e-4a7f-77be-8a5673dbb2f0",
+          "name": "NVIDIA TITAN RTX",
+          "used_mib": 1,
+          "total_mib": 24576,
+          "util_percent": 0,
+          "state": "free",
+          "processes": []
+        },
+        {
+          "index": "1",
+          "uuid": "GPU-442af73e-8628-b195-83b2-7506add343dc",
+          "name": "NVIDIA TITAN RTX",
+          "used_mib": 1,
+          "total_mib": 24576,
+          "util_percent": 0,
+          "state": "free",
+          "processes": []
+        }
+      ],
       "storage": [
         {
           "source": "/dev/sdb1",
@@ -27,8 +48,8 @@
           "source": "/dev/nvme0n1p2",
           "mount": "/",
           "size_bytes": 75149131776,
-          "used_bytes": 34737201152,
-          "avail_bytes": 36568383488,
+          "used_bytes": 34737233920,
+          "avail_bytes": 36568350720,
           "use_percent": "49%",
           "fs_type": "ext4"
         }
@@ -92,35 +113,7 @@
           "processes": []
         }
       ],
-      "storage": [
-        {
-          "source": "/dev/md0",
-          "mount": "/scratch",
-          "size_bytes": 9524376285184,
-          "used_bytes": 8137173483520,
-          "avail_bytes": 907124076544,
-          "use_percent": "90%",
-          "fs_type": "ext4"
-        },
-        {
-          "source": "/dev/mapper/vg0-home",
-          "mount": "/home",
-          "size_bytes": 155826298880,
-          "used_bytes": 138200481792,
-          "avail_bytes": 9635667968,
-          "use_percent": "94%",
-          "fs_type": "ext4"
-        },
-        {
-          "source": "/dev/mapper/vg0-root",
-          "mount": "/",
-          "size_bytes": 67049664512,
-          "used_bytes": 38412394496,
-          "avail_bytes": 25184522240,
-          "use_percent": "61%",
-          "fs_type": "ext4"
-        }
-      ]
+      "storage": []
     },
     "axis2": {
       "status": "ok",
@@ -271,8 +264,8 @@
           "source": "/dev/nvme4n1p3",
           "mount": "/",
           "size_bytes": 134145380352,
-          "used_bytes": 35221868544,
-          "avail_bytes": 92034789376,
+          "used_bytes": 35222151168,
+          "avail_bytes": 92034506752,
           "use_percent": "28%",
           "fs_type": "ext4"
         }
@@ -327,8 +320,8 @@
           "source": "/dev/md0p1",
           "mount": "/home",
           "size_bytes": 3779167371264,
-          "used_bytes": 3276807127040,
-          "avail_bytes": 310312554496,
+          "used_bytes": 3276807278592,
+          "avail_bytes": 310312402944,
           "use_percent": "92%",
           "fs_type": "ext4"
         },
@@ -345,8 +338,8 @@
           "source": "/dev/sda4",
           "mount": "/",
           "size_bytes": 100861726720,
-          "used_bytes": 59643928576,
-          "avail_bytes": 36047060992,
+          "used_bytes": 59644203008,
+          "avail_bytes": 36046786560,
           "use_percent": "63%",
           "fs_type": "ext4"
         }
@@ -401,8 +394,8 @@
           "source": "/dev/sda2",
           "mount": "/data",
           "size_bytes": 15670141526016,
-          "used_bytes": 13801022382080,
-          "avail_bytes": 1079365312512,
+          "used_bytes": 13801022394368,
+          "avail_bytes": 1079365300224,
           "use_percent": "93%",
           "fs_type": "ext4"
         },
@@ -410,8 +403,8 @@
           "source": "/dev/sdb3",
           "mount": "/",
           "size_bytes": 469900591104,
-          "used_bytes": 443743514624,
-          "avail_bytes": 2260135936,
+          "used_bytes": 443743559680,
+          "avail_bytes": 2260090880,
           "use_percent": "100%",
           "fs_type": "ext4"
         }
