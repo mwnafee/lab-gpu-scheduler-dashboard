@@ -1,5 +1,5 @@
 {
-  "updated_utc": "2026-08-16T04:17:45.260406+00:00",
+  "updated_utc": "2026-08-16T04:19:28.396925+00:00",
   "servers": {
     "axis0": {
       "status": "ok",
@@ -48,8 +48,8 @@
           "source": "/dev/nvme0n1p2",
           "mount": "/",
           "size_bytes": 75149131776,
-          "used_bytes": 36294201344,
-          "avail_bytes": 35011383296,
+          "used_bytes": 36294238208,
+          "avail_bytes": 35011346432,
           "use_percent": "51%",
           "fs_type": "ext4"
         }
@@ -127,8 +127,8 @@
           "source": "/dev/mapper/vg0-home",
           "mount": "/home",
           "size_bytes": 155826298880,
-          "used_bytes": 138615418880,
-          "avail_bytes": 9220730880,
+          "used_bytes": 138615599104,
+          "avail_bytes": 9220550656,
           "use_percent": "94%",
           "fs_type": "ext4"
         },
@@ -136,8 +136,8 @@
           "source": "/dev/mapper/vg0-root",
           "mount": "/",
           "size_bytes": 67049664512,
-          "used_bytes": 39205814272,
-          "avail_bytes": 24391102464,
+          "used_bytes": 39205920768,
+          "avail_bytes": 24390995968,
           "use_percent": "62%",
           "fs_type": "ext4"
         }
@@ -254,7 +254,7 @@
           "name": "NVIDIA H100 80GB HBM3",
           "used_mib": 46895,
           "total_mib": 81559,
-          "util_percent": 84,
+          "util_percent": 85,
           "state": "mid",
           "processes": [
             {
@@ -276,7 +276,35 @@
           "processes": []
         }
       ],
-      "storage": []
+      "storage": [
+        {
+          "source": "/dev/md1",
+          "mount": "/space",
+          "size_bytes": 45897978388480,
+          "used_bytes": 45282349518848,
+          "avail_bytes": 154787635200,
+          "use_percent": "100%",
+          "fs_type": "ext4"
+        },
+        {
+          "source": "/dev/md0p1",
+          "mount": "/home",
+          "size_bytes": 11429865578496,
+          "used_bytes": 10485317066752,
+          "avail_bytes": 368438788096,
+          "use_percent": "97%",
+          "fs_type": "ext4"
+        },
+        {
+          "source": "/dev/nvme4n1p3",
+          "mount": "/",
+          "size_bytes": 134145380352,
+          "used_bytes": 36576366592,
+          "avail_bytes": 90680291328,
+          "use_percent": "29%",
+          "fs_type": "ext4"
+        }
+      ]
     },
     "h100-litjan2024": {
       "status": "ok",
@@ -322,7 +350,35 @@
           ]
         }
       ],
-      "storage": []
+      "storage": [
+        {
+          "source": "/dev/md0p1",
+          "mount": "/home",
+          "size_bytes": 3779167371264,
+          "used_bytes": 3279013449728,
+          "avail_bytes": 308106231808,
+          "use_percent": "92%",
+          "fs_type": "ext4"
+        },
+        {
+          "source": "/dev/sda5",
+          "mount": "/var/lib/docker",
+          "size_bytes": 111976861696,
+          "used_bytes": 90640883712,
+          "avail_bytes": 15600529408,
+          "use_percent": "86%",
+          "fs_type": "ext4"
+        },
+        {
+          "source": "/dev/sda4",
+          "mount": "/",
+          "size_bytes": 100861726720,
+          "used_bytes": 60974985216,
+          "avail_bytes": 34716004352,
+          "use_percent": "64%",
+          "fs_type": "ext4"
+        }
+      ]
     },
     "deeprecon": {
       "status": "ok",
@@ -373,8 +429,8 @@
           "source": "/dev/sda2",
           "mount": "/data",
           "size_bytes": 15670141526016,
-          "used_bytes": 13801018273792,
-          "avail_bytes": 1079369420800,
+          "used_bytes": 13801018286080,
+          "avail_bytes": 1079369408512,
           "use_percent": "93%",
           "fs_type": "ext4"
         },
@@ -382,8 +438,8 @@
           "source": "/dev/sdb3",
           "mount": "/",
           "size_bytes": 469900591104,
-          "used_bytes": 444464623616,
-          "avail_bytes": 1539026944,
+          "used_bytes": 444464721920,
+          "avail_bytes": 1538928640,
           "use_percent": "100%",
           "fs_type": "ext4"
         }
