@@ -1,5 +1,5 @@
 {
-  "updated_utc": "2026-08-19T20:21:40.475792+00:00",
+  "updated_utc": "2026-08-19T20:23:03.605227+00:00",
   "servers": {
     "axis0": {
       "status": "ok",
@@ -30,8 +30,8 @@
           "source": "/dev/sdb1",
           "mount": "/data",
           "size_bytes": 19920462254080,
-          "used_bytes": 19048294961152,
-          "avail_bytes": 672139272192,
+          "used_bytes": 19048294969344,
+          "avail_bytes": 672139264000,
           "use_percent": "97%",
           "fs_type": "ext4"
         },
@@ -48,16 +48,71 @@
           "source": "/dev/nvme0n1p2",
           "mount": "/",
           "size_bytes": 75149131776,
-          "used_bytes": 34527969280,
-          "avail_bytes": 36777615360,
+          "used_bytes": 34528153600,
+          "avail_bytes": 36777431040,
           "use_percent": "49%",
           "fs_type": "ext4"
         }
       ]
     },
     "axis1": {
-      "status": "unreachable",
-      "gpus": [],
+      "status": "ok",
+      "gpus": [
+        {
+          "index": "0",
+          "uuid": "GPU-0274ace2-6972-5b39-b19e-20424e7bea6c",
+          "name": "NVIDIA RTX A5000",
+          "used_mib": 1,
+          "total_mib": 24564,
+          "util_percent": 0,
+          "state": "free",
+          "processes": []
+        },
+        {
+          "index": "1",
+          "uuid": "GPU-ea98594f-67ae-f02f-e199-ba2bbd25632e",
+          "name": "NVIDIA RTX A5000",
+          "used_mib": 20818,
+          "total_mib": 24564,
+          "util_percent": 0,
+          "state": "busy",
+          "processes": [
+            {
+              "pid": "45457",
+              "user": "manikm",
+              "name": "VLLM::EngineCore",
+              "used_mib": 20808
+            }
+          ]
+        },
+        {
+          "index": "2",
+          "uuid": "GPU-37cea084-e348-fb23-50ad-db38c474ea65",
+          "name": "NVIDIA RTX A5000",
+          "used_mib": 21766,
+          "total_mib": 24564,
+          "util_percent": 0,
+          "state": "busy",
+          "processes": [
+            {
+              "pid": "70403",
+              "user": "manikm",
+              "name": "VLLM::EngineCore",
+              "used_mib": 21756
+            }
+          ]
+        },
+        {
+          "index": "3",
+          "uuid": "GPU-d5c5ee02-067a-92a2-2129-166ed950fb4c",
+          "name": "NVIDIA RTX A5000",
+          "used_mib": 1,
+          "total_mib": 24564,
+          "util_percent": 0,
+          "state": "free",
+          "processes": []
+        }
+      ],
       "storage": [
         {
           "source": "/dev/md0",
@@ -72,8 +127,8 @@
           "source": "/dev/mapper/vg0-home",
           "mount": "/home",
           "size_bytes": 155826298880,
-          "used_bytes": 139472482304,
-          "avail_bytes": 8363667456,
+          "used_bytes": 139472805888,
+          "avail_bytes": 8363343872,
           "use_percent": "95%",
           "fs_type": "ext4"
         },
@@ -81,8 +136,8 @@
           "source": "/dev/mapper/vg0-root",
           "mount": "/",
           "size_bytes": 67049664512,
-          "used_bytes": 38299013120,
-          "avail_bytes": 25297903616,
+          "used_bytes": 38299262976,
+          "avail_bytes": 25297653760,
           "use_percent": "61%",
           "fs_type": "ext4"
         }
@@ -242,8 +297,8 @@
           "source": "/dev/md0p1",
           "mount": "/home",
           "size_bytes": 11429865578496,
-          "used_bytes": 10543722409984,
-          "avail_bytes": 310033444864,
+          "used_bytes": 10543722491904,
+          "avail_bytes": 310033362944,
           "use_percent": "98%",
           "fs_type": "ext4"
         },
@@ -251,8 +306,8 @@
           "source": "/dev/nvme4n1p3",
           "mount": "/",
           "size_bytes": 134145380352,
-          "used_bytes": 35898830848,
-          "avail_bytes": 91357827072,
+          "used_bytes": 35899297792,
+          "avail_bytes": 91357360128,
           "use_percent": "29%",
           "fs_type": "ext4"
         }
@@ -325,8 +380,8 @@
           "source": "/dev/sda4",
           "mount": "/",
           "size_bytes": 100861726720,
-          "used_bytes": 59334520832,
-          "avail_bytes": 36356468736,
+          "used_bytes": 59334754304,
+          "avail_bytes": 36356235264,
           "use_percent": "63%",
           "fs_type": "ext4"
         }
@@ -341,7 +396,7 @@
           "name": "NVIDIA GeForce GTX 1080 Ti",
           "used_mib": 1695,
           "total_mib": 11264,
-          "util_percent": 40,
+          "util_percent": 36,
           "state": "mid",
           "processes": [
             {
@@ -388,8 +443,8 @@
           "source": "/dev/sda2",
           "mount": "/data",
           "size_bytes": 15670141526016,
-          "used_bytes": 13801080262656,
-          "avail_bytes": 1079307431936,
+          "used_bytes": 13801080270848,
+          "avail_bytes": 1079307423744,
           "use_percent": "93%",
           "fs_type": "ext4"
         },
@@ -397,8 +452,8 @@
           "source": "/dev/sdb3",
           "mount": "/",
           "size_bytes": 469900591104,
-          "used_bytes": 443101011968,
-          "avail_bytes": 2902638592,
+          "used_bytes": 443101081600,
+          "avail_bytes": 2902568960,
           "use_percent": "100%",
           "fs_type": "ext4"
         }
