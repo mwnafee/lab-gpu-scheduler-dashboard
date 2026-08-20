@@ -1,5 +1,5 @@
 {
-  "updated_utc": "2026-08-20T02:14:07.633546+00:00",
+  "updated_utc": "2026-08-20T02:15:22.060876+00:00",
   "servers": {
     "axis0": {
       "status": "ok",
@@ -30,8 +30,8 @@
           "source": "/dev/sdb1",
           "mount": "/data",
           "size_bytes": 19920462254080,
-          "used_bytes": 19048296845312,
-          "avail_bytes": 672137388032,
+          "used_bytes": 19048296853504,
+          "avail_bytes": 672137379840,
           "use_percent": "97%",
           "fs_type": "ext4"
         },
@@ -48,8 +48,8 @@
           "source": "/dev/nvme0n1p2",
           "mount": "/",
           "size_bytes": 75149131776,
-          "used_bytes": 34533847040,
-          "avail_bytes": 36771737600,
+          "used_bytes": 34534031360,
+          "avail_bytes": 36771553280,
           "use_percent": "49%",
           "fs_type": "ext4"
         }
@@ -127,8 +127,8 @@
           "source": "/dev/mapper/vg0-home",
           "mount": "/home",
           "size_bytes": 155826298880,
-          "used_bytes": 139475451904,
-          "avail_bytes": 8360697856,
+          "used_bytes": 139475714048,
+          "avail_bytes": 8360435712,
           "use_percent": "95%",
           "fs_type": "ext4"
         },
@@ -136,8 +136,8 @@
           "source": "/dev/mapper/vg0-root",
           "mount": "/",
           "size_bytes": 67049664512,
-          "used_bytes": 38302711808,
-          "avail_bytes": 25294204928,
+          "used_bytes": 38302941184,
+          "avail_bytes": 25293975552,
           "use_percent": "61%",
           "fs_type": "ext4"
         }
@@ -254,7 +254,7 @@
           "name": "NVIDIA H100 80GB HBM3",
           "used_mib": 68533,
           "total_mib": 81559,
-          "util_percent": 38,
+          "util_percent": 39,
           "state": "busy",
           "processes": [
             {
@@ -271,7 +271,7 @@
           "name": "NVIDIA H100 80GB HBM3",
           "used_mib": 62267,
           "total_mib": 81559,
-          "util_percent": 82,
+          "util_percent": 83,
           "state": "mid",
           "processes": [
             {
@@ -297,8 +297,8 @@
           "source": "/dev/md0p1",
           "mount": "/home",
           "size_bytes": 11429865578496,
-          "used_bytes": 10544201691136,
-          "avail_bytes": 309554163712,
+          "used_bytes": 10544201801728,
+          "avail_bytes": 309554053120,
           "use_percent": "98%",
           "fs_type": "ext4"
         },
@@ -306,8 +306,8 @@
           "source": "/dev/nvme4n1p3",
           "mount": "/",
           "size_bytes": 134145380352,
-          "used_bytes": 35985653760,
-          "avail_bytes": 91271004160,
+          "used_bytes": 35986231296,
+          "avail_bytes": 91270426624,
           "use_percent": "29%",
           "fs_type": "ext4"
         }
@@ -320,21 +320,35 @@
           "index": "0",
           "uuid": "GPU-51f4c93c-f581-bc5d-b66f-4bb8a664c3e7",
           "name": "NVIDIA H100 PCIe",
-          "used_mib": 0,
+          "used_mib": 76517,
           "total_mib": 81559,
-          "util_percent": 0,
-          "state": "free",
-          "processes": []
+          "util_percent": 29,
+          "state": "busy",
+          "processes": [
+            {
+              "pid": "2290134",
+              "user": "azamm",
+              "name": "/home/azamm/anaconda3/envs/llm_medical/bin/python3.11",
+              "used_mib": 76500
+            }
+          ]
         },
         {
           "index": "1",
           "uuid": "GPU-cbf8c219-f716-c2e7-0fa0-943605bdd357",
           "name": "NVIDIA H100 PCIe",
-          "used_mib": 0,
+          "used_mib": 76387,
           "total_mib": 81559,
-          "util_percent": 0,
-          "state": "free",
-          "processes": []
+          "util_percent": 25,
+          "state": "busy",
+          "processes": [
+            {
+              "pid": "2290539",
+              "user": "azamm",
+              "name": "/home/azamm/anaconda3/envs/llm_medical/bin/python3.11",
+              "used_mib": 76370
+            }
+          ]
         }
       ],
       "storage": [
@@ -342,8 +356,8 @@
           "source": "/dev/md0p1",
           "mount": "/home",
           "size_bytes": 3779167371264,
-          "used_bytes": 3282255470592,
-          "avail_bytes": 304864210944,
+          "used_bytes": 3282253418496,
+          "avail_bytes": 304866263040,
           "use_percent": "92%",
           "fs_type": "ext4"
         },
@@ -360,8 +374,8 @@
           "source": "/dev/sda4",
           "mount": "/",
           "size_bytes": 100861726720,
-          "used_bytes": 59429203968,
-          "avail_bytes": 36261785600,
+          "used_bytes": 59429507072,
+          "avail_bytes": 36261482496,
           "use_percent": "63%",
           "fs_type": "ext4"
         }
@@ -376,17 +390,17 @@
           "name": "NVIDIA GeForce GTX 1080 Ti",
           "used_mib": 3385,
           "total_mib": 11264,
-          "util_percent": 86,
+          "util_percent": 85,
           "state": "mid",
           "processes": [
             {
-              "pid": "335650",
+              "pid": "336540",
               "user": "nafeem",
               "name": "python",
               "used_mib": 1690
             },
             {
-              "pid": "335698",
+              "pid": "336621",
               "user": "nafeem",
               "name": "python",
               "used_mib": 1690
@@ -429,8 +443,8 @@
           "source": "/dev/sda2",
           "mount": "/data",
           "size_bytes": 15670141526016,
-          "used_bytes": 13801924526080,
-          "avail_bytes": 1078463168512,
+          "used_bytes": 13801941356544,
+          "avail_bytes": 1078446338048,
           "use_percent": "93%",
           "fs_type": "ext4"
         },
@@ -438,8 +452,8 @@
           "source": "/dev/sdb3",
           "mount": "/",
           "size_bytes": 469900591104,
-          "used_bytes": 443097010176,
-          "avail_bytes": 2906640384,
+          "used_bytes": 443097178112,
+          "avail_bytes": 2906472448,
           "use_percent": "100%",
           "fs_type": "ext4"
         }
