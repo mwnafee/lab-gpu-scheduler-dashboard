@@ -1,10 +1,59 @@
 {
-  "updated_utc": "2026-08-28T17:48:06.284689+00:00",
+  "updated_utc": "2026-08-28T17:49:36.423187+00:00",
   "servers": {
     "axis0": {
-      "status": "unreachable",
-      "gpus": [],
-      "storage": []
+      "status": "ok",
+      "gpus": [
+        {
+          "index": "0",
+          "uuid": "GPU-5edd8cf7-a71e-4a7f-77be-8a5673dbb2f0",
+          "name": "NVIDIA TITAN RTX",
+          "used_mib": 1,
+          "total_mib": 24576,
+          "util_percent": 0,
+          "state": "free",
+          "processes": []
+        },
+        {
+          "index": "1",
+          "uuid": "GPU-442af73e-8628-b195-83b2-7506add343dc",
+          "name": "NVIDIA TITAN RTX",
+          "used_mib": 1,
+          "total_mib": 24576,
+          "util_percent": 0,
+          "state": "free",
+          "processes": []
+        }
+      ],
+      "storage": [
+        {
+          "source": "/dev/sdb1",
+          "mount": "/data",
+          "size_bytes": 19920462254080,
+          "used_bytes": 19048311189504,
+          "avail_bytes": 672123043840,
+          "use_percent": "97%",
+          "fs_type": "ext4"
+        },
+        {
+          "source": "/dev/nvme0n1p6",
+          "mount": "/home",
+          "size_bytes": 155350278144,
+          "used_bytes": 9968926720,
+          "avail_bytes": 137415426048,
+          "use_percent": "7%",
+          "fs_type": "ext4"
+        },
+        {
+          "source": "/dev/nvme0n1p2",
+          "mount": "/",
+          "size_bytes": 75149131776,
+          "used_bytes": 34550673408,
+          "avail_bytes": 36754911232,
+          "use_percent": "49%",
+          "fs_type": "ext4"
+        }
+      ]
     },
     "axis1": {
       "status": "ok",
@@ -78,8 +127,8 @@
           "source": "/dev/mapper/vg0-home",
           "mount": "/home",
           "size_bytes": 155826298880,
-          "used_bytes": 139871924224,
-          "avail_bytes": 7964225536,
+          "used_bytes": 139871973376,
+          "avail_bytes": 7964176384,
           "use_percent": "95%",
           "fs_type": "ext4"
         },
@@ -87,8 +136,8 @@
           "source": "/dev/mapper/vg0-root",
           "mount": "/",
           "size_bytes": 67049664512,
-          "used_bytes": 38360195072,
-          "avail_bytes": 25236721664,
+          "used_bytes": 38360485888,
+          "avail_bytes": 25236430848,
           "use_percent": "61%",
           "fs_type": "ext4"
         }
@@ -222,7 +271,7 @@
           "name": "NVIDIA H100 80GB HBM3",
           "used_mib": 65805,
           "total_mib": 81559,
-          "util_percent": 87,
+          "util_percent": 84,
           "state": "busy",
           "processes": [
             {
@@ -248,8 +297,8 @@
           "source": "/dev/md0p1",
           "mount": "/home",
           "size_bytes": 11429865578496,
-          "used_bytes": 10648818171904,
-          "avail_bytes": 204937682944,
+          "used_bytes": 10648818335744,
+          "avail_bytes": 204937519104,
           "use_percent": "99%",
           "fs_type": "ext4"
         },
@@ -257,8 +306,8 @@
           "source": "/dev/nvme4n1p3",
           "mount": "/",
           "size_bytes": 134145380352,
-          "used_bytes": 36333146112,
-          "avail_bytes": 90923511808,
+          "used_bytes": 36333834240,
+          "avail_bytes": 90922823680,
           "use_percent": "29%",
           "fs_type": "ext4"
         }
@@ -318,8 +367,8 @@
           "source": "/dev/sda2",
           "mount": "/data",
           "size_bytes": 15670141526016,
-          "used_bytes": 13802068905984,
-          "avail_bytes": 1078318788608,
+          "used_bytes": 13802068918272,
+          "avail_bytes": 1078318776320,
           "use_percent": "93%",
           "fs_type": "ext4"
         },
@@ -327,8 +376,8 @@
           "source": "/dev/sdb3",
           "mount": "/",
           "size_bytes": 469900591104,
-          "used_bytes": 442146635776,
-          "avail_bytes": 3857014784,
+          "used_bytes": 442146705408,
+          "avail_bytes": 3856945152,
           "use_percent": "100%",
           "fs_type": "ext4"
         }
