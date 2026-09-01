@@ -1,10 +1,59 @@
 {
-  "updated_utc": "2026-09-01T14:14:40.654393+00:00",
+  "updated_utc": "2026-09-01T14:16:26.395755+00:00",
   "servers": {
     "axis0": {
-      "status": "unreachable",
-      "gpus": [],
-      "storage": []
+      "status": "ok",
+      "gpus": [
+        {
+          "index": "0",
+          "uuid": "GPU-5edd8cf7-a71e-4a7f-77be-8a5673dbb2f0",
+          "name": "NVIDIA TITAN RTX",
+          "used_mib": 1,
+          "total_mib": 24576,
+          "util_percent": 0,
+          "state": "free",
+          "processes": []
+        },
+        {
+          "index": "1",
+          "uuid": "GPU-442af73e-8628-b195-83b2-7506add343dc",
+          "name": "NVIDIA TITAN RTX",
+          "used_mib": 1,
+          "total_mib": 24576,
+          "util_percent": 0,
+          "state": "free",
+          "processes": []
+        }
+      ],
+      "storage": [
+        {
+          "source": "/dev/sdb1",
+          "mount": "/data",
+          "size_bytes": 19920462254080,
+          "used_bytes": 19048311197696,
+          "avail_bytes": 672123035648,
+          "use_percent": "97%",
+          "fs_type": "ext4"
+        },
+        {
+          "source": "/dev/nvme0n1p6",
+          "mount": "/home",
+          "size_bytes": 155350278144,
+          "used_bytes": 9968926720,
+          "avail_bytes": 137415426048,
+          "use_percent": "7%",
+          "fs_type": "ext4"
+        },
+        {
+          "source": "/dev/nvme0n1p2",
+          "mount": "/",
+          "size_bytes": 75149131776,
+          "used_bytes": 34555535360,
+          "avail_bytes": 36750049280,
+          "use_percent": "49%",
+          "fs_type": "ext4"
+        }
+      ]
     },
     "axis1": {
       "status": "ok",
@@ -59,7 +108,7 @@
           "name": "NVIDIA RTX A5000",
           "used_mib": 2876,
           "total_mib": 24564,
-          "util_percent": 0,
+          "util_percent": 87,
           "state": "mid",
           "processes": [
             {
@@ -76,8 +125,8 @@
           "source": "/dev/md0",
           "mount": "/scratch",
           "size_bytes": 9524376285184,
-          "used_bytes": 8229400084480,
-          "avail_bytes": 814897475584,
+          "used_bytes": 8229492469760,
+          "avail_bytes": 814805090304,
           "use_percent": "91%",
           "fs_type": "ext4"
         },
@@ -85,8 +134,8 @@
           "source": "/dev/mapper/vg0-home",
           "mount": "/home",
           "size_bytes": 155826298880,
-          "used_bytes": 139907321856,
-          "avail_bytes": 7928827904,
+          "used_bytes": 139907530752,
+          "avail_bytes": 7928619008,
           "use_percent": "95%",
           "fs_type": "ext4"
         },
@@ -94,8 +143,8 @@
           "source": "/dev/mapper/vg0-root",
           "mount": "/",
           "size_bytes": 67049664512,
-          "used_bytes": 38292361216,
-          "avail_bytes": 25304555520,
+          "used_bytes": 38292779008,
+          "avail_bytes": 25304137728,
           "use_percent": "61%",
           "fs_type": "ext4"
         }
@@ -112,7 +161,14 @@
           "total_mib": 81559,
           "util_percent": 0,
           "state": "busy",
-          "processes": []
+          "processes": [
+            {
+              "pid": "3278216",
+              "user": "manikm",
+              "name": "VLLM::Worker_PP0_TP0",
+              "used_mib": 77874
+            }
+          ]
         },
         {
           "index": "1",
@@ -122,7 +178,14 @@
           "total_mib": 81559,
           "util_percent": 0,
           "state": "busy",
-          "processes": []
+          "processes": [
+            {
+              "pid": "3278217",
+              "user": "manikm",
+              "name": "VLLM::Worker_PP0_TP1",
+              "used_mib": 77876
+            }
+          ]
         },
         {
           "index": "2",
@@ -132,7 +195,14 @@
           "total_mib": 81559,
           "util_percent": 0,
           "state": "busy",
-          "processes": []
+          "processes": [
+            {
+              "pid": "3278218",
+              "user": "manikm",
+              "name": "VLLM::Worker_PP1_TP0",
+              "used_mib": 76726
+            }
+          ]
         },
         {
           "index": "3",
@@ -142,7 +212,14 @@
           "total_mib": 81559,
           "util_percent": 0,
           "state": "busy",
-          "processes": []
+          "processes": [
+            {
+              "pid": "3278219",
+              "user": "manikm",
+              "name": "VLLM::Worker_PP1_TP1",
+              "used_mib": 76726
+            }
+          ]
         },
         {
           "index": "4",
@@ -152,7 +229,14 @@
           "total_mib": 81559,
           "util_percent": 0,
           "state": "busy",
-          "processes": []
+          "processes": [
+            {
+              "pid": "3278220",
+              "user": "manikm",
+              "name": "VLLM::Worker_PP2_TP0",
+              "used_mib": 76972
+            }
+          ]
         },
         {
           "index": "5",
@@ -162,7 +246,14 @@
           "total_mib": 81559,
           "util_percent": 0,
           "state": "busy",
-          "processes": []
+          "processes": [
+            {
+              "pid": "3278221",
+              "user": "manikm",
+              "name": "VLLM::Worker_PP2_TP1",
+              "used_mib": 76972
+            }
+          ]
         },
         {
           "index": "6",
@@ -172,7 +263,14 @@
           "total_mib": 81559,
           "util_percent": 40,
           "state": "busy",
-          "processes": []
+          "processes": [
+            {
+              "pid": "2999187",
+              "user": "manikm",
+              "name": "/home/manikm/HypothesisMed/.venv_final/bin/python",
+              "used_mib": 68428
+            }
+          ]
         },
         {
           "index": "7",
@@ -185,7 +283,35 @@
           "processes": []
         }
       ],
-      "storage": []
+      "storage": [
+        {
+          "source": "/dev/md1",
+          "mount": "/space",
+          "size_bytes": 45897978388480,
+          "used_bytes": 45282349522944,
+          "avail_bytes": 154787631104,
+          "use_percent": "100%",
+          "fs_type": "ext4"
+        },
+        {
+          "source": "/dev/md0p1",
+          "mount": "/home",
+          "size_bytes": 11429865578496,
+          "used_bytes": 10675660795904,
+          "avail_bytes": 178095058944,
+          "use_percent": "99%",
+          "fs_type": "ext4"
+        },
+        {
+          "source": "/dev/nvme4n1p3",
+          "mount": "/",
+          "size_bytes": 134145380352,
+          "used_bytes": 35203764224,
+          "avail_bytes": 92052893696,
+          "use_percent": "28%",
+          "fs_type": "ext4"
+        }
+      ]
     },
     "h100-litjan2024": {
       "status": "unreachable",
@@ -241,8 +367,8 @@
           "source": "/dev/sda2",
           "mount": "/data",
           "size_bytes": 15670141526016,
-          "used_bytes": 14386642309120,
-          "avail_bytes": 493745385472,
+          "used_bytes": 14386642317312,
+          "avail_bytes": 493745377280,
           "use_percent": "97%",
           "fs_type": "ext4"
         },
@@ -250,8 +376,8 @@
           "source": "/dev/sdb3",
           "mount": "/",
           "size_bytes": 469900591104,
-          "used_bytes": 444540293120,
-          "avail_bytes": 1463357440,
+          "used_bytes": 444540370944,
+          "avail_bytes": 1463279616,
           "use_percent": "100%",
           "fs_type": "ext4"
         }
