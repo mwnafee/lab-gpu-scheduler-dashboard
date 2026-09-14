@@ -1,5 +1,5 @@
 {
-  "updated_utc": "2026-09-14T17:40:03.918995+00:00",
+  "updated_utc": "2026-09-14T17:41:33.427203+00:00",
   "servers": {
     "axis0": {
       "status": "ok",
@@ -25,7 +25,35 @@
           "processes": []
         }
       ],
-      "storage": []
+      "storage": [
+        {
+          "source": "/dev/sdb1",
+          "mount": "/data",
+          "size_bytes": 19920462254080,
+          "used_bytes": 19048300699648,
+          "avail_bytes": 672133533696,
+          "use_percent": "97%",
+          "fs_type": "ext4"
+        },
+        {
+          "source": "/dev/nvme0n1p6",
+          "mount": "/home",
+          "size_bytes": 155350278144,
+          "used_bytes": 12372623360,
+          "avail_bytes": 135011729408,
+          "use_percent": "9%",
+          "fs_type": "ext4"
+        },
+        {
+          "source": "/dev/nvme0n1p2",
+          "mount": "/",
+          "size_bytes": 75149131776,
+          "used_bytes": 34567835648,
+          "avail_bytes": 36737748992,
+          "use_percent": "49%",
+          "fs_type": "ext4"
+        }
+      ]
     },
     "axis1": {
       "status": "ok",
@@ -106,8 +134,8 @@
           "source": "/dev/mapper/vg0-home",
           "mount": "/home",
           "size_bytes": 155826298880,
-          "used_bytes": 142822805504,
-          "avail_bytes": 5013344256,
+          "used_bytes": 142822850560,
+          "avail_bytes": 5013299200,
           "use_percent": "97%",
           "fs_type": "ext4"
         },
@@ -115,8 +143,8 @@
           "source": "/dev/mapper/vg0-root",
           "mount": "/",
           "size_bytes": 67049664512,
-          "used_bytes": 38381903872,
-          "avail_bytes": 25215012864,
+          "used_bytes": 38382321664,
+          "avail_bytes": 25214595072,
           "use_percent": "61%",
           "fs_type": "ext4"
         }
@@ -233,7 +261,7 @@
           "name": "NVIDIA H100 80GB HBM3",
           "used_mib": 55403,
           "total_mib": 81559,
-          "util_percent": 72,
+          "util_percent": 70,
           "state": "mid",
           "processes": [
             {
@@ -250,7 +278,7 @@
           "name": "NVIDIA H100 80GB HBM3",
           "used_mib": 71955,
           "total_mib": 81559,
-          "util_percent": 100,
+          "util_percent": 87,
           "state": "busy",
           "processes": [
             {
@@ -273,8 +301,8 @@
           "source": "/dev/md1",
           "mount": "/space",
           "size_bytes": 45897978388480,
-          "used_bytes": 45312810184704,
-          "avail_bytes": 124326969344,
+          "used_bytes": 45312810209280,
+          "avail_bytes": 124326944768,
           "use_percent": "100%",
           "fs_type": "ext4"
         },
@@ -291,8 +319,8 @@
           "source": "/dev/nvme4n1p3",
           "mount": "/",
           "size_bytes": 134145380352,
-          "used_bytes": 34888699904,
-          "avail_bytes": 92367958016,
+          "used_bytes": 34889375744,
+          "avail_bytes": 92367282176,
           "use_percent": "28%",
           "fs_type": "ext4"
         }
@@ -346,27 +374,27 @@
         {
           "source": "h100-litjan2024/azamm",
           "mount": "/home/azamm",
-          "size_bytes": 9147190738944,
+          "size_bytes": 9147190607872,
           "used_bytes": 564014219264,
-          "avail_bytes": 8583176519680,
+          "avail_bytes": 8583176388608,
           "use_percent": "7%",
           "fs_type": "zfs"
         },
         {
           "source": "h100-litjan2024/islamm11",
           "mount": "/home/islamm11",
-          "size_bytes": 9099810701312,
+          "size_bytes": 9099810570240,
           "used_bytes": 516634181632,
-          "avail_bytes": 8583176519680,
+          "avail_bytes": 8583176388608,
           "use_percent": "6%",
           "fs_type": "zfs"
         },
         {
           "source": "h100-litjan2024/liangy15",
           "mount": "/home/liangy15",
-          "size_bytes": 9062529630208,
+          "size_bytes": 9062529499136,
           "used_bytes": 479353110528,
-          "avail_bytes": 8583176519680,
+          "avail_bytes": 8583176388608,
           "use_percent": "6%",
           "fs_type": "zfs"
         },
@@ -374,8 +402,8 @@
           "source": "h100-litjan2024/manikm",
           "mount": "/home/manikm",
           "size_bytes": 8991494242304,
-          "used_bytes": 408317722624,
-          "avail_bytes": 8583176519680,
+          "used_bytes": 408317853696,
+          "avail_bytes": 8583176388608,
           "use_percent": "5%",
           "fs_type": "zfs"
         }
@@ -430,8 +458,8 @@
           "source": "/dev/sda2",
           "mount": "/data",
           "size_bytes": 15670141526016,
-          "used_bytes": 14399262138368,
-          "avail_bytes": 481125556224,
+          "used_bytes": 14399262146560,
+          "avail_bytes": 481125548032,
           "use_percent": "97%",
           "fs_type": "ext4"
         },
@@ -439,8 +467,8 @@
           "source": "/dev/sdb3",
           "mount": "/",
           "size_bytes": 469900591104,
-          "used_bytes": 444839337984,
-          "avail_bytes": 1164312576,
+          "used_bytes": 444839399424,
+          "avail_bytes": 1164251136,
           "use_percent": "100%",
           "fs_type": "ext4"
         }
