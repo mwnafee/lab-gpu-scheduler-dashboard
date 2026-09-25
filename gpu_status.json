@@ -1,10 +1,59 @@
 {
-  "updated_utc": "2026-09-25T17:00:25.177697+00:00",
+  "updated_utc": "2026-09-25T17:02:03.478301+00:00",
   "servers": {
     "axis0": {
-      "status": "unreachable",
-      "gpus": [],
-      "storage": []
+      "status": "ok",
+      "gpus": [
+        {
+          "index": "0",
+          "uuid": "GPU-5edd8cf7-a71e-4a7f-77be-8a5673dbb2f0",
+          "name": "NVIDIA TITAN RTX",
+          "used_mib": 1,
+          "total_mib": 24576,
+          "util_percent": 0,
+          "state": "free",
+          "processes": []
+        },
+        {
+          "index": "1",
+          "uuid": "GPU-442af73e-8628-b195-83b2-7506add343dc",
+          "name": "NVIDIA TITAN RTX",
+          "used_mib": 1,
+          "total_mib": 24576,
+          "util_percent": 0,
+          "state": "free",
+          "processes": []
+        }
+      ],
+      "storage": [
+        {
+          "source": "/dev/sdb1",
+          "mount": "/data",
+          "size_bytes": 19920462254080,
+          "used_bytes": 19048107032576,
+          "avail_bytes": 672327200768,
+          "use_percent": "97%",
+          "fs_type": "ext4"
+        },
+        {
+          "source": "/dev/nvme0n1p6",
+          "mount": "/home",
+          "size_bytes": 155350278144,
+          "used_bytes": 13635211264,
+          "avail_bytes": 133749141504,
+          "use_percent": "10%",
+          "fs_type": "ext4"
+        },
+        {
+          "source": "/dev/nvme0n1p2",
+          "mount": "/",
+          "size_bytes": 75149131776,
+          "used_bytes": 34576056320,
+          "avail_bytes": 36729528320,
+          "use_percent": "49%",
+          "fs_type": "ext4"
+        }
+      ]
     },
     "axis1": {
       "status": "ok",
@@ -101,8 +150,8 @@
           "source": "/dev/mapper/vg0-root",
           "mount": "/",
           "size_bytes": 67049664512,
-          "used_bytes": 39076483072,
-          "avail_bytes": 24520433664,
+          "used_bytes": 39076917248,
+          "avail_bytes": 24519999488,
           "use_percent": "62%",
           "fs_type": "ext4"
         }
@@ -236,7 +285,7 @@
           "name": "NVIDIA H100 80GB HBM3",
           "used_mib": 25129,
           "total_mib": 81559,
-          "util_percent": 79,
+          "util_percent": 91,
           "state": "mid",
           "processes": [
             {
@@ -248,35 +297,7 @@
           ]
         }
       ],
-      "storage": [
-        {
-          "source": "/dev/md1",
-          "mount": "/space",
-          "size_bytes": 45897978388480,
-          "used_bytes": 45326698426368,
-          "avail_bytes": 110438727680,
-          "use_percent": "100%",
-          "fs_type": "ext4"
-        },
-        {
-          "source": "/dev/md0p1",
-          "mount": "/home",
-          "size_bytes": 11429865578496,
-          "used_bytes": 3526074871808,
-          "avail_bytes": 7327680983040,
-          "use_percent": "33%",
-          "fs_type": "ext4"
-        },
-        {
-          "source": "/dev/nvme4n1p3",
-          "mount": "/",
-          "size_bytes": 134145380352,
-          "used_bytes": 33623859200,
-          "avail_bytes": 93632798720,
-          "use_percent": "27%",
-          "fs_type": "ext4"
-        }
-      ]
+      "storage": []
     },
     "h100-litjan2024": {
       "status": "ok",
@@ -410,8 +431,8 @@
           "source": "/dev/sda2",
           "mount": "/data",
           "size_bytes": 15670141526016,
-          "used_bytes": 14399278981120,
-          "avail_bytes": 481108713472,
+          "used_bytes": 14399278993408,
+          "avail_bytes": 481108701184,
           "use_percent": "97%",
           "fs_type": "ext4"
         },
@@ -419,8 +440,8 @@
           "source": "/dev/sdb3",
           "mount": "/",
           "size_bytes": 469900591104,
-          "used_bytes": 444740423680,
-          "avail_bytes": 1263226880,
+          "used_bytes": 444740468736,
+          "avail_bytes": 1263181824,
           "use_percent": "100%",
           "fs_type": "ext4"
         }
