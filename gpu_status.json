@@ -1,5 +1,5 @@
 {
-  "updated_utc": "2026-10-03T15:53:58.304451+00:00",
+  "updated_utc": "2026-10-03T15:55:12.017112+00:00",
   "servers": {
     "axis0": {
       "status": "ok",
@@ -48,8 +48,8 @@
           "source": "/dev/nvme0n1p2",
           "mount": "/",
           "size_bytes": 75149131776,
-          "used_bytes": 34590797824,
-          "avail_bytes": 36714786816,
+          "used_bytes": 34590982144,
+          "avail_bytes": 36714602496,
           "use_percent": "49%",
           "fs_type": "ext4"
         }
@@ -113,8 +113,8 @@
           "source": "/dev/mapper/vg0-home",
           "mount": "/home",
           "size_bytes": 155826298880,
-          "used_bytes": 145396801536,
-          "avail_bytes": 2439348224,
+          "used_bytes": 145396809728,
+          "avail_bytes": 2439340032,
           "use_percent": "99%",
           "fs_type": "ext4"
         },
@@ -122,8 +122,8 @@
           "source": "/dev/mapper/vg0-root",
           "mount": "/",
           "size_bytes": 67049664512,
-          "used_bytes": 38973607936,
-          "avail_bytes": 24623308800,
+          "used_bytes": 38973865984,
+          "avail_bytes": 24623050752,
           "use_percent": "62%",
           "fs_type": "ext4"
         }
@@ -255,11 +255,30 @@
           "index": "7",
           "uuid": "GPU-c3e858c3-04bb-b607-4d99-98502d0bfef5",
           "name": "NVIDIA H100 80GB HBM3",
-          "used_mib": 0,
+          "used_mib": 9288,
           "total_mib": 81559,
-          "util_percent": 0,
-          "state": "free",
-          "processes": []
+          "util_percent": 99,
+          "state": "mid",
+          "processes": [
+            {
+              "pid": "3738696",
+              "user": "islamm11",
+              "name": "/home/islamm11/miniconda3/envs/civl6962/bin/python",
+              "used_mib": 3088
+            },
+            {
+              "pid": "3738603",
+              "user": "islamm11",
+              "name": "/home/islamm11/miniconda3/envs/civl6962/bin/python",
+              "used_mib": 3092
+            },
+            {
+              "pid": "3738687",
+              "user": "islamm11",
+              "name": "/home/islamm11/miniconda3/envs/civl6962/bin/python",
+              "used_mib": 3088
+            }
+          ]
         }
       ],
       "storage": [
@@ -276,8 +295,8 @@
           "source": "/dev/md0p1",
           "mount": "/home",
           "size_bytes": 11429865578496,
-          "used_bytes": 3974846484480,
-          "avail_bytes": 6878909370368,
+          "used_bytes": 3974846504960,
+          "avail_bytes": 6878909349888,
           "use_percent": "37%",
           "fs_type": "ext4"
         },
@@ -285,8 +304,8 @@
           "source": "/dev/nvme4n1p3",
           "mount": "/",
           "size_bytes": 134145380352,
-          "used_bytes": 33387675648,
-          "avail_bytes": 93868982272,
+          "used_bytes": 33378865152,
+          "avail_bytes": 93877792768,
           "use_percent": "27%",
           "fs_type": "ext4"
         }
@@ -424,8 +443,8 @@
           "source": "/dev/sda2",
           "mount": "/data",
           "size_bytes": 15670141526016,
-          "used_bytes": 14399278350336,
-          "avail_bytes": 481109344256,
+          "used_bytes": 14399278362624,
+          "avail_bytes": 481109331968,
           "use_percent": "97%",
           "fs_type": "ext4"
         },
@@ -433,8 +452,8 @@
           "source": "/dev/sdb3",
           "mount": "/",
           "size_bytes": 469900591104,
-          "used_bytes": 444990877696,
-          "avail_bytes": 1012772864,
+          "used_bytes": 444990935040,
+          "avail_bytes": 1012715520,
           "use_percent": "100%",
           "fs_type": "ext4"
         }
