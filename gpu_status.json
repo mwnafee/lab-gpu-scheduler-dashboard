@@ -1,5 +1,5 @@
 {
-  "updated_utc": "2026-10-08T14:05:45.931989+00:00",
+  "updated_utc": "2026-10-08T14:07:04.963211+00:00",
   "servers": {
     "axis0": {
       "status": "ok",
@@ -48,8 +48,8 @@
           "source": "/dev/nvme0n1p2",
           "mount": "/",
           "size_bytes": 75149131776,
-          "used_bytes": 34600779776,
-          "avail_bytes": 36704804864,
+          "used_bytes": 34600968192,
+          "avail_bytes": 36704616448,
           "use_percent": "49%",
           "fs_type": "ext4"
         }
@@ -84,7 +84,7 @@
           "name": "NVIDIA RTX A5000",
           "used_mib": 4096,
           "total_mib": 24564,
-          "util_percent": 100,
+          "util_percent": 96,
           "state": "mid",
           "processes": [
             {
@@ -101,7 +101,7 @@
           "name": "NVIDIA RTX A5000",
           "used_mib": 4096,
           "total_mib": 24564,
-          "util_percent": 98,
+          "util_percent": 100,
           "state": "mid",
           "processes": [
             {
@@ -118,8 +118,8 @@
           "source": "/dev/md0",
           "mount": "/scratch",
           "size_bytes": 9524376285184,
-          "used_bytes": 8926012309504,
-          "avail_bytes": 118285250560,
+          "used_bytes": 8926013837312,
+          "avail_bytes": 118283722752,
           "use_percent": "99%",
           "fs_type": "ext4"
         },
@@ -127,8 +127,8 @@
           "source": "/dev/mapper/vg0-home",
           "mount": "/home",
           "size_bytes": 155826298880,
-          "used_bytes": 144289456128,
-          "avail_bytes": 3546693632,
+          "used_bytes": 144289669120,
+          "avail_bytes": 3546480640,
           "use_percent": "98%",
           "fs_type": "ext4"
         },
@@ -136,16 +136,177 @@
           "source": "/dev/mapper/vg0-root",
           "mount": "/",
           "size_bytes": 67049664512,
-          "used_bytes": 38754074624,
-          "avail_bytes": 24842842112,
+          "used_bytes": 38754369536,
+          "avail_bytes": 24842547200,
           "use_percent": "61%",
           "fs_type": "ext4"
         }
       ]
     },
     "axis2": {
-      "status": "unreachable",
-      "gpus": [],
+      "status": "ok",
+      "gpus": [
+        {
+          "index": "0",
+          "uuid": "GPU-4fe8d37d-e43a-e90a-62ab-b8b2d654a66b",
+          "name": "NVIDIA H100 80GB HBM3",
+          "used_mib": 77814,
+          "total_mib": 81559,
+          "util_percent": 0,
+          "state": "busy",
+          "processes": [
+            {
+              "pid": "2404938",
+              "user": "azamm",
+              "name": "VLLM::EngineCore",
+              "used_mib": 20934
+            },
+            {
+              "pid": "2445424",
+              "user": "azamm",
+              "name": "VLLM::EngineCore",
+              "used_mib": 19616
+            },
+            {
+              "pid": "2479203",
+              "user": "azamm",
+              "name": "VLLM::EngineCore",
+              "used_mib": 19268
+            },
+            {
+              "pid": "2482362",
+              "user": "azamm",
+              "name": "VLLM::EngineCore",
+              "used_mib": 17968
+            }
+          ]
+        },
+        {
+          "index": "1",
+          "uuid": "GPU-8a4650f4-6932-3e75-006b-f71194335d7e",
+          "name": "NVIDIA H100 80GB HBM3",
+          "used_mib": 23099,
+          "total_mib": 81559,
+          "util_percent": 45,
+          "state": "mid",
+          "processes": [
+            {
+              "pid": "2484043",
+              "user": "manikm",
+              "name": "/home/manikm/elvae_stage2_venv/bin/python",
+              "used_mib": 23090
+            }
+          ]
+        },
+        {
+          "index": "2",
+          "uuid": "GPU-9291d44c-11e1-33ed-b66a-82bb7f7483db",
+          "name": "NVIDIA H100 80GB HBM3",
+          "used_mib": 12953,
+          "total_mib": 81559,
+          "util_percent": 91,
+          "state": "mid",
+          "processes": [
+            {
+              "pid": "2505054",
+              "user": "manikm",
+              "name": "/home/manikm/elvae_stage2_venv/bin/python",
+              "used_mib": 12944
+            }
+          ]
+        },
+        {
+          "index": "3",
+          "uuid": "GPU-4ee2f4c3-c97f-ad4f-1016-d0c4d1a98c4e",
+          "name": "NVIDIA H100 80GB HBM3",
+          "used_mib": 23099,
+          "total_mib": 81559,
+          "util_percent": 98,
+          "state": "mid",
+          "processes": [
+            {
+              "pid": "2451566",
+              "user": "manikm",
+              "name": "/home/manikm/elvae_stage2_venv/bin/python",
+              "used_mib": 23090
+            }
+          ]
+        },
+        {
+          "index": "4",
+          "uuid": "GPU-f1222c01-2dcf-eaa5-7135-476ef280c166",
+          "name": "NVIDIA H100 80GB HBM3",
+          "used_mib": 72337,
+          "total_mib": 81559,
+          "util_percent": 100,
+          "state": "busy",
+          "processes": [
+            {
+              "pid": "610174",
+              "user": "manikm",
+              "name": "VLLM::EngineCore",
+              "used_mib": 72328
+            }
+          ]
+        },
+        {
+          "index": "5",
+          "uuid": "GPU-91867a7a-5e49-8049-fa35-3df1467e5c15",
+          "name": "NVIDIA H100 80GB HBM3",
+          "used_mib": 72709,
+          "total_mib": 81559,
+          "util_percent": 100,
+          "state": "busy",
+          "processes": [
+            {
+              "pid": "62985",
+              "user": "manikm",
+              "name": "VLLM::EngineCore",
+              "used_mib": 72700
+            }
+          ]
+        },
+        {
+          "index": "6",
+          "uuid": "GPU-652d5b3f-b16c-c486-1844-8a66b427c1a9",
+          "name": "NVIDIA H100 80GB HBM3",
+          "used_mib": 78241,
+          "total_mib": 81559,
+          "util_percent": 100,
+          "state": "busy",
+          "processes": [
+            {
+              "pid": "2365308",
+              "user": "azamm",
+              "name": "VLLM::EngineCore",
+              "used_mib": 74578
+            },
+            {
+              "pid": "2485596",
+              "user": "azamm",
+              "name": "python",
+              "used_mib": 3648
+            }
+          ]
+        },
+        {
+          "index": "7",
+          "uuid": "GPU-c3e858c3-04bb-b607-4d99-98502d0bfef5",
+          "name": "NVIDIA H100 80GB HBM3",
+          "used_mib": 32115,
+          "total_mib": 81559,
+          "util_percent": 91,
+          "state": "mid",
+          "processes": [
+            {
+              "pid": "93732",
+              "user": "manikm",
+              "name": "python",
+              "used_mib": 32106
+            }
+          ]
+        }
+      ],
       "storage": [
         {
           "source": "/dev/md1",
@@ -160,8 +321,8 @@
           "source": "/dev/md0p1",
           "mount": "/home",
           "size_bytes": 11429865578496,
-          "used_bytes": 4260018475008,
-          "avail_bytes": 6593737379840,
+          "used_bytes": 4260014202880,
+          "avail_bytes": 6593741651968,
           "use_percent": "40%",
           "fs_type": "ext4"
         },
@@ -169,91 +330,50 @@
           "source": "/dev/nvme4n1p3",
           "mount": "/",
           "size_bytes": 134145380352,
-          "used_bytes": 32352710656,
-          "avail_bytes": 94903947264,
+          "used_bytes": 32354160640,
+          "avail_bytes": 94902497280,
           "use_percent": "26%",
           "fs_type": "ext4"
         }
       ]
     },
     "h100-litjan2024": {
-      "status": "ok",
-      "gpus": [
-        {
-          "index": "0",
-          "uuid": "GPU-51f4c93c-f581-bc5d-b66f-4bb8a664c3e7",
-          "name": "NVIDIA H100 PCIe",
-          "used_mib": 61357,
-          "total_mib": 81559,
-          "util_percent": 0,
-          "state": "mid",
-          "processes": [
-            {
-              "pid": "2362659",
-              "user": "islamm11",
-              "name": "VLLM::Worker_TP0",
-              "used_mib": 61348
-            }
-          ]
-        },
-        {
-          "index": "1",
-          "uuid": "GPU-cbf8c219-f716-c2e7-0fa0-943605bdd357",
-          "name": "NVIDIA H100 PCIe",
-          "used_mib": 66763,
-          "total_mib": 81559,
-          "util_percent": 0,
-          "state": "busy",
-          "processes": [
-            {
-              "pid": "491576",
-              "user": "islamm11",
-              "name": "/home/islamm11/anaconda3/envs/mimic_tts/bin/python",
-              "used_mib": 5574
-            },
-            {
-              "pid": "2362660",
-              "user": "islamm11",
-              "name": "VLLM::Worker_TP1",
-              "used_mib": 61174
-            }
-          ]
-        }
-      ],
+      "status": "unreachable",
+      "gpus": [],
       "storage": [
         {
           "source": "h100-litjan2024/azamm",
           "mount": "/home/azamm",
-          "size_bytes": 9000103313408,
+          "size_bytes": 9000103444480,
           "used_bytes": 564014219264,
-          "avail_bytes": 8436089094144,
+          "avail_bytes": 8436089225216,
           "use_percent": "7%",
           "fs_type": "zfs"
         },
         {
           "source": "h100-litjan2024/manikm",
           "mount": "/home/manikm",
-          "size_bytes": 8980154679296,
+          "size_bytes": 8980154810368,
           "used_bytes": 544065585152,
-          "avail_bytes": 8436089094144,
+          "avail_bytes": 8436089225216,
           "use_percent": "7%",
           "fs_type": "zfs"
         },
         {
           "source": "h100-litjan2024/islamm11",
           "mount": "/home/islamm11",
-          "size_bytes": 8964023779328,
+          "size_bytes": 8964023910400,
           "used_bytes": 527934685184,
-          "avail_bytes": 8436089094144,
+          "avail_bytes": 8436089225216,
           "use_percent": "6%",
           "fs_type": "zfs"
         },
         {
           "source": "h100-litjan2024/liangy15",
           "mount": "/home/liangy15",
-          "size_bytes": 8915442204672,
+          "size_bytes": 8915442335744,
           "used_bytes": 479353110528,
-          "avail_bytes": 8436089094144,
+          "avail_bytes": 8436089225216,
           "use_percent": "6%",
           "fs_type": "zfs"
         }
@@ -308,8 +428,8 @@
           "source": "/dev/sda2",
           "mount": "/data",
           "size_bytes": 15670141526016,
-          "used_bytes": 14399281561600,
-          "avail_bytes": 481106132992,
+          "used_bytes": 14399281569792,
+          "avail_bytes": 481106124800,
           "use_percent": "97%",
           "fs_type": "ext4"
         },
@@ -317,8 +437,8 @@
           "source": "/dev/sdb3",
           "mount": "/",
           "size_bytes": 469900591104,
-          "used_bytes": 445296574464,
-          "avail_bytes": 707076096,
+          "used_bytes": 445296627712,
+          "avail_bytes": 707022848,
           "use_percent": "100%",
           "fs_type": "ext4"
         }
