@@ -1,5 +1,5 @@
 {
-  "updated_utc": "2026-10-09T06:05:31.560313+00:00",
+  "updated_utc": "2026-10-09T06:06:50.179501+00:00",
   "servers": {
     "axis0": {
       "status": "ok",
@@ -48,8 +48,8 @@
           "source": "/dev/nvme0n1p2",
           "mount": "/",
           "size_bytes": 75149131776,
-          "used_bytes": 34591666176,
-          "avail_bytes": 36713918464,
+          "used_bytes": 34591850496,
+          "avail_bytes": 36713734144,
           "use_percent": "49%",
           "fs_type": "ext4"
         }
@@ -113,8 +113,8 @@
           "source": "/dev/mapper/vg0-home",
           "mount": "/home",
           "size_bytes": 155826298880,
-          "used_bytes": 144553906176,
-          "avail_bytes": 3282243584,
+          "used_bytes": 144553910272,
+          "avail_bytes": 3282239488,
           "use_percent": "98%",
           "fs_type": "ext4"
         },
@@ -122,8 +122,8 @@
           "source": "/dev/mapper/vg0-root",
           "mount": "/",
           "size_bytes": 67049664512,
-          "used_bytes": 38741512192,
-          "avail_bytes": 24855404544,
+          "used_bytes": 38741864448,
+          "avail_bytes": 24855052288,
           "use_percent": "61%",
           "fs_type": "ext4"
         }
@@ -140,7 +140,20 @@
           "total_mib": 81559,
           "util_percent": 0,
           "state": "busy",
-          "processes": []
+          "processes": [
+            {
+              "pid": "945084",
+              "user": "azamm",
+              "name": "VLLM::EngineCore",
+              "used_mib": 74578
+            },
+            {
+              "pid": "1102752",
+              "user": "azamm",
+              "name": "python",
+              "used_mib": 3688
+            }
+          ]
         },
         {
           "index": "1",
@@ -150,7 +163,32 @@
           "total_mib": 81559,
           "util_percent": 100,
           "state": "busy",
-          "processes": []
+          "processes": [
+            {
+              "pid": "947929",
+              "user": "azamm",
+              "name": "VLLM::EngineCore",
+              "used_mib": 20934
+            },
+            {
+              "pid": "950423",
+              "user": "azamm",
+              "name": "VLLM::EngineCore",
+              "used_mib": 19618
+            },
+            {
+              "pid": "952867",
+              "user": "azamm",
+              "name": "VLLM::EngineCore",
+              "used_mib": 19326
+            },
+            {
+              "pid": "956197",
+              "user": "azamm",
+              "name": "VLLM::EngineCore",
+              "used_mib": 17970
+            }
+          ]
         },
         {
           "index": "2",
@@ -158,9 +196,22 @@
           "name": "NVIDIA H100 80GB HBM3",
           "used_mib": 6751,
           "total_mib": 81559,
-          "util_percent": 95,
+          "util_percent": 92,
           "state": "free",
-          "processes": []
+          "processes": [
+            {
+              "pid": "2063802",
+              "user": "manikm",
+              "name": "/home/manikm/elvae_stage2_venv/bin/python",
+              "used_mib": 3368
+            },
+            {
+              "pid": "2067171",
+              "user": "manikm",
+              "name": "/home/manikm/elvae_stage2_venv/bin/python",
+              "used_mib": 3368
+            }
+          ]
         },
         {
           "index": "3",
@@ -180,7 +231,14 @@
           "total_mib": 81559,
           "util_percent": 100,
           "state": "busy",
-          "processes": []
+          "processes": [
+            {
+              "pid": "1478101",
+              "user": "manikm",
+              "name": "VLLM::EngineCore",
+              "used_mib": 74488
+            }
+          ]
         },
         {
           "index": "5",
@@ -190,7 +248,14 @@
           "total_mib": 81559,
           "util_percent": 100,
           "state": "busy",
-          "processes": []
+          "processes": [
+            {
+              "pid": "1764897",
+              "user": "manikm",
+              "name": "VLLM::EngineCore",
+              "used_mib": 72224
+            }
+          ]
         },
         {
           "index": "6",
@@ -208,9 +273,16 @@
           "name": "NVIDIA H100 80GB HBM3",
           "used_mib": 35571,
           "total_mib": 81559,
-          "util_percent": 92,
+          "util_percent": 91,
           "state": "mid",
-          "processes": []
+          "processes": [
+            {
+              "pid": "93732",
+              "user": "manikm",
+              "name": "python",
+              "used_mib": 35562
+            }
+          ]
         }
       ],
       "storage": [
@@ -227,8 +299,8 @@
           "source": "/dev/md0p1",
           "mount": "/home",
           "size_bytes": 11429865578496,
-          "used_bytes": 4330700152832,
-          "avail_bytes": 6523055702016,
+          "used_bytes": 4330701783040,
+          "avail_bytes": 6523054071808,
           "use_percent": "40%",
           "fs_type": "ext4"
         },
@@ -236,8 +308,8 @@
           "source": "/dev/nvme4n1p3",
           "mount": "/",
           "size_bytes": 134145380352,
-          "used_bytes": 32417099776,
-          "avail_bytes": 94839558144,
+          "used_bytes": 32417472512,
+          "avail_bytes": 94839185408,
           "use_percent": "26%",
           "fs_type": "ext4"
         }
@@ -375,8 +447,8 @@
           "source": "/dev/sda2",
           "mount": "/data",
           "size_bytes": 15670141526016,
-          "used_bytes": 14399291133952,
-          "avail_bytes": 481096560640,
+          "used_bytes": 14399291142144,
+          "avail_bytes": 481096552448,
           "use_percent": "97%",
           "fs_type": "ext4"
         },
@@ -384,8 +456,8 @@
           "source": "/dev/sdb3",
           "mount": "/",
           "size_bytes": 469900591104,
-          "used_bytes": 445018492928,
-          "avail_bytes": 985157632,
+          "used_bytes": 445018566656,
+          "avail_bytes": 985083904,
           "use_percent": "100%",
           "fs_type": "ext4"
         }
