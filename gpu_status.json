@@ -1,5 +1,5 @@
 {
-  "updated_utc": "2026-10-22T05:17:42.260311+00:00",
+  "updated_utc": "2026-10-22T05:19:19.882630+00:00",
   "servers": {
     "axis0": {
       "status": "ok",
@@ -48,8 +48,8 @@
           "source": "/dev/nvme0n1p2",
           "mount": "/",
           "size_bytes": 75149131776,
-          "used_bytes": 34598371328,
-          "avail_bytes": 36707213312,
+          "used_bytes": 34598621184,
+          "avail_bytes": 36706963456,
           "use_percent": "49%",
           "fs_type": "ext4"
         }
@@ -113,8 +113,8 @@
           "source": "/dev/mapper/vg0-home",
           "mount": "/home",
           "size_bytes": 155826298880,
-          "used_bytes": 144461717504,
-          "avail_bytes": 3374432256,
+          "used_bytes": 144457908224,
+          "avail_bytes": 3378241536,
           "use_percent": "98%",
           "fs_type": "ext4"
         },
@@ -122,8 +122,8 @@
           "source": "/dev/mapper/vg0-root",
           "mount": "/",
           "size_bytes": 67049664512,
-          "used_bytes": 38524182528,
-          "avail_bytes": 25072734208,
+          "used_bytes": 38524592128,
+          "avail_bytes": 25072324608,
           "use_percent": "61%",
           "fs_type": "ext4"
         }
@@ -138,7 +138,7 @@
           "name": "NVIDIA H100 80GB HBM3",
           "used_mib": 74793,
           "total_mib": 81559,
-          "util_percent": 97,
+          "util_percent": 100,
           "state": "busy",
           "processes": [
             {
@@ -155,7 +155,7 @@
           "name": "NVIDIA H100 80GB HBM3",
           "used_mib": 74595,
           "total_mib": 81559,
-          "util_percent": 40,
+          "util_percent": 100,
           "state": "busy",
           "processes": [
             {
@@ -222,7 +222,7 @@
           "name": "NVIDIA H100 80GB HBM3",
           "used_mib": 74211,
           "total_mib": 81559,
-          "util_percent": 32,
+          "util_percent": 36,
           "state": "busy",
           "processes": [
             {
@@ -234,12 +234,118 @@
           ]
         }
       ],
-      "storage": []
+      "storage": [
+        {
+          "source": "/dev/md1",
+          "mount": "/space",
+          "size_bytes": 45897978388480,
+          "used_bytes": 45376704200704,
+          "avail_bytes": 60432953344,
+          "use_percent": "100%",
+          "fs_type": "ext4"
+        },
+        {
+          "source": "/dev/md0p1",
+          "mount": "/home",
+          "size_bytes": 11429865578496,
+          "used_bytes": 5348372959232,
+          "avail_bytes": 5505382895616,
+          "use_percent": "50%",
+          "fs_type": "ext4"
+        },
+        {
+          "source": "/dev/nvme4n1p3",
+          "mount": "/",
+          "size_bytes": 134145380352,
+          "used_bytes": 32144171008,
+          "avail_bytes": 95112486912,
+          "use_percent": "26%",
+          "fs_type": "ext4"
+        }
+      ]
     },
     "h100-litjan2024": {
-      "status": "unreachable",
-      "gpus": [],
-      "storage": []
+      "status": "ok",
+      "gpus": [
+        {
+          "index": "0",
+          "uuid": "GPU-51f4c93c-f581-bc5d-b66f-4bb8a664c3e7",
+          "name": "NVIDIA H100 PCIe",
+          "used_mib": 61357,
+          "total_mib": 81559,
+          "util_percent": 0,
+          "state": "mid",
+          "processes": [
+            {
+              "pid": "2362659",
+              "user": "islamm11",
+              "name": "VLLM::Worker_TP0",
+              "used_mib": 61348
+            }
+          ]
+        },
+        {
+          "index": "1",
+          "uuid": "GPU-cbf8c219-f716-c2e7-0fa0-943605bdd357",
+          "name": "NVIDIA H100 PCIe",
+          "used_mib": 66763,
+          "total_mib": 81559,
+          "util_percent": 0,
+          "state": "busy",
+          "processes": [
+            {
+              "pid": "491576",
+              "user": "islamm11",
+              "name": "/home/islamm11/anaconda3/envs/mimic_tts/bin/python",
+              "used_mib": 5574
+            },
+            {
+              "pid": "2362660",
+              "user": "islamm11",
+              "name": "VLLM::Worker_TP1",
+              "used_mib": 61174
+            }
+          ]
+        }
+      ],
+      "storage": [
+        {
+          "source": "h100-litjan2024/azamm",
+          "mount": "/home/azamm",
+          "size_bytes": 8994517811200,
+          "used_bytes": 564014219264,
+          "avail_bytes": 8430503591936,
+          "use_percent": "7%",
+          "fs_type": "zfs"
+        },
+        {
+          "source": "h100-litjan2024/manikm",
+          "mount": "/home/manikm",
+          "size_bytes": 8973010206720,
+          "used_bytes": 542506614784,
+          "avail_bytes": 8430503591936,
+          "use_percent": "7%",
+          "fs_type": "zfs"
+        },
+        {
+          "source": "h100-litjan2024/islamm11",
+          "mount": "/home/islamm11",
+          "size_bytes": 8964437573632,
+          "used_bytes": 533933981696,
+          "avail_bytes": 8430503591936,
+          "use_percent": "6%",
+          "fs_type": "zfs"
+        },
+        {
+          "source": "h100-litjan2024/liangy15",
+          "mount": "/home/liangy15",
+          "size_bytes": 8909856702464,
+          "used_bytes": 479353110528,
+          "avail_bytes": 8430503591936,
+          "use_percent": "6%",
+          "fs_type": "zfs"
+        }
+      ]
     },
     "deeprecon": {
       "status": "ok",
@@ -290,8 +396,8 @@
           "source": "/dev/sda2",
           "mount": "/data",
           "size_bytes": 15670141526016,
-          "used_bytes": 14399298764800,
-          "avail_bytes": 481088929792,
+          "used_bytes": 14399298777088,
+          "avail_bytes": 481088917504,
           "use_percent": "97%",
           "fs_type": "ext4"
         },
@@ -299,8 +405,8 @@
           "source": "/dev/sdb3",
           "mount": "/",
           "size_bytes": 469900591104,
-          "used_bytes": 444766896128,
-          "avail_bytes": 1236754432,
+          "used_bytes": 444766953472,
+          "avail_bytes": 1236697088,
           "use_percent": "100%",
           "fs_type": "ext4"
         }
