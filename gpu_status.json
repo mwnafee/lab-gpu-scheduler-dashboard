@@ -1,10 +1,59 @@
 {
-  "updated_utc": "2026-10-29T19:50:52.316465+00:00",
+  "updated_utc": "2026-10-29T19:52:22.947876+00:00",
   "servers": {
     "axis0": {
-      "status": "unreachable",
-      "gpus": [],
-      "storage": []
+      "status": "ok",
+      "gpus": [
+        {
+          "index": "0",
+          "uuid": "GPU-5edd8cf7-a71e-4a7f-77be-8a5673dbb2f0",
+          "name": "NVIDIA TITAN RTX",
+          "used_mib": 1,
+          "total_mib": 24576,
+          "util_percent": 0,
+          "state": "free",
+          "processes": []
+        },
+        {
+          "index": "1",
+          "uuid": "GPU-442af73e-8628-b195-83b2-7506add343dc",
+          "name": "NVIDIA TITAN RTX",
+          "used_mib": 1,
+          "total_mib": 24576,
+          "util_percent": 0,
+          "state": "free",
+          "processes": []
+        }
+      ],
+      "storage": [
+        {
+          "source": "/dev/sdb1",
+          "mount": "/data",
+          "size_bytes": 19920462254080,
+          "used_bytes": 19048095072256,
+          "avail_bytes": 672339161088,
+          "use_percent": "97%",
+          "fs_type": "ext4"
+        },
+        {
+          "source": "/dev/nvme0n1p6",
+          "mount": "/home",
+          "size_bytes": 155350278144,
+          "used_bytes": 15734370304,
+          "avail_bytes": 131649982464,
+          "use_percent": "11%",
+          "fs_type": "ext4"
+        },
+        {
+          "source": "/dev/nvme0n1p2",
+          "mount": "/",
+          "size_bytes": 75149131776,
+          "used_bytes": 34539327488,
+          "avail_bytes": 36766257152,
+          "use_percent": "49%",
+          "fs_type": "ext4"
+        }
+      ]
     },
     "axis1": {
       "status": "ok",
@@ -15,7 +64,7 @@
           "name": "NVIDIA RTX A5000",
           "used_mib": 22160,
           "total_mib": 24564,
-          "util_percent": 18,
+          "util_percent": 100,
           "state": "busy",
           "processes": [
             {
@@ -32,7 +81,7 @@
           "name": "NVIDIA RTX A5000",
           "used_mib": 17446,
           "total_mib": 24564,
-          "util_percent": 35,
+          "util_percent": 0,
           "state": "mid",
           "processes": [
             {
@@ -49,7 +98,7 @@
           "name": "NVIDIA RTX A5000",
           "used_mib": 21988,
           "total_mib": 24564,
-          "util_percent": 28,
+          "util_percent": 0,
           "state": "busy",
           "processes": [
             {
@@ -66,7 +115,7 @@
           "name": "NVIDIA RTX A5000",
           "used_mib": 17718,
           "total_mib": 24564,
-          "util_percent": 94,
+          "util_percent": 95,
           "state": "mid",
           "processes": [
             {
@@ -83,8 +132,8 @@
           "source": "/dev/md0",
           "mount": "/scratch",
           "size_bytes": 9524376285184,
-          "used_bytes": 8416060100608,
-          "avail_bytes": 628237459456,
+          "used_bytes": 8416060301312,
+          "avail_bytes": 628237258752,
           "use_percent": "94%",
           "fs_type": "ext4"
         },
@@ -101,8 +150,8 @@
           "source": "/dev/mapper/vg0-root",
           "mount": "/",
           "size_bytes": 67049664512,
-          "used_bytes": 37907931136,
-          "avail_bytes": 25688985600,
+          "used_bytes": 37908287488,
+          "avail_bytes": 25688629248,
           "use_percent": "60%",
           "fs_type": "ext4"
         }
@@ -239,8 +288,8 @@
           "source": "/dev/sda2",
           "mount": "/data",
           "size_bytes": 15670141526016,
-          "used_bytes": 14399308857344,
-          "avail_bytes": 481078837248,
+          "used_bytes": 14399308865536,
+          "avail_bytes": 481078829056,
           "use_percent": "97%",
           "fs_type": "ext4"
         },
@@ -248,8 +297,8 @@
           "source": "/dev/sdb3",
           "mount": "/",
           "size_bytes": 469900591104,
-          "used_bytes": 444391841792,
-          "avail_bytes": 1611808768,
+          "used_bytes": 444391915520,
+          "avail_bytes": 1611735040,
           "use_percent": "100%",
           "fs_type": "ext4"
         }
