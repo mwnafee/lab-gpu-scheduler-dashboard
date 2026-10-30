@@ -1,66 +1,10 @@
 {
-  "updated_utc": "2026-10-30T14:05:37.327857+00:00",
+  "updated_utc": "2026-10-30T14:07:07.892347+00:00",
   "servers": {
     "axis0": {
-      "status": "ok",
-      "gpus": [
-        {
-          "index": "0",
-          "uuid": "GPU-5edd8cf7-a71e-4a7f-77be-8a5673dbb2f0",
-          "name": "NVIDIA TITAN RTX",
-          "used_mib": 10162,
-          "total_mib": 24576,
-          "util_percent": 99,
-          "state": "mid",
-          "processes": [
-            {
-              "pid": "1337288",
-              "user": "chenk14",
-              "name": "python",
-              "used_mib": 10158
-            }
-          ]
-        },
-        {
-          "index": "1",
-          "uuid": "GPU-442af73e-8628-b195-83b2-7506add343dc",
-          "name": "NVIDIA TITAN RTX",
-          "used_mib": 1,
-          "total_mib": 24576,
-          "util_percent": 0,
-          "state": "free",
-          "processes": []
-        }
-      ],
-      "storage": [
-        {
-          "source": "/dev/sdb1",
-          "mount": "/data",
-          "size_bytes": 19920462254080,
-          "used_bytes": 19061404798976,
-          "avail_bytes": 659029434368,
-          "use_percent": "97%",
-          "fs_type": "ext4"
-        },
-        {
-          "source": "/dev/nvme0n1p6",
-          "mount": "/home",
-          "size_bytes": 155350278144,
-          "used_bytes": 16721006592,
-          "avail_bytes": 130663346176,
-          "use_percent": "12%",
-          "fs_type": "ext4"
-        },
-        {
-          "source": "/dev/nvme0n1p2",
-          "mount": "/",
-          "size_bytes": 75149131776,
-          "used_bytes": 34543566848,
-          "avail_bytes": 36762017792,
-          "use_percent": "49%",
-          "fs_type": "ext4"
-        }
-      ]
+      "status": "unreachable",
+      "gpus": [],
+      "storage": []
     },
     "axis1": {
       "status": "ok",
@@ -71,7 +15,7 @@
           "name": "NVIDIA RTX A5000",
           "used_mib": 22984,
           "total_mib": 24564,
-          "util_percent": 33,
+          "util_percent": 26,
           "state": "busy",
           "processes": [
             {
@@ -88,7 +32,7 @@
           "name": "NVIDIA RTX A5000",
           "used_mib": 19818,
           "total_mib": 24564,
-          "util_percent": 26,
+          "util_percent": 50,
           "state": "busy",
           "processes": [
             {
@@ -105,7 +49,7 @@
           "name": "NVIDIA RTX A5000",
           "used_mib": 22878,
           "total_mib": 24564,
-          "util_percent": 44,
+          "util_percent": 23,
           "state": "busy",
           "processes": [
             {
@@ -139,8 +83,8 @@
           "source": "/dev/md0",
           "mount": "/scratch",
           "size_bytes": 9524376285184,
-          "used_bytes": 8416253685760,
-          "avail_bytes": 628043874304,
+          "used_bytes": 8416253841408,
+          "avail_bytes": 628043718656,
           "use_percent": "94%",
           "fs_type": "ext4"
         },
@@ -148,8 +92,8 @@
           "source": "/dev/mapper/vg0-home",
           "mount": "/home",
           "size_bytes": 155826298880,
-          "used_bytes": 145946865664,
-          "avail_bytes": 1889284096,
+          "used_bytes": 145946869760,
+          "avail_bytes": 1889280000,
           "use_percent": "99%",
           "fs_type": "ext4"
         },
@@ -157,8 +101,8 @@
           "source": "/dev/mapper/vg0-root",
           "mount": "/",
           "size_bytes": 67049664512,
-          "used_bytes": 37776674816,
-          "avail_bytes": 25820241920,
+          "used_bytes": 37777108992,
+          "avail_bytes": 25819807744,
           "use_percent": "60%",
           "fs_type": "ext4"
         }
@@ -180,7 +124,14 @@
           "total_mib": 81559,
           "util_percent": 0,
           "state": "mid",
-          "processes": []
+          "processes": [
+            {
+              "pid": "9972",
+              "user": "islamm11",
+              "name": "VLLM::Worker_TP0",
+              "used_mib": 59948
+            }
+          ]
         },
         {
           "index": "1",
@@ -190,7 +141,14 @@
           "total_mib": 81559,
           "util_percent": 0,
           "state": "mid",
-          "processes": []
+          "processes": [
+            {
+              "pid": "9973",
+              "user": "islamm11",
+              "name": "VLLM::Worker_TP1",
+              "used_mib": 59684
+            }
+          ]
         }
       ],
       "storage": [
@@ -281,8 +239,8 @@
           "source": "/dev/sda2",
           "mount": "/data",
           "size_bytes": 15670141526016,
-          "used_bytes": 14399289901056,
-          "avail_bytes": 481097793536,
+          "used_bytes": 14399289909248,
+          "avail_bytes": 481097785344,
           "use_percent": "97%",
           "fs_type": "ext4"
         },
@@ -290,8 +248,8 @@
           "source": "/dev/sdb3",
           "mount": "/",
           "size_bytes": 469900591104,
-          "used_bytes": 444388405248,
-          "avail_bytes": 1615245312,
+          "used_bytes": 444388491264,
+          "avail_bytes": 1615159296,
           "use_percent": "100%",
           "fs_type": "ext4"
         }
