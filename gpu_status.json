@@ -1,5 +1,5 @@
 {
-  "updated_utc": "2026-11-06T03:06:36.859118+00:00",
+  "updated_utc": "2026-11-06T03:07:59.356429+00:00",
   "servers": {
     "axis0": {
       "status": "ok",
@@ -39,8 +39,8 @@
           "source": "/dev/nvme0n1p6",
           "mount": "/home",
           "size_bytes": 155350278144,
-          "used_bytes": 19416076288,
-          "avail_bytes": 127968276480,
+          "used_bytes": 19418750976,
+          "avail_bytes": 127965601792,
           "use_percent": "14%",
           "fs_type": "ext4"
         },
@@ -48,8 +48,8 @@
           "source": "/dev/nvme0n1p2",
           "mount": "/",
           "size_bytes": 75149131776,
-          "used_bytes": 34543796224,
-          "avail_bytes": 36761788416,
+          "used_bytes": 34544017408,
+          "avail_bytes": 36761567232,
           "use_percent": "49%",
           "fs_type": "ext4"
         }
@@ -104,8 +104,8 @@
           "source": "/dev/md0",
           "mount": "/scratch",
           "size_bytes": 9524376285184,
-          "used_bytes": 8475502747648,
-          "avail_bytes": 568794812416,
+          "used_bytes": 8475502768128,
+          "avail_bytes": 568794791936,
           "use_percent": "94%",
           "fs_type": "ext4"
         },
@@ -113,8 +113,8 @@
           "source": "/dev/mapper/vg0-home",
           "mount": "/home",
           "size_bytes": 155826298880,
-          "used_bytes": 147800129536,
-          "avail_bytes": 36020224,
+          "used_bytes": 147800346624,
+          "avail_bytes": 35803136,
           "use_percent": "100%",
           "fs_type": "ext4"
         },
@@ -122,8 +122,8 @@
           "source": "/dev/mapper/vg0-root",
           "mount": "/",
           "size_bytes": 67049664512,
-          "used_bytes": 38994059264,
-          "avail_bytes": 24602857472,
+          "used_bytes": 38994452480,
+          "avail_bytes": 24602464256,
           "use_percent": "62%",
           "fs_type": "ext4"
         }
@@ -135,8 +135,61 @@
       "storage": []
     },
     "h100-litjan2024": {
-      "status": "unreachable",
-      "gpus": [],
+      "status": "ok",
+      "gpus": [
+        {
+          "index": "0",
+          "uuid": "GPU-51f4c93c-f581-bc5d-b66f-4bb8a664c3e7",
+          "name": "NVIDIA H100 PCIe",
+          "used_mib": 68871,
+          "total_mib": 81559,
+          "util_percent": 99,
+          "state": "busy",
+          "processes": [
+            {
+              "pid": "9972",
+              "user": "islamm11",
+              "name": "VLLM::Worker_TP0",
+              "used_mib": 61282
+            },
+            {
+              "pid": "3542903",
+              "user": "islamm11",
+              "name": "python",
+              "used_mib": 7574
+            }
+          ]
+        },
+        {
+          "index": "1",
+          "uuid": "GPU-cbf8c219-f716-c2e7-0fa0-943605bdd357",
+          "name": "NVIDIA H100 PCIe",
+          "used_mib": 73148,
+          "total_mib": 81559,
+          "util_percent": 99,
+          "state": "busy",
+          "processes": [
+            {
+              "pid": "9973",
+              "user": "islamm11",
+              "name": "VLLM::Worker_TP1",
+              "used_mib": 61018
+            },
+            {
+              "pid": "5043",
+              "user": "islamm11",
+              "name": "/home/islamm11/anaconda3/envs/mimic_tts/bin/python",
+              "used_mib": 4536
+            },
+            {
+              "pid": "3545801",
+              "user": "islamm11",
+              "name": "python",
+              "used_mib": 7574
+            }
+          ]
+        }
+      ],
       "storage": [
         {
           "source": "h100-litjan2024/azamm",
@@ -185,7 +238,7 @@
           "name": "NVIDIA GeForce GTX 1080 Ti",
           "used_mib": 5935,
           "total_mib": 11264,
-          "util_percent": 100,
+          "util_percent": 99,
           "state": "mid",
           "processes": [
             {
@@ -202,7 +255,7 @@
           "name": "NVIDIA GeForce GTX 1080 Ti",
           "used_mib": 3371,
           "total_mib": 11264,
-          "util_percent": 100,
+          "util_percent": 98,
           "state": "mid",
           "processes": [
             {
@@ -219,7 +272,7 @@
           "name": "NVIDIA GeForce GTX 1080 Ti",
           "used_mib": 5935,
           "total_mib": 11264,
-          "util_percent": 99,
+          "util_percent": 100,
           "state": "mid",
           "processes": [
             {
@@ -253,8 +306,8 @@
           "source": "/dev/sda2",
           "mount": "/data",
           "size_bytes": 15670141526016,
-          "used_bytes": 14430618320896,
-          "avail_bytes": 449769373696,
+          "used_bytes": 14430618333184,
+          "avail_bytes": 449769361408,
           "use_percent": "97%",
           "fs_type": "ext4"
         },
@@ -262,8 +315,8 @@
           "source": "/dev/sdb3",
           "mount": "/",
           "size_bytes": 469900591104,
-          "used_bytes": 444808417280,
-          "avail_bytes": 1195233280,
+          "used_bytes": 444843393024,
+          "avail_bytes": 1160257536,
           "use_percent": "100%",
           "fs_type": "ext4"
         }
