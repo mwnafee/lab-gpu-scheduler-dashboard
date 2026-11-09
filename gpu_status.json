@@ -1,9 +1,44 @@
 {
-  "updated_utc": "2026-11-09T17:48:09.402920+00:00",
+  "updated_utc": "2026-11-09T17:49:31.291020+00:00",
   "servers": {
     "axis0": {
-      "status": "unreachable",
-      "gpus": [],
+      "status": "ok",
+      "gpus": [
+        {
+          "index": "0",
+          "uuid": "GPU-5edd8cf7-a71e-4a7f-77be-8a5673dbb2f0",
+          "name": "NVIDIA TITAN RTX",
+          "used_mib": 4622,
+          "total_mib": 24576,
+          "util_percent": 42,
+          "state": "mid",
+          "processes": [
+            {
+              "pid": "1833117",
+              "user": "azamm",
+              "name": "python",
+              "used_mib": 4618
+            }
+          ]
+        },
+        {
+          "index": "1",
+          "uuid": "GPU-442af73e-8628-b195-83b2-7506add343dc",
+          "name": "NVIDIA TITAN RTX",
+          "used_mib": 4614,
+          "total_mib": 24576,
+          "util_percent": 39,
+          "state": "mid",
+          "processes": [
+            {
+              "pid": "1833118",
+              "user": "azamm",
+              "name": "python",
+              "used_mib": 4610
+            }
+          ]
+        }
+      ],
       "storage": [
         {
           "source": "/dev/sdb1",
@@ -27,8 +62,8 @@
           "source": "/dev/nvme0n1p2",
           "mount": "/",
           "size_bytes": 75149131776,
-          "used_bytes": 34548948992,
-          "avail_bytes": 36756635648,
+          "used_bytes": 34549649408,
+          "avail_bytes": 36755935232,
           "use_percent": "49%",
           "fs_type": "ext4"
         }
@@ -101,8 +136,8 @@
           "source": "/dev/mapper/vg0-root",
           "mount": "/",
           "size_bytes": 67049664512,
-          "used_bytes": 40048041984,
-          "avail_bytes": 23548874752,
+          "used_bytes": 40048332800,
+          "avail_bytes": 23548583936,
           "use_percent": "63%",
           "fs_type": "ext4"
         }
@@ -239,8 +274,8 @@
           "source": "/dev/sda2",
           "mount": "/data",
           "size_bytes": 15670141526016,
-          "used_bytes": 14431159533568,
-          "avail_bytes": 449228161024,
+          "used_bytes": 14431159545856,
+          "avail_bytes": 449228148736,
           "use_percent": "97%",
           "fs_type": "ext4"
         },
@@ -248,8 +283,8 @@
           "source": "/dev/sdb3",
           "mount": "/",
           "size_bytes": 469900591104,
-          "used_bytes": 444845203456,
-          "avail_bytes": 1158447104,
+          "used_bytes": 444845256704,
+          "avail_bytes": 1158393856,
           "use_percent": "100%",
           "fs_type": "ext4"
         }
