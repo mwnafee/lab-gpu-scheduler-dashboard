@@ -1,5 +1,5 @@
 {
-  "updated_utc": "2026-11-09T12:58:08.649843+00:00",
+  "updated_utc": "2026-11-09T12:59:23.463911+00:00",
   "servers": {
     "axis0": {
       "status": "ok",
@@ -48,8 +48,8 @@
           "source": "/dev/nvme0n1p2",
           "mount": "/",
           "size_bytes": 75149131776,
-          "used_bytes": 34547122176,
-          "avail_bytes": 36758462464,
+          "used_bytes": 34547359744,
+          "avail_bytes": 36758224896,
           "use_percent": "49%",
           "fs_type": "ext4"
         }
@@ -113,8 +113,8 @@
           "source": "/dev/mapper/vg0-home",
           "mount": "/home",
           "size_bytes": 155826298880,
-          "used_bytes": 131966918656,
-          "avail_bytes": 15869231104,
+          "used_bytes": 131966971904,
+          "avail_bytes": 15869177856,
           "use_percent": "90%",
           "fs_type": "ext4"
         },
@@ -122,8 +122,8 @@
           "source": "/dev/mapper/vg0-root",
           "mount": "/",
           "size_bytes": 67049664512,
-          "used_bytes": 39831183360,
-          "avail_bytes": 23765733376,
+          "used_bytes": 39831465984,
+          "avail_bytes": 23765450752,
           "use_percent": "63%",
           "fs_type": "ext4"
         }
@@ -141,7 +141,7 @@
           "index": "0",
           "uuid": "GPU-51f4c93c-f581-bc5d-b66f-4bb8a664c3e7",
           "name": "NVIDIA H100 PCIe",
-          "used_mib": 75618,
+          "used_mib": 76848,
           "total_mib": 81559,
           "util_percent": 0,
           "state": "busy",
@@ -170,16 +170,22 @@
           "index": "1",
           "uuid": "GPU-cbf8c219-f716-c2e7-0fa0-943605bdd357",
           "name": "NVIDIA H100 PCIe",
-          "used_mib": 2877,
+          "used_mib": 36777,
           "total_mib": 81559,
-          "util_percent": 0,
-          "state": "free",
+          "util_percent": 31,
+          "state": "mid",
           "processes": [
             {
               "pid": "3636098",
               "user": "islamm11",
               "name": "/home/islamm11/rtavatar/venvs/ditto/bin/python",
               "used_mib": 2868
+            },
+            {
+              "pid": "4101818",
+              "user": "islamm11",
+              "name": "VLLM::Worker_TP1",
+              "used_mib": 33894
             }
           ]
         }
@@ -272,8 +278,8 @@
           "source": "/dev/sda2",
           "mount": "/data",
           "size_bytes": 15670141526016,
-          "used_bytes": 14431156658176,
-          "avail_bytes": 449231036416,
+          "used_bytes": 14431156666368,
+          "avail_bytes": 449231028224,
           "use_percent": "97%",
           "fs_type": "ext4"
         },
@@ -281,8 +287,8 @@
           "source": "/dev/sdb3",
           "mount": "/",
           "size_bytes": 469900591104,
-          "used_bytes": 444840624128,
-          "avail_bytes": 1163026432,
+          "used_bytes": 444840681472,
+          "avail_bytes": 1162969088,
           "use_percent": "100%",
           "fs_type": "ext4"
         }
