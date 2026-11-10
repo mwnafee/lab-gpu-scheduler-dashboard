@@ -1,9 +1,44 @@
 {
-  "updated_utc": "2026-11-10T03:30:31.591375+00:00",
+  "updated_utc": "2026-11-10T03:31:57.505052+00:00",
   "servers": {
     "axis0": {
-      "status": "unreachable",
-      "gpus": [],
+      "status": "ok",
+      "gpus": [
+        {
+          "index": "0",
+          "uuid": "GPU-5edd8cf7-a71e-4a7f-77be-8a5673dbb2f0",
+          "name": "NVIDIA TITAN RTX",
+          "used_mib": 5406,
+          "total_mib": 24576,
+          "util_percent": 52,
+          "state": "mid",
+          "processes": [
+            {
+              "pid": "1833117",
+              "user": "azamm",
+              "name": "python",
+              "used_mib": 5402
+            }
+          ]
+        },
+        {
+          "index": "1",
+          "uuid": "GPU-442af73e-8628-b195-83b2-7506add343dc",
+          "name": "NVIDIA TITAN RTX",
+          "used_mib": 4614,
+          "total_mib": 24576,
+          "util_percent": 40,
+          "state": "mid",
+          "processes": [
+            {
+              "pid": "1833118",
+              "user": "azamm",
+              "name": "python",
+              "used_mib": 4610
+            }
+          ]
+        }
+      ],
       "storage": [
         {
           "source": "/dev/sdb1",
@@ -27,8 +62,8 @@
           "source": "/dev/nvme0n1p2",
           "mount": "/",
           "size_bytes": 75149131776,
-          "used_bytes": 34556067840,
-          "avail_bytes": 36749516800,
+          "used_bytes": 34556698624,
+          "avail_bytes": 36748886016,
           "use_percent": "49%",
           "fs_type": "ext4"
         }
@@ -43,7 +78,7 @@
           "name": "NVIDIA RTX A5000",
           "used_mib": 1613,
           "total_mib": 24564,
-          "util_percent": 47,
+          "util_percent": 35,
           "state": "free",
           "processes": [
             {
@@ -66,7 +101,7 @@
           "name": "NVIDIA RTX A5000",
           "used_mib": 1613,
           "total_mib": 24564,
-          "util_percent": 50,
+          "util_percent": 48,
           "state": "free",
           "processes": [
             {
@@ -112,7 +147,7 @@
           "name": "NVIDIA RTX A5000",
           "used_mib": 1613,
           "total_mib": 24564,
-          "util_percent": 35,
+          "util_percent": 48,
           "state": "free",
           "processes": [
             {
@@ -135,8 +170,8 @@
           "source": "/dev/md0",
           "mount": "/scratch",
           "size_bytes": 9524376285184,
-          "used_bytes": 8587888242688,
-          "avail_bytes": 456409317376,
+          "used_bytes": 8587921965056,
+          "avail_bytes": 456375595008,
           "use_percent": "95%",
           "fs_type": "ext4"
         },
@@ -153,8 +188,8 @@
           "source": "/dev/mapper/vg0-root",
           "mount": "/",
           "size_bytes": 67049664512,
-          "used_bytes": 42209751040,
-          "avail_bytes": 21387165696,
+          "used_bytes": 42210181120,
+          "avail_bytes": 21386735616,
           "use_percent": "67%",
           "fs_type": "ext4"
         }
@@ -291,8 +326,8 @@
           "source": "/dev/sda2",
           "mount": "/data",
           "size_bytes": 15670141526016,
-          "used_bytes": 14431165181952,
-          "avail_bytes": 449222512640,
+          "used_bytes": 14431165194240,
+          "avail_bytes": 449222500352,
           "use_percent": "97%",
           "fs_type": "ext4"
         },
@@ -300,8 +335,8 @@
           "source": "/dev/sdb3",
           "mount": "/",
           "size_bytes": 469900591104,
-          "used_bytes": 444839477248,
-          "avail_bytes": 1164173312,
+          "used_bytes": 444839555072,
+          "avail_bytes": 1164095488,
           "use_percent": "100%",
           "fs_type": "ext4"
         }
