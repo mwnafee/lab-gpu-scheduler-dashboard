@@ -1,5 +1,5 @@
 {
-  "updated_utc": "2026-11-10T16:01:22.975041+00:00",
+  "updated_utc": "2026-11-10T16:02:40.291460+00:00",
   "servers": {
     "axis0": {
       "status": "ok",
@@ -10,7 +10,7 @@
           "name": "NVIDIA TITAN RTX",
           "used_mib": 5406,
           "total_mib": 24576,
-          "util_percent": 54,
+          "util_percent": 63,
           "state": "mid",
           "processes": [
             {
@@ -27,7 +27,7 @@
           "name": "NVIDIA TITAN RTX",
           "used_mib": 2122,
           "total_mib": 24576,
-          "util_percent": 30,
+          "util_percent": 28,
           "state": "free",
           "processes": [
             {
@@ -62,8 +62,8 @@
           "source": "/dev/nvme0n1p2",
           "mount": "/",
           "size_bytes": 75149131776,
-          "used_bytes": 34547904512,
-          "avail_bytes": 36757680128,
+          "used_bytes": 34549489664,
+          "avail_bytes": 36756094976,
           "use_percent": "49%",
           "fs_type": "ext4"
         }
@@ -136,8 +136,8 @@
           "source": "/dev/mapper/vg0-root",
           "mount": "/",
           "size_bytes": 67049664512,
-          "used_bytes": 42998673408,
-          "avail_bytes": 20598243328,
+          "used_bytes": 42999078912,
+          "avail_bytes": 20597837824,
           "use_percent": "68%",
           "fs_type": "ext4"
         }
@@ -149,43 +149,8 @@
       "storage": []
     },
     "h100-litjan2024": {
-      "status": "ok",
-      "gpus": [
-        {
-          "index": "0",
-          "uuid": "GPU-51f4c93c-f581-bc5d-b66f-4bb8a664c3e7",
-          "name": "NVIDIA H100 PCIe",
-          "used_mib": 61333,
-          "total_mib": 81559,
-          "util_percent": 0,
-          "state": "mid",
-          "processes": [
-            {
-              "pid": "817366",
-              "user": "islamm11",
-              "name": "VLLM::Worker_TP0",
-              "used_mib": 61324
-            }
-          ]
-        },
-        {
-          "index": "1",
-          "uuid": "GPU-cbf8c219-f716-c2e7-0fa0-943605bdd357",
-          "name": "NVIDIA H100 PCIe",
-          "used_mib": 61099,
-          "total_mib": 81559,
-          "util_percent": 0,
-          "state": "mid",
-          "processes": [
-            {
-              "pid": "817367",
-              "user": "islamm11",
-              "name": "VLLM::Worker_TP1",
-              "used_mib": 61090
-            }
-          ]
-        }
-      ],
+      "status": "unreachable",
+      "gpus": [],
       "storage": [
         {
           "source": "h100-litjan2024/azamm",
@@ -274,8 +239,8 @@
           "source": "/dev/sda2",
           "mount": "/data",
           "size_bytes": 15670141526016,
-          "used_bytes": 14431172739072,
-          "avail_bytes": 449214955520,
+          "used_bytes": 14431172751360,
+          "avail_bytes": 449214943232,
           "use_percent": "97%",
           "fs_type": "ext4"
         },
@@ -283,8 +248,8 @@
           "source": "/dev/sdb3",
           "mount": "/",
           "size_bytes": 469900591104,
-          "used_bytes": 444916797440,
-          "avail_bytes": 1086853120,
+          "used_bytes": 444916867072,
+          "avail_bytes": 1086783488,
           "use_percent": "100%",
           "fs_type": "ext4"
         }
