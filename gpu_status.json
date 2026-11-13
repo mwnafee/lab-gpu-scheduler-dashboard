@@ -1,5 +1,5 @@
 {
-  "updated_utc": "2026-11-13T18:54:11.090398+00:00",
+  "updated_utc": "2026-11-13T18:55:31.029214+00:00",
   "servers": {
     "axis0": {
       "status": "ok",
@@ -8,7 +8,7 @@
           "index": "0",
           "uuid": "GPU-5edd8cf7-a71e-4a7f-77be-8a5673dbb2f0",
           "name": "NVIDIA TITAN RTX",
-          "used_mib": 12062,
+          "used_mib": 12054,
           "total_mib": 24576,
           "util_percent": 100,
           "state": "mid",
@@ -37,7 +37,7 @@
           "index": "1",
           "uuid": "GPU-442af73e-8628-b195-83b2-7506add343dc",
           "name": "NVIDIA TITAN RTX",
-          "used_mib": 12144,
+          "used_mib": 12150,
           "total_mib": 24576,
           "util_percent": 100,
           "state": "mid",
@@ -68,8 +68,8 @@
           "source": "/dev/sdb1",
           "mount": "/data",
           "size_bytes": 19920462254080,
-          "used_bytes": 19145738731520,
-          "avail_bytes": 574695501824,
+          "used_bytes": 19145743364096,
+          "avail_bytes": 574690869248,
           "use_percent": "98%",
           "fs_type": "ext4"
         },
@@ -86,8 +86,8 @@
           "source": "/dev/nvme0n1p2",
           "mount": "/",
           "size_bytes": 75149131776,
-          "used_bytes": 36100845568,
-          "avail_bytes": 35204739072,
+          "used_bytes": 36101324800,
+          "avail_bytes": 35204259840,
           "use_percent": "51%",
           "fs_type": "ext4"
         }
@@ -151,8 +151,8 @@
           "source": "/dev/mapper/vg0-home",
           "mount": "/home",
           "size_bytes": 155826298880,
-          "used_bytes": 130618138624,
-          "avail_bytes": 17218011136,
+          "used_bytes": 130618142720,
+          "avail_bytes": 17218007040,
           "use_percent": "89%",
           "fs_type": "ext4"
         },
@@ -160,8 +160,8 @@
           "source": "/dev/mapper/vg0-root",
           "mount": "/",
           "size_bytes": 67049664512,
-          "used_bytes": 57134698496,
-          "avail_bytes": 6462218240,
+          "used_bytes": 57135013888,
+          "avail_bytes": 6461902848,
           "use_percent": "90%",
           "fs_type": "ext4"
         }
@@ -292,26 +292,33 @@
           "index": "0",
           "uuid": "GPU-1448095e-7137-c882-a1ae-ae3b0f6ebb0a",
           "name": "NVIDIA GeForce GTX 1080 Ti",
-          "used_mib": 3,
+          "used_mib": 1291,
           "total_mib": 11264,
-          "util_percent": 0,
-          "state": "free",
-          "processes": []
+          "util_percent": 94,
+          "state": "mid",
+          "processes": [
+            {
+              "pid": "2734821",
+              "user": "islamm11",
+              "name": "python",
+              "used_mib": 1286
+            }
+          ]
         },
         {
           "index": "1",
           "uuid": "GPU-1c1d2e93-fa30-47e7-14b0-b6b05746f754",
           "name": "NVIDIA GeForce GTX 1080 Ti",
-          "used_mib": 1773,
+          "used_mib": 1291,
           "total_mib": 11264,
-          "util_percent": 0,
+          "util_percent": 89,
           "state": "mid",
           "processes": [
             {
-              "pid": "2734694",
+              "pid": "2734955",
               "user": "islamm11",
               "name": "python",
-              "used_mib": 1768
+              "used_mib": 1286
             }
           ]
         },
@@ -319,16 +326,16 @@
           "index": "2",
           "uuid": "GPU-2b51f9f3-f066-b6a3-da4f-c65ea8f463aa",
           "name": "NVIDIA GeForce GTX 1080 Ti",
-          "used_mib": 513,
+          "used_mib": 423,
           "total_mib": 11264,
-          "util_percent": 95,
+          "util_percent": 0,
           "state": "free",
           "processes": [
             {
-              "pid": "2734565",
+              "pid": "2734900",
               "user": "islamm11",
               "name": "python",
-              "used_mib": 508
+              "used_mib": 418
             }
           ]
         },
@@ -336,16 +343,16 @@
           "index": "3",
           "uuid": "GPU-5e180032-b22f-8cd5-722f-e982dfeff7c4",
           "name": "NVIDIA GeForce GTX 1080 Ti",
-          "used_mib": 6809,
+          "used_mib": 6811,
           "total_mib": 11264,
-          "util_percent": 99,
+          "util_percent": 98,
           "state": "mid",
           "processes": [
             {
               "pid": "2733607",
               "user": "islamm11",
               "name": "python",
-              "used_mib": 6804
+              "used_mib": 6806
             }
           ]
         }
@@ -355,8 +362,8 @@
           "source": "/dev/sda2",
           "mount": "/data",
           "size_bytes": 15670141526016,
-          "used_bytes": 14431421513728,
-          "avail_bytes": 448966180864,
+          "used_bytes": 14431426949120,
+          "avail_bytes": 448960745472,
           "use_percent": "97%",
           "fs_type": "ext4"
         },
@@ -364,7 +371,7 @@
           "source": "/dev/sdb3",
           "mount": "/",
           "size_bytes": 469900591104,
-          "used_bytes": 446437949440,
+          "used_bytes": 446438047744,
           "avail_bytes": 0,
           "use_percent": "100%",
           "fs_type": "ext4"
