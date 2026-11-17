@@ -1,5 +1,5 @@
 {
-  "updated_utc": "2026-11-17T03:49:47.880040+00:00",
+  "updated_utc": "2026-11-17T03:51:05.774721+00:00",
   "servers": {
     "axis0": {
       "status": "ok",
@@ -10,7 +10,7 @@
           "name": "NVIDIA TITAN RTX",
           "used_mib": 5622,
           "total_mib": 24576,
-          "util_percent": 95,
+          "util_percent": 94,
           "state": "mid",
           "processes": [
             {
@@ -27,7 +27,7 @@
           "name": "NVIDIA TITAN RTX",
           "used_mib": 5648,
           "total_mib": 24576,
-          "util_percent": 90,
+          "util_percent": 91,
           "state": "mid",
           "processes": [
             {
@@ -62,8 +62,8 @@
           "source": "/dev/nvme0n1p2",
           "mount": "/",
           "size_bytes": 75149131776,
-          "used_bytes": 36092596224,
-          "avail_bytes": 35212988416,
+          "used_bytes": 36093370368,
+          "avail_bytes": 35212214272,
           "use_percent": "51%",
           "fs_type": "ext4"
         }
@@ -136,8 +136,8 @@
           "source": "/dev/mapper/vg0-root",
           "mount": "/",
           "size_bytes": 67049664512,
-          "used_bytes": 38646755328,
-          "avail_bytes": 24950161408,
+          "used_bytes": 38647046144,
+          "avail_bytes": 24949870592,
           "use_percent": "61%",
           "fs_type": "ext4"
         }
@@ -252,16 +252,28 @@
           "index": "6",
           "uuid": "GPU-8414cfa7-2c64-d356-2b38-e1cc2cb7d463",
           "name": "NVIDIA H100 80GB HBM3",
-          "used_mib": 40037,
+          "used_mib": 55588,
           "total_mib": 81559,
-          "util_percent": 35,
+          "util_percent": 76,
           "state": "mid",
           "processes": [
             {
               "pid": "671576",
               "user": "manikm",
               "name": "VLLM::EngineCore",
-              "used_mib": 39956
+              "used_mib": 39978
+            },
+            {
+              "pid": "674897",
+              "user": "manikm",
+              "name": "python",
+              "used_mib": 600
+            },
+            {
+              "pid": "675890",
+              "user": "manikm",
+              "name": "VLLM::EngineCore",
+              "used_mib": 15216
             }
           ]
         },
@@ -269,16 +281,22 @@
           "index": "7",
           "uuid": "GPU-c3e858c3-04bb-b607-4d99-98502d0bfef5",
           "name": "NVIDIA H100 80GB HBM3",
-          "used_mib": 38745,
+          "used_mib": 53499,
           "total_mib": 81559,
-          "util_percent": 29,
+          "util_percent": 0,
           "state": "mid",
           "processes": [
             {
               "pid": "671653",
               "user": "manikm",
               "name": "VLLM::EngineCore",
-              "used_mib": 38486
+              "used_mib": 44592
+            },
+            {
+              "pid": "674897",
+              "user": "manikm",
+              "name": "python",
+              "used_mib": 8892
             }
           ]
         }
@@ -297,8 +315,8 @@
           "source": "/dev/md0p1",
           "mount": "/home",
           "size_bytes": 11429865578496,
-          "used_bytes": 5572175511552,
-          "avail_bytes": 5281580343296,
+          "used_bytes": 5572175585280,
+          "avail_bytes": 5281580269568,
           "use_percent": "52%",
           "fs_type": "ext4"
         },
@@ -306,8 +324,8 @@
           "source": "/dev/nvme4n1p3",
           "mount": "/",
           "size_bytes": 134145380352,
-          "used_bytes": 33591685120,
-          "avail_bytes": 93664972800,
+          "used_bytes": 33592295424,
+          "avail_bytes": 93664362496,
           "use_percent": "27%",
           "fs_type": "ext4"
         }
@@ -469,8 +487,8 @@
           "source": "/dev/sda2",
           "mount": "/data",
           "size_bytes": 15670141526016,
-          "used_bytes": 14435175968768,
-          "avail_bytes": 445211725824,
+          "used_bytes": 14435175981056,
+          "avail_bytes": 445211713536,
           "use_percent": "98%",
           "fs_type": "ext4"
         },
@@ -478,7 +496,7 @@
           "source": "/dev/sdb3",
           "mount": "/",
           "size_bytes": 469900591104,
-          "used_bytes": 446439309312,
+          "used_bytes": 446439378944,
           "avail_bytes": 0,
           "use_percent": "100%",
           "fs_type": "ext4"
