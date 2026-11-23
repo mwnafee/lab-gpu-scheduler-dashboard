@@ -1,5 +1,5 @@
 {
-  "updated_utc": "2026-11-23T03:18:11.371134+00:00",
+  "updated_utc": "2026-11-23T03:19:45.156974+00:00",
   "servers": {
     "axis0": {
       "status": "ok",
@@ -48,8 +48,8 @@
           "source": "/dev/nvme0n1p2",
           "mount": "/",
           "size_bytes": 75149131776,
-          "used_bytes": 34532253696,
-          "avail_bytes": 36773330944,
+          "used_bytes": 34532630528,
+          "avail_bytes": 36772954112,
           "use_percent": "49%",
           "fs_type": "ext4"
         }
@@ -122,8 +122,8 @@
           "source": "/dev/mapper/vg0-root",
           "mount": "/",
           "size_bytes": 67049664512,
-          "used_bytes": 37664423936,
-          "avail_bytes": 25932492800,
+          "used_bytes": 37607628800,
+          "avail_bytes": 25989287936,
           "use_percent": "60%",
           "fs_type": "ext4"
         }
@@ -269,7 +269,7 @@
           "name": "NVIDIA H100 80GB HBM3",
           "used_mib": 69419,
           "total_mib": 81559,
-          "util_percent": 85,
+          "util_percent": 100,
           "state": "busy",
           "processes": [
             {
@@ -287,7 +287,35 @@
           ]
         }
       ],
-      "storage": []
+      "storage": [
+        {
+          "source": "/dev/md1",
+          "mount": "/space",
+          "size_bytes": 45897978388480,
+          "used_bytes": 42353092198400,
+          "avail_bytes": 3084044955648,
+          "use_percent": "94%",
+          "fs_type": "ext4"
+        },
+        {
+          "source": "/dev/md0p1",
+          "mount": "/home",
+          "size_bytes": 11429865578496,
+          "used_bytes": 5596094001152,
+          "avail_bytes": 5257661853696,
+          "use_percent": "52%",
+          "fs_type": "ext4"
+        },
+        {
+          "source": "/dev/nvme4n1p3",
+          "mount": "/",
+          "size_bytes": 134145380352,
+          "used_bytes": 33518600192,
+          "avail_bytes": 93738057728,
+          "use_percent": "27%",
+          "fs_type": "ext4"
+        }
+      ]
     },
     "h100-litjan2024": {
       "status": "ok",
@@ -367,36 +395,36 @@
         {
           "source": "h100-litjan2024/azamm",
           "mount": "/home/azamm",
-          "size_bytes": 8707810656256,
+          "size_bytes": 8705785331712,
           "used_bytes": 2774065479680,
-          "avail_bytes": 5933745176576,
+          "avail_bytes": 5931719852032,
           "use_percent": "32%",
           "fs_type": "zfs"
         },
         {
           "source": "h100-litjan2024/islamm11",
           "mount": "/home/islamm11",
-          "size_bytes": 6747952513024,
-          "used_bytes": 814207336448,
-          "avail_bytes": 5933745176576,
+          "size_bytes": 6747952381952,
+          "used_bytes": 816232529920,
+          "avail_bytes": 5931719852032,
           "use_percent": "13%",
           "fs_type": "zfs"
         },
         {
           "source": "h100-litjan2024/manikm",
           "mount": "/home/manikm",
-          "size_bytes": 6482625429504,
+          "size_bytes": 6480600104960,
           "used_bytes": 548880252928,
-          "avail_bytes": 5933745176576,
+          "avail_bytes": 5931719852032,
           "use_percent": "9%",
           "fs_type": "zfs"
         },
         {
           "source": "h100-litjan2024/liangy15",
           "mount": "/home/liangy15",
-          "size_bytes": 6413098287104,
+          "size_bytes": 6411072962560,
           "used_bytes": 479353110528,
-          "avail_bytes": 5933745176576,
+          "avail_bytes": 5931719852032,
           "use_percent": "8%",
           "fs_type": "zfs"
         }
@@ -451,8 +479,8 @@
           "source": "/dev/sda2",
           "mount": "/data",
           "size_bytes": 15670141526016,
-          "used_bytes": 14435161251840,
-          "avail_bytes": 445226442752,
+          "used_bytes": 14435161272320,
+          "avail_bytes": 445226422272,
           "use_percent": "98%",
           "fs_type": "ext4"
         },
@@ -460,8 +488,8 @@
           "source": "/dev/sdb3",
           "mount": "/",
           "size_bytes": 469900591104,
-          "used_bytes": 444827111424,
-          "avail_bytes": 1176539136,
+          "used_bytes": 444827181056,
+          "avail_bytes": 1176469504,
           "use_percent": "100%",
           "fs_type": "ext4"
         }
