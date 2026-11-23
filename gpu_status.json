@@ -1,5 +1,5 @@
 {
-  "updated_utc": "2026-11-23T16:10:43.230203+00:00",
+  "updated_utc": "2026-11-23T16:12:15.840729+00:00",
   "servers": {
     "axis0": {
       "status": "ok",
@@ -48,8 +48,8 @@
           "source": "/dev/nvme0n1p2",
           "mount": "/",
           "size_bytes": 75149131776,
-          "used_bytes": 34526601216,
-          "avail_bytes": 36778983424,
+          "used_bytes": 34526965760,
+          "avail_bytes": 36778618880,
           "use_percent": "49%",
           "fs_type": "ext4"
         }
@@ -122,8 +122,8 @@
           "source": "/dev/mapper/vg0-root",
           "mount": "/",
           "size_bytes": 67049664512,
-          "used_bytes": 37683843072,
-          "avail_bytes": 25913073664,
+          "used_bytes": 37684244480,
+          "avail_bytes": 25912672256,
           "use_percent": "60%",
           "fs_type": "ext4"
         }
@@ -140,7 +140,14 @@
           "total_mib": 81559,
           "util_percent": 0,
           "state": "busy",
-          "processes": []
+          "processes": [
+            {
+              "pid": "53721",
+              "user": "manikm",
+              "name": "VLLM::Worker_PP0_TP0",
+              "used_mib": 76514
+            }
+          ]
         },
         {
           "index": "1",
@@ -150,7 +157,14 @@
           "total_mib": 81559,
           "util_percent": 0,
           "state": "busy",
-          "processes": []
+          "processes": [
+            {
+              "pid": "53722",
+              "user": "manikm",
+              "name": "VLLM::Worker_PP0_TP1",
+              "used_mib": 76514
+            }
+          ]
         },
         {
           "index": "2",
@@ -160,7 +174,14 @@
           "total_mib": 81559,
           "util_percent": 0,
           "state": "busy",
-          "processes": []
+          "processes": [
+            {
+              "pid": "53723",
+              "user": "manikm",
+              "name": "VLLM::Worker_PP1_TP0",
+              "used_mib": 77202
+            }
+          ]
         },
         {
           "index": "3",
@@ -170,7 +191,14 @@
           "total_mib": 81559,
           "util_percent": 0,
           "state": "busy",
-          "processes": []
+          "processes": [
+            {
+              "pid": "53724",
+              "user": "manikm",
+              "name": "VLLM::Worker_PP1_TP1",
+              "used_mib": 77202
+            }
+          ]
         },
         {
           "index": "4",
@@ -180,7 +208,14 @@
           "total_mib": 81559,
           "util_percent": 0,
           "state": "busy",
-          "processes": []
+          "processes": [
+            {
+              "pid": "53725",
+              "user": "manikm",
+              "name": "VLLM::Worker_PP2_TP0",
+              "used_mib": 77332
+            }
+          ]
         },
         {
           "index": "5",
@@ -190,7 +225,14 @@
           "total_mib": 81559,
           "util_percent": 0,
           "state": "busy",
-          "processes": []
+          "processes": [
+            {
+              "pid": "53726",
+              "user": "manikm",
+              "name": "VLLM::Worker_PP2_TP1",
+              "used_mib": 77332
+            }
+          ]
         },
         {
           "index": "6",
@@ -213,7 +255,35 @@
           "processes": []
         }
       ],
-      "storage": []
+      "storage": [
+        {
+          "source": "/dev/md1",
+          "mount": "/space",
+          "size_bytes": 45897978388480,
+          "used_bytes": 42353092198400,
+          "avail_bytes": 3084044955648,
+          "use_percent": "94%",
+          "fs_type": "ext4"
+        },
+        {
+          "source": "/dev/md0p1",
+          "mount": "/home",
+          "size_bytes": 11429865578496,
+          "used_bytes": 5596656496640,
+          "avail_bytes": 5257099358208,
+          "use_percent": "52%",
+          "fs_type": "ext4"
+        },
+        {
+          "source": "/dev/nvme4n1p3",
+          "mount": "/",
+          "size_bytes": 134145380352,
+          "used_bytes": 33545822208,
+          "avail_bytes": 93710835712,
+          "use_percent": "27%",
+          "fs_type": "ext4"
+        }
+      ]
     },
     "h100-litjan2024": {
       "status": "ok",
@@ -222,7 +292,7 @@
           "index": "0",
           "uuid": "GPU-51f4c93c-f581-bc5d-b66f-4bb8a664c3e7",
           "name": "NVIDIA H100 PCIe",
-          "used_mib": 72762,
+          "used_mib": 67174,
           "total_mib": 81559,
           "util_percent": 0,
           "state": "busy",
@@ -234,22 +304,16 @@
               "used_mib": 60772
             },
             {
-              "pid": "4151727",
-              "user": "unknown",
-              "name": "[No data]",
-              "used_mib": 2216
+              "pid": "8523",
+              "user": "islamm11",
+              "name": "/home/islamm11/rtavatar/venvs/asr/bin/python",
+              "used_mib": 2016
             },
             {
-              "pid": "4151724",
-              "user": "unknown",
+              "pid": "8520",
+              "user": "islamm11",
               "name": "/home/islamm11/rtavatar/venvs/clone/bin/python",
-              "used_mib": 4612
-            },
-            {
-              "pid": "4154049",
-              "user": "unknown",
-              "name": "[No data]",
-              "used_mib": 5134
+              "used_mib": 4364
             }
           ]
         },
@@ -257,7 +321,7 @@
           "index": "1",
           "uuid": "GPU-cbf8c219-f716-c2e7-0fa0-943605bdd357",
           "name": "NVIDIA H100 PCIe",
-          "used_mib": 74184,
+          "used_mib": 74188,
           "total_mib": 81559,
           "util_percent": 0,
           "state": "busy",
@@ -275,16 +339,16 @@
               "used_mib": 5174
             },
             {
-              "pid": "4151725",
-              "user": "unknown",
+              "pid": "8522",
+              "user": "islamm11",
               "name": "/home/islamm11/rtavatar/venvs/muse/bin/python",
-              "used_mib": 4240
+              "used_mib": 4238
             },
             {
-              "pid": "4151726",
-              "user": "unknown",
+              "pid": "8521",
+              "user": "islamm11",
               "name": "/home/islamm11/rtavatar/venvs/muse/bin/python",
-              "used_mib": 4234
+              "used_mib": 4240
             }
           ]
         }
@@ -377,8 +441,8 @@
           "source": "/dev/sda2",
           "mount": "/data",
           "size_bytes": 15670141526016,
-          "used_bytes": 14435168792576,
-          "avail_bytes": 445218902016,
+          "used_bytes": 14435168800768,
+          "avail_bytes": 445218893824,
           "use_percent": "98%",
           "fs_type": "ext4"
         },
@@ -386,8 +450,8 @@
           "source": "/dev/sdb3",
           "mount": "/",
           "size_bytes": 469900591104,
-          "used_bytes": 444819451904,
-          "avail_bytes": 1184198656,
+          "used_bytes": 444819517440,
+          "avail_bytes": 1184133120,
           "use_percent": "100%",
           "fs_type": "ext4"
         }
