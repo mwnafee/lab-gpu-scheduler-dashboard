@@ -1,5 +1,5 @@
 {
-  "updated_utc": "2026-11-25T01:05:00.540090+00:00",
+  "updated_utc": "2026-11-25T01:06:19.095228+00:00",
   "servers": {
     "axis0": {
       "status": "ok",
@@ -48,8 +48,8 @@
           "source": "/dev/nvme0n1p2",
           "mount": "/",
           "size_bytes": 75149131776,
-          "used_bytes": 34527338496,
-          "avail_bytes": 36778246144,
+          "used_bytes": 34527506432,
+          "avail_bytes": 36778078208,
           "use_percent": "49%",
           "fs_type": "ext4"
         }
@@ -122,8 +122,8 @@
           "source": "/dev/mapper/vg0-root",
           "mount": "/",
           "size_bytes": 67049664512,
-          "used_bytes": 37634977792,
-          "avail_bytes": 25961938944,
+          "used_bytes": 37635371008,
+          "avail_bytes": 25961545728,
           "use_percent": "60%",
           "fs_type": "ext4"
         }
@@ -240,7 +240,7 @@
           "name": "NVIDIA H100 80GB HBM3",
           "used_mib": 65699,
           "total_mib": 81559,
-          "util_percent": 97,
+          "util_percent": 53,
           "state": "busy",
           "processes": [
             {
@@ -255,158 +255,59 @@
           "index": "7",
           "uuid": "GPU-c3e858c3-04bb-b607-4d99-98502d0bfef5",
           "name": "NVIDIA H100 80GB HBM3",
-          "used_mib": 66245,
+          "used_mib": 64453,
           "total_mib": 81559,
-          "util_percent": 43,
-          "state": "busy",
+          "util_percent": 53,
+          "state": "mid",
           "processes": [
             {
-              "pid": "152846",
+              "pid": "237621",
               "user": "manikm",
               "name": "/home/manikm/miniconda3/bin/python3",
-              "used_mib": 66236
+              "used_mib": 64444
             }
           ]
         }
       ],
-      "storage": [
-        {
-          "source": "/dev/md1",
-          "mount": "/space",
-          "size_bytes": 45897978388480,
-          "used_bytes": 42353092198400,
-          "avail_bytes": 3084044955648,
-          "use_percent": "94%",
-          "fs_type": "ext4"
-        },
-        {
-          "source": "/dev/md0p1",
-          "mount": "/home",
-          "size_bytes": 11429865578496,
-          "used_bytes": 5598105395200,
-          "avail_bytes": 5255650459648,
-          "use_percent": "52%",
-          "fs_type": "ext4"
-        },
-        {
-          "source": "/dev/nvme4n1p3",
-          "mount": "/",
-          "size_bytes": 134145380352,
-          "used_bytes": 33805598720,
-          "avail_bytes": 93451059200,
-          "use_percent": "27%",
-          "fs_type": "ext4"
-        }
-      ]
+      "storage": []
     },
     "h100-litjan2024": {
-      "status": "ok",
-      "gpus": [
-        {
-          "index": "0",
-          "uuid": "GPU-51f4c93c-f581-bc5d-b66f-4bb8a664c3e7",
-          "name": "NVIDIA H100 PCIe",
-          "used_mib": 67918,
-          "total_mib": 81559,
-          "util_percent": 0,
-          "state": "busy",
-          "processes": [
-            {
-              "pid": "501998",
-              "user": "islamm11",
-              "name": "VLLM::Worker_TP0",
-              "used_mib": 60772
-            },
-            {
-              "pid": "189100",
-              "user": "islamm11",
-              "name": "/home/islamm11/rtavatar/venvs/asr/bin/python",
-              "used_mib": 2216
-            },
-            {
-              "pid": "189097",
-              "user": "islamm11",
-              "name": "/home/islamm11/rtavatar/venvs/clone/bin/python",
-              "used_mib": 4908
-            }
-          ]
-        },
-        {
-          "index": "1",
-          "uuid": "GPU-cbf8c219-f716-c2e7-0fa0-943605bdd357",
-          "name": "NVIDIA H100 PCIe",
-          "used_mib": 74320,
-          "total_mib": 81559,
-          "util_percent": 0,
-          "state": "busy",
-          "processes": [
-            {
-              "pid": "501999",
-              "user": "islamm11",
-              "name": "VLLM::Worker_TP1",
-              "used_mib": 60508
-            },
-            {
-              "pid": "500636",
-              "user": "islamm11",
-              "name": "/home/islamm11/anaconda3/envs/mimic_tts/bin/python",
-              "used_mib": 5174
-            },
-            {
-              "pid": "189098",
-              "user": "islamm11",
-              "name": "/home/islamm11/rtavatar/venvs/ditto/bin/python",
-              "used_mib": 2868
-            },
-            {
-              "pid": "189099",
-              "user": "islamm11",
-              "name": "/home/islamm11/rtavatar/venvs/ditto/bin/python",
-              "used_mib": 2868
-            },
-            {
-              "pid": "191454",
-              "user": "islamm11",
-              "name": "/home/islamm11/rtavatar/venvs/ditto/bin/python",
-              "used_mib": 2868
-            }
-          ]
-        }
-      ],
+      "status": "unreachable",
+      "gpus": [],
       "storage": [
         {
           "source": "h100-litjan2024/azamm",
           "mount": "/home/azamm",
-          "size_bytes": 8700299706368,
+          "size_bytes": 8700299444224,
           "used_bytes": 2774065479680,
-          "avail_bytes": 5926234226688,
+          "avail_bytes": 5926233964544,
           "use_percent": "32%",
           "fs_type": "zfs"
         },
         {
           "source": "h100-litjan2024/islamm11",
           "mount": "/home/islamm11",
-          "size_bytes": 6752275398656,
+          "size_bytes": 6752275136512,
           "used_bytes": 826041171968,
-          "avail_bytes": 5926234226688,
+          "avail_bytes": 5926233964544,
           "use_percent": "13%",
           "fs_type": "zfs"
         },
         {
           "source": "h100-litjan2024/manikm",
           "mount": "/home/manikm",
-          "size_bytes": 6470789103616,
-          "used_bytes": 544554876928,
-          "avail_bytes": 5926234226688,
+          "size_bytes": 6470789234688,
+          "used_bytes": 544555270144,
+          "avail_bytes": 5926233964544,
           "use_percent": "9%",
           "fs_type": "zfs"
         },
         {
           "source": "h100-litjan2024/liangy15",
           "mount": "/home/liangy15",
-          "size_bytes": 6405587337216,
+          "size_bytes": 6405587075072,
           "used_bytes": 479353110528,
-          "avail_bytes": 5926234226688,
+          "avail_bytes": 5926233964544,
           "use_percent": "8%",
           "fs_type": "zfs"
         }
@@ -419,9 +320,9 @@
           "index": "0",
           "uuid": "GPU-1448095e-7137-c882-a1ae-ae3b0f6ebb0a",
           "name": "NVIDIA GeForce GTX 1080 Ti",
-          "used_mib": 817,
+          "used_mib": 823,
           "total_mib": 11264,
-          "util_percent": 36,
+          "util_percent": 64,
           "state": "free",
           "processes": [
             {
@@ -438,7 +339,7 @@
           "name": "NVIDIA GeForce GTX 1080 Ti",
           "used_mib": 817,
           "total_mib": 11264,
-          "util_percent": 70,
+          "util_percent": 74,
           "state": "free",
           "processes": [
             {
@@ -455,7 +356,7 @@
           "name": "NVIDIA GeForce GTX 1080 Ti",
           "used_mib": 817,
           "total_mib": 11264,
-          "util_percent": 51,
+          "util_percent": 45,
           "state": "free",
           "processes": [
             {
@@ -470,16 +371,16 @@
           "index": "3",
           "uuid": "GPU-5e180032-b22f-8cd5-722f-e982dfeff7c4",
           "name": "NVIDIA GeForce GTX 1080 Ti",
-          "used_mib": 817,
+          "used_mib": 825,
           "total_mib": 11264,
-          "util_percent": 68,
+          "util_percent": 48,
           "state": "free",
           "processes": [
             {
               "pid": "823828",
               "user": "chenk14",
               "name": "python",
-              "used_mib": 820
+              "used_mib": 812
             }
           ]
         }
@@ -489,8 +390,8 @@
           "source": "/dev/sda2",
           "mount": "/data",
           "size_bytes": 15670141526016,
-          "used_bytes": 14435883094016,
-          "avail_bytes": 444504600576,
+          "used_bytes": 14435888132096,
+          "avail_bytes": 444499562496,
           "use_percent": "98%",
           "fs_type": "ext4"
         },
@@ -498,8 +399,8 @@
           "source": "/dev/sdb3",
           "mount": "/",
           "size_bytes": 469900591104,
-          "used_bytes": 445385236480,
-          "avail_bytes": 618414080,
+          "used_bytes": 445494026240,
+          "avail_bytes": 509624320,
           "use_percent": "100%",
           "fs_type": "ext4"
         }
